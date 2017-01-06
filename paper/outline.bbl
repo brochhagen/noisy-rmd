@@ -1,0 +1,70 @@
+\begin{thebibliography}{10}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Griffiths and Kalish(2007)]{griffiths+kalish:2007}
+Thomas~L. Griffiths and Michael~L. Kalish.
+\newblock Language evolution by iterated learning with bayesian agents.
+\newblock \emph{Cognitive Science}, 31\penalty0 (3):\penalty0 441--480, 2007.
+
+\bibitem[Kirby et~al.(2014)Kirby, Griffiths, and Smith]{kirby+etal:2014}
+Simon Kirby, Tom Griffiths, and Kenny Smith.
+\newblock Iterated learning and the evolution of language.
+\newblock \emph{Current Opinion in Neurobiology}, 28:\penalty0 108--114, 2014.
+\newblock \doi{10.1016/j.conb.2014.07.014}.
+
+\bibitem[Tamariz and Kirby(2016)]{tamariz+kirby:2016}
+Monica Tamariz and Simon Kirby.
+\newblock The cultural evolution of language.
+\newblock \emph{Current Opinion in Psychology}, 8:\penalty0 37--43, 2016.
+
+\bibitem[Merriman and Bowman(1989)]{merriman+bowman:1989}
+William~E. Merriman and Laura~L. Bowman.
+\newblock The mutual exclusivity bias in children's word learning.
+\newblock \emph{Monographs of the Society for Research in Child Development},
+  54\penalty0 (3/4):\penalty0 i--129, 1989.
+\newblock \doi{10.2307/1166130}.
+
+\bibitem[Clark(2009)]{clark:2009}
+Eve~V. Clark.
+\newblock Lexical meaning.
+\newblock In Edith~L. Bavin, editor, \emph{The Cambridge Handbook of Child
+  Language}, pages 283--300. Cambridge University Press, 2009.
+\newblock \doi{10.1017/cbo9780511576164.016}.
+
+\bibitem[Kirby et~al.(2015)Kirby, Tamariz, Cornish, and Smith]{kirby+etal:2015}
+Simon Kirby, Monica Tamariz, Hannah Cornish, and Kenny Smith.
+\newblock Compression and communication in the cultural evolution of linguistic
+  structure.
+\newblock \emph{Cognition}, 141:\penalty0 87--102, 2015.
+
+\bibitem[{Hudson Kam} and Newport(2005)]{hudson+etal:2005}
+Carla~L. {Hudson Kam} and Elissa Newport.
+\newblock Regularizing unpredictable variation: The roles of adult and child
+  learners in language formation and change.
+\newblock \emph{Language Learning and Development}, 1\penalty0 (2):\penalty0
+  151--195, 2005.
+\newblock \doi{10.1207/s15473341lld0102\_3}.
+
+\bibitem[Smith(2011)]{smith:2011}
+Kenny Smith.
+\newblock Learning bias, cultural evolution of language, and the biological
+  evolution of the language faculty.
+\newblock \emph{Human Biology}, 83\penalty0 (2):\penalty0 261--278, 2011.
+\newblock \doi{10.3378/027.083.0207}.
+
+\bibitem[O'Connor(2015)]{oconnor:2015}
+Cailin O'Connor.
+\newblock Evolving to generalize: Trading precision for speed.
+\newblock \emph{The British Journal for the Philosophy of Science}, 2015.
+\newblock \doi{10.1093/bjps/axv038}.
+
+\bibitem[Franke and Correia(to appear)]{franke+correia:toappear}
+Michael Franke and Jose~Pedro Correia.
+\newblock Vagueness and imprecise imitation in signalling games.
+\newblock \emph{British Journal for the Philosophy of Science}, to appear.
+
+\end{thebibliography}

@@ -1,0 +1,165 @@
+\documentclass[11pt]{article}
+
+\usepackage{geometry}
+\usepackage{natbib}
+\bibpunct[:]{(}{)}{,}{a}{}{;}
+
+%--------------------
+%\usepackage{gb4e}
+%\noautomath
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{nicefrac}
+%\usepackage{stmaryrd}
+%\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{booktabs}
+
+\newcommand{\citeposs}[2][]{\citeauthor{#2}'s (\citeyear[#1]{#2})}
+\newcommand{\tuple}[1]{\ensuremath{\left\langle #1 \right\rangle}} 
+
+\newcommand{\hl}[1]{\textcolor[rgb]{.8,.33,.0}{#1}}% prints in orange
+%\newcommand{\argmax}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{max}}\;}
+%\newcommand{\argmin}[1]{\underset{#1}{\operatorname{arg}\,\operatorname{min}}\;}
+%\newcommand{\sbna}{\exists\lnot\forall}
+
+\definecolor{Red}{RGB}{178,34,34}
+\newcommand{\mf}[1]{\textcolor{Red}{[MF: #1]}} 
+\newcommand{\tb}[1]{\textcolor[rgb]{.8,.33,.0}{[TB: #1]}}% prints in orange
+
+\usepackage{blkarray}
+\usepackage{xspace}
+
+%%% MF's commands
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\card}[1]{\left \lvert \, #1 \, \right\rvert}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\States}{\ensuremath{S}\xspace}		% Set of States
+\newcommand{\state}{\ensuremath{s}\xspace}		% single states
+\newcommand{\mystate}[1]{\ensuremath{\state_{\text{#1}}}\xspace} %meaningful states
+\newcommand{\Messgs}{\ensuremath{M}\xspace}		% Set of Messages
+\newcommand{\messg}{\ensuremath{m}\xspace}		% single messages
+\newcommand{\mymessg}[1]{\ensuremath{\messg_{\text{#1}}}\xspace} %meaningful messages
+\newcommand{\ssome}{\mystate{\ensuremath{\exists\neg\forall}}}
+\newcommand{\sall}{\mystate{\ensuremath{\forall}}}
+\newcommand{\msome}{\mymessg{some}}
+\newcommand{\mall}{\mymessg{all}}
+\newcommand{\asome}{\myact{\ensuremath{\exists\neg\forall}}}
+\newcommand{\aall}{\myact{\ensuremath{\forall}}}
+\definecolor{mygray}{cmyk}{0.35,0.35,0.35,0.35}
+\newcommand{\mygray}[1]{{\textcolor{mygray}{#1}}}
+%%% 
+
+
+%--------------------
+%\usepackage{gb4e}
+%
+%\usepackage{setspace}
+%\onehalfspacing
+%
+%\usepackage{soul} %underlining
+%\setuldepth{a}
+
+
+
+
+%\usepackage{inconsolata}
+
+%-------------------
+
+
+\title{Sketch:\\Transmission perturbations in the cultural evolution of language}
+
+\author{%\bf NAME1 and NAME2\\
+    \today
+}
+
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+Language emergence and change are shaped by their use and transmission across generations. The latter process is often viewed as arising from a combination of general learning mechanisms and inductive cognitive biases (e.g. \citealt{griffiths+kalish:2007,kirby+etal:2014,tamariz+kirby:2016}).  Proposals of biases that shape language acquisition abound. Some prominent examples are mutual exclusivity \citep{merriman+bowman:1989,clark:2009}, a simplicity \citep{kirby+etal:2015}, regularization \citep{hudson+etal:2005}, and generalization biases \citep{smith:2011,oconnor:2015}.\footnote{Depending on their formulation and the domain(s) they are proposed to apply to, some biases entail others. For instance, a domain-independent bias for simplicity can entail regularization (and may conflict with mutual exclusivity).} Here, we show how environmental factors can produce evolutionary outcomes that look as if cognitive learning biases are present even if they are not. In doing so, we underline the pivotal role of systematic transmission perturbations of linguistic knowledge in language change while showing that such perturbations may stem from other sources. That is, they may not stem from learning biases but from other sources of systematic noise, e.g., as a result of errors in perception. This result highlights the frequently overlooked possibility that channel noise in evolutionary replication can mimic effects of inductive biases.
+
+\begin{itemize}
+  \item Brief overview of the cases we consider
+\end{itemize}
+
+
+\section{Model}
+
+\begin{itemize}
+  \item Introduction to iterated Bayesian learning. Highlighting predictions of the prior's influence (i) from a technical perspective with respect to sampling to MAP and (ii) conceptual perspective with respect to the claim that laboratory experiments can give us insights into learning priors \tb{For this we can draw directly from what we already had in the other draft}
+  \item Noisy iterated learning. Following what we had before.
+  \item Possibly: functional pressure \tb{I'd leave it out if it's not strictly necessary, we should mention that this also plays a role in the introduction, but no need to introduce the full model we use elsewhere.}
+\end{itemize}
+
+We denote the probability that the teacher (learner) observes state $s_t$ ($s_l$) when the actual state is $s_a$ as $P_N(s_t \mid s_a)$ ($P_N(s_l \mid s_a)$). The probability that $s_a$ is the actual state when the learner observes $s_l$ is therefore:
+
+\begin{align*}
+  P_N(s_a \mid s_l) \propto P(s_a) \ P_N(s_l \mid s_a)\,.
+\end{align*}
+
+Accordingly, the probability that the teacher observes $s_t$ when the learner observes $s_l$ is:
+\begin{align*}
+  P_N(s_t \mid s_l) = \sum_{s_a} P(s_a \mid s_l) \ P_N(s_t \mid s_a)\,.
+\end{align*}
+Finally, this gives us the probability that a teacher of type $t$ produces a datum that is
+perceived by the listener as $d = \tuple{s_l, m}$:
+\begin{align*}
+  P_N(\tuple{s_l, m} \mid t) = \sum_{s_t} P_N(s_t \mid s_l) \ P(m \mid s_t; t)\,.
+\end{align*}
+Generalize this to a sequence of perceived data $d_l$ and write $P_N(d_l \mid t)$. Then, the noise-perturbed mutation matrix is defined as:
+\begin{align*}
+  Q_{ij}  \propto \sum_{d_l \in D} P(d_l \mid t_i) F(t_j,d_l) \,, \ \  \text{where $F(t_j,d)$
+    is as before.}
+\end{align*}
+In words, it may be the case that learner and/or teacher do not perceive the actual state as what it is. They are not aware of this, and produce/learn as if what they observed was the actual state. In particular, the learner does not reason about noise when she tries to infer the speaker's type. She takes what she observes a state to be as the actual state that the teacher has seen as well and infers which type would have most likely generated the message to this state. This can lead to biases of inferring the ``wrong'' teacher type if the noise makes some types err in a way that resembles the noiseless behavior of other types. That is, such environmental factors can, in principle, induce transmission biases that look as if there was a cognitive bias in favor of a particular type, simply because that type better explains the noise.
+
+\section{Applications}
+If we only look at iterated learning, we can skip receiver strategies. In any case, it may be best to assume that a single type's strategy is derived from a single language in order to avoid having too many types. 
+
+\subsection{Vagueness setup}
+\begin{itemize}
+  \item $T = [0,100]$
+  \item $|M| = 2$
+  \item Probabilistic languages sampled at the onset of a run. \tb{It's probably feasable to get representative samples for each run without running into computational problems as the rest of the setup is simple. Otherwise we have to reduce the state space.}
+  \item Production is simply proportional to the truth-value of a message in a teacher's perceived state $t_t$ -- no Gricean reasoning or exponential functions.
+  \item Confusability: Either proportional to physical distance e.g. following \citet[9]{franke+correia}, or, to keep matter uniform to deflation\\
+    $t_t ~ \text{Normal}(t_a, \sigma)$\\
+    $t_l ~ \text{Normal}(t_a, \sigma)$
+\end{itemize}
+\section{Deflation}
+\section{Quantifiers}
+
+\subparagraph{(III) Inductive bias.} A second learning bias that codifies the idea that lexica should be uniform, i.e. be biased towards either lexicalizing an upper-bound for all weaker alternatives in a scalar pair or for none.
+
+\subparagraph{(IV)  Uncertainty.} The other advantage of non-upper bounded semantics lies in being non-committal to the negation of stronger alternatives when the speaker is uncertain. Adding this to the model requires the most changes to our present setup and some additional assumptions about the cues available to players to discern the speaker's knowledge about the state she is in. 
+
+\subparagraph{(V) More scalar pairs.} Taking into consideration more than one scalar pair. Preliminary results suggest that this does not influence the results in any meaningful way without further additions, e.g. by (III).
+
+\subparagraph{(VI) More lexica.} Not necessary. Preliminary results suggest that considering more lexica has no noteworthy effect on the dynamics (tested with all possible 2x2 lexica).
+
+\subparagraph{(VII) State frequencies.} Variations on state frequencies. This may have an interesting interaction with (III).
+
+\subparagraph{(VIII) Reintroduction of communal learning.} One possibility: The probably $N_{ij}$ with which a child of $t_i$ adopts $t_j$ could be the weighted sum of $Q_{ij}$ (as before) and a vector we get from learning from all of the population: $L_j = \sum_d P(d | \vec{p})  P(t_j | d)$, where $P(d | \vec{p}) = \sum_{i} P(d | t_i)  \vec{p}_i$ is the probability of observing $d$ when learning from a random member of the present population distribution.
+
+
+\section{Discussion}
+\section{Conclusion}
+
+\bibliographystyle{unsrtnat}
+
+%\setlength{\bibleftmargin}{.125in}
+%\setlength{\bibindent}{-\bibleftmargin}
+\bibliography{./noise-bib}
+
+
+\end{document}
