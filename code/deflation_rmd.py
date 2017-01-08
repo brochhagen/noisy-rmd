@@ -118,7 +118,8 @@ q = get_mutation_matrix(s,k,state_freq,sample_amount,learning_parameter, sigma)
 
 #p = np.random.dirichlet(np.ones(s)) # unbiased random starting state
 p = np.zeros(s)
-p[90] = 1
+p[90] = 1 
+########################WHY DOES IT JUMPT TO 0 IN ONE GO? #########################
 
 for r in range(gens):
 #    pPrime = p * [np.sum(u[t,] * p)  for t in range(len(typeList))]
