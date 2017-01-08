@@ -11,12 +11,12 @@ import csv
 ##### variables ##########
 s = 100 #amount of states
 sigma = 1
-k = 10  # length of observation sequences
-sample_amount = 100 #amount of k-length samples for each production type 
+k = 2  # length of observation sequences
+sample_amount = 10 #amount of k-length samples for each production type 
 
 
 learning_parameter = 10 #prob-matching = 1, increments approach MAP
-gens = 100 #number of generations per simulation run
+gens = 10 #number of generations per simulation run
 #runs = 50 #number of independent simulation runs
 state_freq = np.ones(s) / float(s) #frequency of states s_1,...,s_n 
 ##########################
@@ -123,10 +123,10 @@ p[90] = 1
 for r in range(gens):
 #    pPrime = p * [np.sum(u[t,] * p)  for t in range(len(typeList))]
 #    pPrime = pPrime / np.sum(pPrime)
+    f.writerow([str(r),str(sigma),str(k),str(sample_amount),str(learning_parameter)]+[str(x) for x in p])
     print '### Generation %d ###' %r
     print 'Proportion of %.2f players uses threshold %d' % (p[np.argmax(p)], np.argmax(p))
     p = np.dot(p, q)
-    f.writerow([str(r),str(sigma),str(k),str(sample_amount),str(learning_parameter)]+[str(x) for x in p])
 
 
 
