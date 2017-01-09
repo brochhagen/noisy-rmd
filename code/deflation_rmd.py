@@ -7,12 +7,15 @@ import sys
 import datetime
 import csv
 
+# Notes:
+# observations are currently generated without noise
+#Normalized DoublePerception. I think this is correct, given that P_N(s_t|s_a) need not sum to 1 
 
 ##### variables ##########
 s = 100 #amount of states
 sigma = 1
-k = 2  # length of observation sequences
-sample_amount = 10 #amount of k-length samples for each production type 
+k = 50  # length of observation sequences
+sample_amount = 1000 #amount of k-length samples for each production type 
 
 
 learning_parameter = 10 #prob-matching = 1, increments approach MAP
@@ -21,18 +24,15 @@ gens = 10 #number of generations per simulation run
 state_freq = np.ones(s) / float(s) #frequency of states s_1,...,s_n 
 ##########################
 
-f = csv.writer(open('./results/deflation-states%d-sigma%d-k%d-samples%d-l%d-g%d.csv' %(s,sigma,k,sample_amount,learning_parameter,gens),'wb')) #file to store mean results
+f = csv.writer(open('./results/deflation-states%d-sigma%.2f-k%d-samples%d-l%d-g%d.csv' %(s,sigma,k,sample_amount,learning_parameter,gens),'wb')) #file to store mean results
 f.writerow(["generation","sigma","k","samples","learning"]+['t'+str(x) for x in xrange(s)])
 
+def normalize(m):
+    m = m / m.sum(axis=1)[:, np.newaxis]
+    return m
 
-def get_types(s_amount): #a type is simply a theta-value
-    return [x for x in xrange(s_amount)]
-
-
-
-print '#Starting, ', datetime.datetime.now()
-
-print '#Computing likelihood, ', datetime.datetime.now()
+def m_max(m): #aux function for convenience
+    return np.unravel_index(m.argmax(), m.shape)
 
 def get_obs(states,state_freqs,sample_amount,k): #returns (non-noisy) sample_amount tuples of k-utterances per type
     out = []
@@ -45,8 +45,6 @@ def get_obs(states,state_freqs,sample_amount,k): #returns (non-noisy) sample_amo
         out.append(out_parent)
     return out
 
-obs = get_obs(s,state_freq,sample_amount,k)
-
 def get_confusability_matrix(states,sigma):
     out = np.zeros([states,states])
     for i in xrange(states):
@@ -54,32 +52,26 @@ def get_confusability_matrix(states,sigma):
             out[i,j] = stats.norm(i, sigma).pdf(j)
     return out
 
-
-def normalize(m):
-    m = m / m.sum(axis=1)[:, np.newaxis]
-    return m
-
-def m_max(m): #aux function for convenience
-    return np.unravel_index(m.argmax(), m.shape)
-
-
 def get_lh(states): #send message if state > threshold
     return [np.concatenate((np.zeros(x),np.ones(states-x))) for x in xrange(states)]
-
-
 
 def get_lh_perturbed(states,sigma):
     likelihoods = get_lh(states) #plain production
     lh_perturbed = get_lh(states) #plain production copy to modify
     state_confusion_matrix = get_confusability_matrix(states,sigma)
+
     PosteriorState = normalize(np.array([[state_freq[sActual] * state_confusion_matrix[sActual, sPerceived] for sActual in xrange(states)] \
                      for sPerceived in xrange(states)])) # probability of actual state given a perceived state
-    DoublePerception = np.array([[np.sum([ state_confusion_matrix[sActual, sTeacher] * PosteriorState[sLearner,sActual] \
-                     for sActual in xrange(states)]) for sTeacher in xrange(states) ] for sLearner in xrange(states)])# probability of teacher observing column, given that learner observes row
+    DoublePerception = normalize(np.array([[np.sum([ state_confusion_matrix[sActual, sTeacher] * PosteriorState[sLearner,sActual] \
+                     for sActual in xrange(states)]) for sTeacher in xrange(states) ] for sLearner in xrange(states)]))# probability of teacher observing column, given that learner observes row
     for t in xrange(len(likelihoods)):
        for sLearner in xrange(len(likelihoods[t])):
            lh_perturbed[t][sLearner] = np.sum([ DoublePerception[sLearner,sTeacher] * likelihoods[t][sTeacher] for sTeacher in xrange(len(likelihoods[t]))])
     return lh_perturbed
+
+l_p = get_lh_perturbed(s,1)
+
+
 
 
 def get_likelihood(states, obs, sigma, kind='plain'):
@@ -94,6 +86,9 @@ def get_likelihood(states, obs, sigma, kind='plain'):
             out[lhi,o] = np.prod([lh[lhi][obs[o][x]] for x in xrange(len(obs[o]))])
     return out
 
+print '#Starting, ', datetime.datetime.now()
+print '#Computing likelihood, ', datetime.datetime.now()
+
 def get_mutation_matrix(states,k,state_freqs,sample_amount,learning_parameter, sigma):
     obs = get_obs(states,state_freqs,sample_amount,k) #get production data from all types
     out = np.zeros([states,states]) #matrix to store Q
@@ -106,7 +101,7 @@ def get_mutation_matrix(states,k,state_freqs,sample_amount,learning_parameter, s
         parametrized_post = normalize(normalize(np.transpose(lhs))**learning_parameter) #P(t_j|parent data) for all types; P(d|t_j)P(t_j)
         out[parent_type] = np.dot(lhs_perturbed[parent_type],parametrized_post)
 
-    return normalize(out) #[parametrized_post, lhs_perturbed]#normalize(out)
+    return normalize(out)
 
 print '#Computing Q, ', datetime.datetime.now()
 
@@ -118,8 +113,8 @@ q = get_mutation_matrix(s,k,state_freq,sample_amount,learning_parameter, sigma)
 
 #p = np.random.dirichlet(np.ones(s)) # unbiased random starting state
 p = np.zeros(s)
-p[90] = 1 
-########################WHY DOES IT JUMPT TO 0 IN ONE GO? #########################
+starting_threshold = 60
+p[starting_threshold] = 1 
 
 for r in range(gens):
 #    pPrime = p * [np.sum(u[t,] * p)  for t in range(len(typeList))]
@@ -127,29 +122,16 @@ for r in range(gens):
     f.writerow([str(r),str(sigma),str(k),str(sample_amount),str(learning_parameter)]+[str(x) for x in p])
     print '### Generation %d ###' %r
     print 'Proportion of %.2f players uses threshold %d' % (p[np.argmax(p)], np.argmax(p))
+    print 'Proportion of %.2f players uses threshold %d' % (p[starting_threshold], starting_threshold)
     p = np.dot(p, q)
 
 
 
 print '###Overview of results###', datetime.datetime.now()
-print 'Parameters: sigma = %d, k = %d, sample_amount = %d, learning parameter = %d, gens = %d' % (sigma, k, sample_amount, learning_parameter, gens)
-print 'end state:' 
-#print p
+print 'Parameters: sigma = %.2f, k = %d, sample_amount = %d, learning parameter = %d, gens = %d' % (sigma, k, sample_amount, learning_parameter, gens)
 print 'incumbent: ', np.argmax(p), 'proportion: ', p[np.argmax(p)]
-
-
-
-
-
-#plt.plot(X,Y1, marker='*', markersize=12,markevery=4)
-#plt.plot(X,Y2, marker='D', markersize=7,markevery=5)
-# plt.plot(X,Y3,linestyle='dashed')
-
-
-
-
-
 sys.exit()
+
 ######### snippets for data generated for all types, not by parent_type
 #def get_likelihood(states, obs, sigma, kind='plain'):
 #    if kind == 'perturbed':
