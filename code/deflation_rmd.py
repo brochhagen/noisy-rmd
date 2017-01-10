@@ -12,20 +12,20 @@ import csv
 #Normalized DoublePerception. I think this is correct, given that P_N(s_t|s_a) need not sum to 1 
 
 ##### variables ##########
-s = 100 #amount of states
+s = 10 #amount of states
 sigma = 1
-k = 50  # length of observation sequences
+k = 20  # length of observation sequences
 sample_amount = 1000 #amount of k-length samples for each production type 
 
 
-learning_parameter = 10 #prob-matching = 1, increments approach MAP
+learning_parameter = 1 #prob-matching = 1, increments approach MAP
 gens = 10 #number of generations per simulation run
 #runs = 50 #number of independent simulation runs
 state_freq = np.ones(s) / float(s) #frequency of states s_1,...,s_n 
 ##########################
 
-f = csv.writer(open('./results/deflation-states%d-sigma%.2f-k%d-samples%d-l%d-g%d.csv' %(s,sigma,k,sample_amount,learning_parameter,gens),'wb')) #file to store mean results
-f.writerow(["generation","sigma","k","samples","learning"]+['t'+str(x) for x in xrange(s)])
+#f = csv.writer(open('./results/deflation-states%d-sigma%.2f-k%d-samples%d-l%d-g%d.csv' %(s,sigma,k,sample_amount,learning_parameter,gens),'wb')) #file to store mean results
+#f.writerow(["generation","sigma","k","samples","learning"]+['t'+str(x) for x in xrange(s)])
 
 def normalize(m):
     m = m / m.sum(axis=1)[:, np.newaxis]
@@ -58,12 +58,12 @@ def get_lh(states): #send message if state > threshold
 def get_lh_perturbed(states,sigma):
     likelihoods = get_lh(states) #plain production
     lh_perturbed = get_lh(states) #plain production copy to modify
-    state_confusion_matrix = get_confusability_matrix(states,sigma)
+    state_confusion_matrix = normalize(get_confusability_matrix(states,sigma))
 
     PosteriorState = normalize(np.array([[state_freq[sActual] * state_confusion_matrix[sActual, sPerceived] for sActual in xrange(states)] \
                      for sPerceived in xrange(states)])) # probability of actual state given a perceived state
-    DoublePerception = normalize(np.array([[np.sum([ state_confusion_matrix[sActual, sTeacher] * PosteriorState[sLearner,sActual] \
-                     for sActual in xrange(states)]) for sTeacher in xrange(states) ] for sLearner in xrange(states)]))# probability of teacher observing column, given that learner observes row
+    DoublePerception = np.array([[np.sum([ state_confusion_matrix[sActual, sTeacher] * PosteriorState[sLearner,sActual] \
+                     for sActual in xrange(states)]) for sTeacher in xrange(states) ] for sLearner in xrange(states)])# probability of teacher observing column, given that learner observes row
     for t in xrange(len(likelihoods)):
        for sLearner in xrange(len(likelihoods[t])):
            lh_perturbed[t][sLearner] = np.sum([ DoublePerception[sLearner,sTeacher] * likelihoods[t][sTeacher] for sTeacher in xrange(len(likelihoods[t]))])
