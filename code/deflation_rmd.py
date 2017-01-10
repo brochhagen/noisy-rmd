@@ -64,14 +64,13 @@ def get_lh_perturbed(states,sigma):
                      for sPerceived in xrange(states)])) # probability of actual state given a perceived state
     DoublePerception = np.array([[np.sum([ state_confusion_matrix[sActual, sTeacher] * PosteriorState[sLearner,sActual] \
                      for sActual in xrange(states)]) for sTeacher in xrange(states) ] for sLearner in xrange(states)])# probability of teacher observing column, given that learner observes row
+
     for t in xrange(len(likelihoods)):
        for sLearner in xrange(len(likelihoods[t])):
            lh_perturbed[t][sLearner] = np.sum([ DoublePerception[sLearner,sTeacher] * likelihoods[t][sTeacher] for sTeacher in xrange(len(likelihoods[t]))])
     return lh_perturbed
 
 l_p = get_lh_perturbed(s,1)
-
-
 
 
 def get_likelihood(states, obs, sigma, kind='plain'):
