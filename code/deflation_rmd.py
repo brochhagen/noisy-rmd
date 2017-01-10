@@ -89,8 +89,8 @@ def get_likelihood(states, obs, sigma, kind='plain'):
 print '#Starting, ', datetime.datetime.now()
 print '#Computing likelihood, ', datetime.datetime.now()
 
-def get_mutation_matrix(states,k,state_freqs,sample_amount,learning_parameter, sigma):
-    obs = get_obs(states,state_freqs,sample_amount,k) #get production data from all types
+def get_mutation_matrix(states,k,state_freq,sample_amount,learning_parameter, sigma):
+    obs = get_obs(states,state_freq,sample_amount,k) #get production data from all types
     out = np.zeros([states,states]) #matrix to store Q
 
     for parent_type in xrange(states):
@@ -105,9 +105,7 @@ def get_mutation_matrix(states,k,state_freqs,sample_amount,learning_parameter, s
 
 print '#Computing Q, ', datetime.datetime.now()
 
-
 q = get_mutation_matrix(s,k,state_freq,sample_amount,learning_parameter, sigma)
-
 
 ### single run
 
