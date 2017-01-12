@@ -11,7 +11,7 @@ import csv
 
 ##### variables ##########
 s = 10 #amount of states
-sigma = 1
+sigma = 3
 k = 10  # length of observation sequences
 sample_amount = 300 #amount of k-length samples for each production type 
 
@@ -22,8 +22,8 @@ gens = 30 #number of generations per simulation run
 state_freq = np.ones(s) / float(s) #frequency of states s_1,...,s_n 
 ##########################
 
-#f = csv.writer(open('./results/deflation-states%d-sigma%.2f-k%d-samples%d-l%d-g%d.csv' %(s,sigma,k,sample_amount,learning_parameter,gens),'wb')) #file to store mean results
-#f.writerow(["generation","sigma","k","samples","learning"]+['t'+str(x) for x in xrange(s)])
+f = csv.writer(open('./results/deflation-states%d-sigma%.2f-k%d-samples%d-l%d-g%d.csv' %(s,sigma,k,sample_amount,learning_parameter,gens),'wb')) #file to store mean results
+f.writerow(["generation","sigma","k","samples","learning"]+['t'+str(x) for x in xrange(s)])
 
 def normalize(m):
     m = m / m.sum(axis=1)[:, np.newaxis]
@@ -78,9 +78,10 @@ def get_likelihood(states, obs, sigma, state_freqs,k, kind='plain'):
         
     out = np.zeros([len(lh), len(obs)])
     for lhi in xrange(len(lh)):
-        prob_of_not_reporting = sum([state_freqs[x] for x in xrange(lhi)])
+        type_not_reporting_event = sum([state_freqs[x] for x in xrange(lhi)])
         for o in xrange(len(obs)):
-            out[lhi,o] = np.prod([lh[lhi][obs[o][x]] * stats.binom.pmf(k-len(obs[o]),k,prob_of_not_reporting) for x in xrange(len(obs[o])) ])
+            prob_not_reporting_ob = stats.binom.pmf(k-len(obs[o]),k,type_not_reporting_event)
+            out[lhi,o] = np.prod([lh[lhi][obs[o][x]]  for x in xrange(len(obs[o])) ]) * prob_not_reporting_ob
     return out
 
 print '#Starting, ', datetime.datetime.now()
@@ -113,7 +114,7 @@ p[starting_threshold] = 1
 for r in range(gens):
 #    pPrime = p * [np.sum(u[t,] * p)  for t in range(len(typeList))]
 #    pPrime = pPrime / np.sum(pPrime)
-#    f.writerow([str(r),str(sigma),str(k),str(sample_amount),str(learning_parameter)]+[str(x) for x in p])
+    f.writerow([str(r),str(sigma),str(k),str(sample_amount),str(learning_parameter)]+[str(x) for x in p])
     print '### Generation %d ###' %r
     print 'Proportion of %.2f players uses threshold %d' % (p[np.argmax(p)], np.argmax(p))
     print 'Proportion of %.2f players uses threshold %d' % (p[starting_threshold], starting_threshold)

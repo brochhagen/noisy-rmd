@@ -37,4 +37,6 @@ def deflation_over_generations(s,sigma,k,sample_amount,learning_parameter,gens):
 
     plt.show()
 
-deflation_over_generations(10,0.4,10,300,10,30)
+deflation_over_generations(10,0.4,10,300,1,30)
+deflation_over_generations(10,1,10,300,1,30)
+deflation_over_generations(10,3,10,300,1,30)
