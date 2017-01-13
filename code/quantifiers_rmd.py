@@ -14,7 +14,6 @@ import datetime
 import csv
 
 #####
-l4,l5 = np.array( [[0.,1.],[1.,0.]] ), np.array( [[0.,1.],[1.,1.]] )
 
 alpha = 1 # rate to control difference between semantic and pragmatic violations
 cost = 0 # cost for LOT-concept with upper bound
@@ -31,10 +30,14 @@ runs = 50 #number of independent simulation runs
 states = 2 #number of states
 messages = 2 #number of messages
 state_freq = np.ones(states) / float(states) #frequency of states s_1,...,s_n 
+###
+
+def normalize(m):
+    return m / m.sum(axis=1)[:, np.newaxis]
 
 
 print '#Starting, ', datetime.datetime.now()
-
+l4,l5 = np.array( [[0.,1.],[1.,0.]] ), np.array( [[0.,1.],[1.,1.]] )
 t4,t5 =  LiteralPlayer(alpha,lam,l4), LiteralPlayer(alpha,lam,l5)
 t10,t11 =  GriceanPlayer(alpha,lam,l4), GriceanPlayer(alpha,lam,l5)
 
@@ -42,10 +45,6 @@ typeList = [t4,t5,t10,t11]
 
 print '#Computing likelihood, ', datetime.datetime.now()
 likelihoods = np.array([t.sender_matrix for t in typeList])
-
-
-def normalize(m):
-    return m / m.sum(axis=1)[:, np.newaxis]
 
 ## state confusability
 state_confusion_matrix = np.array([[1-epsilon , epsilon ],
@@ -97,7 +96,6 @@ def get_obs(k,states,messages,lhs,state_freq,sample_amount):
         obs.append(produced_obs)
     return obs
 
-
 def get_likelihood(obs, kind = "plain"):
     # allow three kinds of likelihood:
     ## 1. "plain" -> probability that speaker generates m when observing s
@@ -141,16 +139,15 @@ def get_utils():
                      np.sum( np.dot(state_confusion_matrix, typeList[j].sender_matrix) * np.transpose(typeList[i].receiver_matrix))) / 4
     return out
 
-print '#Computing utilities, ', datetime.datetime.now()
+#print '#Computing utilities, ', datetime.datetime.now()
 #u = get_utils()
 #print [np.sum(u[i,:]) for i in xrange(u.shape[1])]
 
 print '#Computing Q, ', datetime.datetime.now()
 q = get_mutation_matrix(k,states,messages,likelihoods,state_freq,sample_amount,lexica_prior,learning_parameter,lh_perturbed)
 
-
-f = csv.writer(open('./results/quantifiers-a%.2f-c%.2f-l%d-k%d-samples%d-learn%.2f-g%d-r%d-epsilon%.2f-delfa%.2f.csv' %(alpha,cost,lam,k,sample_amount, learning_parameter, gens,runs,epsilon,delta),'wb')) #file to store mean results
-f.writerow(["run_ID", "t4_initial","t5_initial","t10_initial","t11_initial","alpha", "prior_cost_c", "lambda", "k", "sample_amount", "learning_parameter", "generations","epsilon","delta","t4_final","t5_final","t10_final","t11_final"])
+#f = csv.writer(open('./results/quantifiers-a%.2f-c%.2f-l%d-k%d-samples%d-learn%.2f-g%d-r%d-epsilon%.2f-delfa%.2f.csv' %(alpha,cost,lam,k,sample_amount, learning_parameter, gens,runs,epsilon,delta),'wb')) #file to store mean results
+#f.writerow(["run_ID", "t4_initial","t5_initial","t10_initial","t11_initial","alpha", "prior_cost_c", "lambda", "k", "sample_amount", "learning_parameter", "generations","epsilon","delta","t4_final","t5_final","t10_final","t11_final"])
 
 for i in xrange(runs):
     p = np.random.dirichlet(np.ones(len(typeList))) # unbiased random starting state
@@ -158,7 +155,7 @@ for i in xrange(runs):
 
     for r in range(gens):
         p = np.dot(p,q) #np.dot(pPrime, q)
-    f.writerow([str(i),str(p_initial[0]), str(p_initial[1]),str(p_initial[2]), str(p_initial[3]), str(alpha), str(cost), str(lam), str(k), str(sample_amount), str(learning_parameter), str(gens), str(epsilon), str(delta), str(p[0]), str(p[1]),str(p[2]),str(p[3])])
+#    f.writerow([str(i),str(p_initial[0]), str(p_initial[1]),str(p_initial[2]), str(p_initial[3]), str(alpha), str(cost), str(lam), str(k), str(sample_amount), str(learning_parameter), str(gens), str(epsilon), str(delta), str(p[0]), str(p[1]),str(p[2]),str(p[3])])
 
 
 
@@ -167,13 +164,9 @@ print 'Parameters: alpha = %d, c = %.2f, lambda = %d, k = %d, samples per type =
 print 'end state:' 
 print p
 
-
-
 sys.exit()
 p = np.random.dirichlet(np.ones(len(typeList))) # unbiased random starting state
 for r in range(gens):
-#    pPrime = p * [np.sum(u[t,] * p)  for t in range(len(typeList))]
-#    pPrime = pPrime / np.sum(pPrime)
     p = np.dot(p,q) #np.dot(pPrime, q)
 
 

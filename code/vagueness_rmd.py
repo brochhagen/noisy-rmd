@@ -1,30 +1,25 @@
 import numpy as np
-#np.set_printoptions(threshold=np.nan)
 from random import sample
 from itertools import product, combinations_with_replacement
 from scipy import stats
 import sys 
 import datetime
 import csv
-import pdb 
-
-# observations are currently generated without noise
 
 ##### variables ##########
-s = 10 #amount of states
-sigma = 0.4
-k = 10  # length of observation sequences
-sample_amount = 1000 #amount of k-length samples for each production type 
-
+s = 100 #amount of states
+sigma = 5
+k = 30  # length of observation sequences
+sample_amount = 100 #amount of k-length samples for each production type 
 
 learning_parameter = 1 #prob-matching = 1, increments approach MAP
-gens = 10 #number of generations per simulation run
+gens = 50 #number of generations per simulation run
 #runs = 50 #number of independent simulation runs
 state_freq = np.ones(s) / float(s) #frequency of states s_1,...,s_n 
 ##########################
 
-#f = csv.writer(open('./results/vagueness-states%d-sigma%.2f-k%d-samples%d-l%d-g%d.csv' %(s,sigma,k,sample_amount,learning_parameter,gens),'wb')) #file to store mean results
-#f.writerow(["generation","sigma","k","samples","learning"]+['t'+str(x) for x in xrange(s)])
+f = csv.writer(open('./results/vagueness-states%d-sigma%.2f-k%d-samples%d-l%d-g%d.csv' %(s,sigma,k,sample_amount,learning_parameter,gens),'wb')) #file to store mean results
+f.writerow(["generation","sigma","k","samples","learning"]+['t'+str(x) for x in xrange(s)])
 
 def normalize(m):
     m = m / m.sum(axis=1)[:, np.newaxis]
@@ -40,14 +35,14 @@ def get_confusability_matrix(states,sigma):
             out[i,j] = stats.norm(i, sigma).pdf(j)
     return out
 
-def get_lh(states): #send m_1 if state => theta, send m_2 if state < theta
+def get_lh(states): #send m_1 if state >= theta, send m_2 if state < theta
     out = []
     lh_m1 = [np.concatenate((np.zeros(x),np.ones(states-x))) for x in xrange(states)]
     lh_m2 = [np.concatenate((np.ones(x),np.zeros(states-x))) for x in xrange(states)]
     for i in xrange(len(lh_m1)):
         out.append(np.hstack((lh_m1[i][:,np.newaxis],lh_m2[i][:,np.newaxis])))
     return out
-   
+
 def get_obs(states,state_freqs,sample_amount,k): #returns (non-noisy) sample_amount tuples of k-utterances per type
     likelihoods = get_lh(states)
     out = []
@@ -60,15 +55,11 @@ def get_obs(states,state_freqs,sample_amount,k): #returns (non-noisy) sample_amo
         for j in xrange(sample_amount): #amount of k-length samples
             parent_production = np.zeros(sts * msgs) #vector to store what parent produced in state
             sampled_obs = [np.random.choice(xrange(len(production_vector)),p=production_vector) for _ in xrange(k)] #idx of 0 is s_0,m_0, idx of 1 is s_0,m_1, ...
-            
-
             for n in xrange(len(sampled_obs)):
                 parent_production[sampled_obs[n]] += 1 
             out_parent.append(parent_production)
         out.append(out_parent)
     return out
-
-
 
 def get_lh_perturbed(states,sigma):
     likelihoods = get_lh(states) #plain production
@@ -89,7 +80,6 @@ def get_lh_perturbed(states,sigma):
     
     return lh_perturbed
 
-
 def get_likelihood(states, obs, sigma, kind='plain'):
     if kind == 'perturbed':
         lh = get_lh_perturbed(states,sigma)
@@ -101,6 +91,7 @@ def get_likelihood(states, obs, sigma, kind='plain'):
         for o in xrange(len(obs)):
             flat_lhi = lh[lhi].flatten()
             out[lhi,o] = np.prod([flat_lhi[x]**obs[o][x] for x in xrange(len(obs[o]))])
+
     return out
 
 print '#Starting, ', datetime.datetime.now()
@@ -111,7 +102,6 @@ def get_mutation_matrix(states,k,state_freq,sample_amount,learning_parameter, si
     out = np.zeros([states,states]) #matrix to store Q
 
     for parent_type in xrange(states):
-        print parent_type
         type_obs = obs[parent_type] #Parent production data
         lhs_perturbed = get_likelihood(states, type_obs, sigma, kind = "perturbed") #P(learner observes data|t_i) for all types;
         lhs = get_likelihood(states, type_obs, sigma, kind = "plain") #P(parent data|t_i) for all types; without all noise
@@ -126,50 +116,18 @@ q = get_mutation_matrix(s,k,state_freq,sample_amount,learning_parameter, sigma)
 
 
 ### single run
-
 #p = np.random.dirichlet(np.ones(s)) # unbiased random starting state
 p = np.zeros(s)
-starting_threshold = 6
+starting_threshold = 49
 p[starting_threshold] = 1 
 
 for r in range(gens):
-#    pPrime = p * [np.sum(u[t,] * p)  for t in range(len(typeList))]
-#    pPrime = pPrime / np.sum(pPrime)
-#    f.writerow([str(r),str(sigma),str(k),str(sample_amount),str(learning_parameter)]+[str(x) for x in p])
+    f.writerow([str(r),str(sigma),str(k),str(sample_amount),str(learning_parameter)]+[str(x) for x in p])
     print '### Generation %d ###' %r
     print 'Proportion of %.2f players uses threshold %d' % (p[np.argmax(p)], np.argmax(p))
     print 'Proportion of %.2f players uses threshold %d' % (p[starting_threshold], starting_threshold)
     p = np.dot(p, q)
 
-
-
 print '###Overview of results###', datetime.datetime.now()
 print 'Parameters: sigma = %.2f, k = %d, sample_amount = %d, learning parameter = %d, gens = %d' % (sigma, k, sample_amount, learning_parameter, gens)
 print 'incumbent: ', np.argmax(p), 'proportion: ', p[np.argmax(p)]
-sys.exit()
-
-######### snippets for data generated for all types, not by parent_type
-#def get_likelihood(states, obs, sigma, kind='plain'):
-#    if kind == 'perturbed':
-#        lh = get_lh_perturbed(states,sigma)
-#    elif kind == 'plain':
-#        lh = get_lh(states)
-#        
-#    out = np.zeros([len(lh), len(obs)])
-#    for lhi in xrange(len(lh)):
-#        for o in xrange(len(obs)):
-#            out[lhi,o] = np.prod([lh[lhi][obs[o][x]] for x in xrange(len(obs[o]))])
-#    return out
-
-#def get_mutation_matrix(states,k,state_freqs,sample_amount,learning_parameter, sigma):
-#    obs = [[np.random.choice(xrange(states),p=state_freqs) for _ in xrange(k)] for _ in xrange(sample_amount)] #sample of possible observations
-#
-#    lhs = get_likelihood(states,obs, sigma, kind='plain')
-#    
-#    lhs_perturbed = get_likelihood(states,obs, sigma, kind='perturbed')
-#    
-#    parametrized_post = normalize(normalize(lhs)**learning_parameter)
-#    out = np.dot(np.transpose(lhs_perturbed),parametrized_post)
-#
-#    return normalize(np.dot(np.transpose(lhs_perturbed),parametrized_post))#normalize(out)
-

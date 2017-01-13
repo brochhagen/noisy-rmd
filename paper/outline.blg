@@ -1,46 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: outline.aux
 The style file: unsrtnat.bst
 Database file #1: ./noise-bib.bib
-You've used 10 entries,
+You've used 11 entries,
             2481 wiz_defined-function locations,
-            627 strings with 6232 characters,
-and the built_in function-call counts, 3880 in all, are:
-= -- 362
-> -- 148
-< -- 9
-+ -- 61
-- -- 41
-* -- 281
-:= -- 610
-add.period$ -- 37
-call.type$ -- 10
-change.case$ -- 20
-chr.to.int$ -- 10
-cite$ -- 10
-duplicate$ -- 201
-empty$ -- 367
-format.name$ -- 61
-if$ -- 832
+            635 strings with 6607 characters,
+and the built_in function-call counts, 4459 in all, are:
+= -- 421
+> -- 169
+< -- 10
++ -- 69
+- -- 47
+* -- 320
+:= -- 688
+add.period$ -- 41
+call.type$ -- 11
+change.case$ -- 22
+chr.to.int$ -- 11
+cite$ -- 11
+duplicate$ -- 234
+empty$ -- 419
+format.name$ -- 68
+if$ -- 969
 int.to.chr$ -- 1
-int.to.str$ -- 11
-missing$ -- 10
-newline$ -- 64
-num.names$ -- 32
-pop$ -- 73
+int.to.str$ -- 12
+missing$ -- 11
+newline$ -- 69
+num.names$ -- 35
+pop$ -- 84
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 11
 quote$ -- 0
-skip$ -- 125
+skip$ -- 149
 stack$ -- 0
-substring$ -- 208
-swap$ -- 29
-text.length$ -- 1
+substring$ -- 250
+swap$ -- 42
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 70
+type$ -- 77
 warning$ -- 0
-while$ -- 37
+while$ -- 42
 width$ -- 0
-write$ -- 148
+write$ -- 163

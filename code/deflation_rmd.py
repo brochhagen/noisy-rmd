@@ -1,5 +1,4 @@
 import numpy as np
-#np.set_printoptions(threshold=np.nan)
 from random import sample
 from itertools import product, combinations_with_replacement
 from scipy import stats
@@ -7,19 +6,15 @@ import sys
 import datetime
 import csv
 
-# observations are currently generated without noise
-
 ##### variables ##########
-s = 10 #amount of states
-sigma = 3
-k = 10  # length of observation sequences
+s = 100 #amount of states
+sigma = 2
+k = 30  # length of observation sequences
 sample_amount = 300 #amount of k-length samples for each production type 
-
-
 learning_parameter = 1 #prob-matching = 1, increments approach MAP
-gens = 30 #number of generations per simulation run
+gens = 50 #number of generations per simulation run
 #runs = 50 #number of independent simulation runs
-state_freq = np.ones(s) / float(s) #frequency of states s_1,...,s_n 
+state_freq = np.ones(s) / float(s) #frequency of states s_0,...,s_n-1
 ##########################
 
 f = csv.writer(open('./results/deflation-states%d-sigma%.2f-k%d-samples%d-l%d-g%d.csv' %(s,sigma,k,sample_amount,learning_parameter,gens),'wb')) #file to store mean results
@@ -29,7 +24,7 @@ def normalize(m):
     m = m / m.sum(axis=1)[:, np.newaxis]
     return m
 
-def m_max(m): #aux function for convenience
+def m_max(m): #auxiliary function for convenience
     return np.unravel_index(m.argmax(), m.shape)
 
 def get_obs(states,state_freqs,sample_amount,k): #returns (non-noisy) sample_amount tuples of k-utterances per type
@@ -68,8 +63,6 @@ def get_lh_perturbed(states,sigma):
            lh_perturbed[t][sLearner] = np.sum([ DoublePerception[sLearner,sTeacher] * likelihoods[t][sTeacher] for sTeacher in xrange(len(likelihoods[t]))])
     return lh_perturbed
 
-l_p = get_lh_perturbed(s,1)
-
 def get_likelihood(states, obs, sigma, state_freqs,k, kind='plain'):
     if kind == 'perturbed':
         lh = get_lh_perturbed(states,sigma)
@@ -104,51 +97,19 @@ print '#Computing Q, ', datetime.datetime.now()
 
 q = get_mutation_matrix(s,k,state_freq,sample_amount,learning_parameter, sigma)
 
-### single run
-
+####### single run ######
 #p = np.random.dirichlet(np.ones(s)) # unbiased random starting state
 p = np.zeros(s)
-starting_threshold = 6
+starting_threshold = 80
 p[starting_threshold] = 1 
 
 for r in range(gens):
-#    pPrime = p * [np.sum(u[t,] * p)  for t in range(len(typeList))]
-#    pPrime = pPrime / np.sum(pPrime)
     f.writerow([str(r),str(sigma),str(k),str(sample_amount),str(learning_parameter)]+[str(x) for x in p])
     print '### Generation %d ###' %r
     print 'Proportion of %.2f players uses threshold %d' % (p[np.argmax(p)], np.argmax(p))
     print 'Proportion of %.2f players uses threshold %d' % (p[starting_threshold], starting_threshold)
     p = np.dot(p, q)
 
-
-
 print '###Overview of results###', datetime.datetime.now()
 print 'Parameters: sigma = %.2f, k = %d, sample_amount = %d, learning parameter = %d, gens = %d' % (sigma, k, sample_amount, learning_parameter, gens)
 print 'incumbent: ', np.argmax(p), 'proportion: ', p[np.argmax(p)]
-sys.exit()
-
-######### snippets for data generated for all types, not by parent_type
-#def get_likelihood(states, obs, sigma, kind='plain'):
-#    if kind == 'perturbed':
-#        lh = get_lh_perturbed(states,sigma)
-#    elif kind == 'plain':
-#        lh = get_lh(states)
-#        
-#    out = np.zeros([len(lh), len(obs)])
-#    for lhi in xrange(len(lh)):
-#        for o in xrange(len(obs)):
-#            out[lhi,o] = np.prod([lh[lhi][obs[o][x]] for x in xrange(len(obs[o]))])
-#    return out
-
-#def get_mutation_matrix(states,k,state_freqs,sample_amount,learning_parameter, sigma):
-#    obs = [[np.random.choice(xrange(states),p=state_freqs) for _ in xrange(k)] for _ in xrange(sample_amount)] #sample of possible observations
-#
-#    lhs = get_likelihood(states,obs, sigma, kind='plain')
-#    
-#    lhs_perturbed = get_likelihood(states,obs, sigma, kind='perturbed')
-#    
-#    parametrized_post = normalize(normalize(lhs)**learning_parameter)
-#    out = np.dot(np.transpose(lhs_perturbed),parametrized_post)
-#
-#    return normalize(np.dot(np.transpose(lhs_perturbed),parametrized_post))#normalize(out)
-

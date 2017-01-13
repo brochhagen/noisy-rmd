@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{11}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -66,5 +66,14 @@ Cailin O'Connor.
 Michael Franke and Jose~Pedro Correia.
 \newblock Vagueness and imprecise imitation in signalling games.
 \newblock \emph{British Journal for the Philosophy of Science}, to appear.
+
+\bibitem[Brochhagen et~al.(2016)Brochhagen, Franke, and van
+  Rooij]{brochhagen+etal:2016:CogSci}
+Thomas Brochhagen, Michael Franke, and Robert van Rooij.
+\newblock Learning biases may prevent lexicalization of pragmatic inferences: a
+  case study combining iterated (bayesian) learning and functional selection.
+\newblock In \emph{Proceedings of the 38th Annual Conference of the Cognitive
+  Science Society}, pages 2081--2086, Austin, TX, 2016. Cognitive Science
+  Society.
 
 \end{thebibliography}
