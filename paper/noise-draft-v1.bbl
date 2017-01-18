@@ -1,0 +1,314 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Brochhagen%
+, Franke%
+\BCBL {}\ \BBA {} van Rooij%
+}{%
+Brochhagen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+brochhagen+etal:2016:CogSci}
+\APACinsertmetastar {%
+brochhagen+etal:2016:CogSci}%
+\begin{APACrefauthors}%
+Brochhagen, T.%
+, Franke, M.%
+\BCBL {}\ \BBA {} van Rooij, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning biases may prevent lexicalization of pragmatic
+  inferences: a case study combining iterated (Bayesian) learning and
+  functional selection} {Learning biases may prevent lexicalization of
+  pragmatic inferences: a case study combining iterated (bayesian) learning and
+  functional selection}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 38th Annual Conference of the
+  Cognitive Science Society} {Proceedings of the 38th annual conference of the
+  cognitive science society}\ (\BPGS\ 2081--2086).
+\newblock
+\APACaddressPublisher{Austin, TX}{Cognitive Science Society}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Clark%
+}{%
+Clark%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+clark:2009}
+\APACinsertmetastar {%
+clark:2009}%
+\begin{APACrefauthors}%
+Clark, E\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Lexical meaning} {Lexical meaning}.{\BBCQ}
+\newblock
+\BIn{} E\BPBI L.~Bavin\ (\BED), \APACrefbtitle {The Cambridge Handbook of Child
+  Language} {The cambridge handbook of child language}\ (\BPGS\ 283--300).
+\newblock
+\APACaddressPublisher{}{Cambridge University Press}.
+\newblock
+\begin{APACrefDOI} \doi{10.1017/cbo9780511576164.016} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Franke%
+\ \BBA {} Correia%
+}{%
+Franke%
+\ \BBA {} Correia%
+}{%
+{\protect \APACyear {to appear}}%
+}]{%
+franke+correia:toappear}
+\APACinsertmetastar {%
+franke+correia:toappear}%
+\begin{APACrefauthors}%
+Franke, M.%
+\BCBT {}\ \BBA {} Correia, J\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{to appear}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Vagueness and imprecise imitation in signalling games}
+  {Vagueness and imprecise imitation in signalling games}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{British Journal for the Philosophy of Science}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Griffiths%
+\ \BBA {} Kalish%
+}{%
+Griffiths%
+\ \BBA {} Kalish%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+griffiths+kalish:2007}
+\APACinsertmetastar {%
+griffiths+kalish:2007}%
+\begin{APACrefauthors}%
+Griffiths, T\BPBI L.%
+\BCBT {}\ \BBA {} Kalish, M\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Language Evolution by Iterated Learning With Bayesian
+  Agents} {Language evolution by iterated learning with bayesian
+  agents}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognitive Science}{31}{3}{441--480}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Hudson Kam}%
+\ \BBA {} Newport%
+}{%
+{Hudson Kam}%
+\ \BBA {} Newport%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+hudson+etal:2005}
+\APACinsertmetastar {%
+hudson+etal:2005}%
+\begin{APACrefauthors}%
+{Hudson Kam}, C\BPBI L.%
+\BCBT {}\ \BBA {} Newport, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Regularizing Unpredictable Variation: The Roles of Adult
+  and Child Learners in Language Formation and Change} {Regularizing
+  unpredictable variation: The roles of adult and child learners in language
+  formation and change}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Language Learning and Development}{1}{2}{151--195}.
+\newblock
+\begin{APACrefDOI} \doi{10.1207/s15473341lld0102\_3} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kirby%
+, Griffiths%
+\BCBL {}\ \BBA {} Smith%
+}{%
+Kirby%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+kirby+etal:2014}
+\APACinsertmetastar {%
+kirby+etal:2014}%
+\begin{APACrefauthors}%
+Kirby, S.%
+, Griffiths, T.%
+\BCBL {}\ \BBA {} Smith, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Iterated learning and the evolution of language}
+  {Iterated learning and the evolution of language}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Current Opinion in Neurobiology}{28}{}{108--114}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.conb.2014.07.014} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kirby%
+, Tamariz%
+, Cornish%
+\BCBL {}\ \BBA {} Smith%
+}{%
+Kirby%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+kirby+etal:2015}
+\APACinsertmetastar {%
+kirby+etal:2015}%
+\begin{APACrefauthors}%
+Kirby, S.%
+, Tamariz, M.%
+, Cornish, H.%
+\BCBL {}\ \BBA {} Smith, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Compression and communication in the cultural evolution
+  of linguistic structure} {Compression and communication in the cultural
+  evolution of linguistic structure}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognition}{141}{}{87--102}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Merriman%
+\ \BBA {} Bowman%
+}{%
+Merriman%
+\ \BBA {} Bowman%
+}{%
+{\protect \APACyear {1989}}%
+}]{%
+merriman+bowman:1989}
+\APACinsertmetastar {%
+merriman+bowman:1989}%
+\begin{APACrefauthors}%
+Merriman, W\BPBI E.%
+\BCBT {}\ \BBA {} Bowman, L\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1989}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Mutual Exclusivity Bias in Children's Word Learning}
+  {The mutual exclusivity bias in children's word learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Monographs of the Society for Research in Child
+  Development}{54}{3/4}{i-129}.
+\newblock
+\begin{APACrefDOI} \doi{10.2307/1166130} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+O'Connor%
+}{%
+O'Connor%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+oconnor:2015}
+\APACinsertmetastar {%
+oconnor:2015}%
+\begin{APACrefauthors}%
+O'Connor, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Evolving to Generalize: Trading Precision for Speed}
+  {Evolving to generalize: Trading precision for speed}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The British Journal for the Philosophy of
+  Science}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1093/bjps/axv038} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Smith%
+}{%
+Smith%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+smith:2011}
+\APACinsertmetastar {%
+smith:2011}%
+\begin{APACrefauthors}%
+Smith, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning Bias, Cultural Evolution of Language, and the
+  Biological Evolution of the Language Faculty} {Learning bias, cultural
+  evolution of language, and the biological evolution of the language
+  faculty}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Human Biology}{83}{2}{261--278}.
+\newblock
+\begin{APACrefDOI} \doi{10.3378/027.083.0207} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tamariz%
+\ \BBA {} Kirby%
+}{%
+Tamariz%
+\ \BBA {} Kirby%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+tamariz+kirby:2016}
+\APACinsertmetastar {%
+tamariz+kirby:2016}%
+\begin{APACrefauthors}%
+Tamariz, M.%
+\BCBT {}\ \BBA {} Kirby, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The cultural evolution of language} {The cultural
+  evolution of language}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Current Opinion in Psychology}{8}{}{37--43}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
