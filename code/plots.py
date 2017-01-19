@@ -42,7 +42,7 @@ def deflation_over_generations(s,sigma,k,sample_amount,learning_parameter,gens):
     plt.show()
 
 #deflation_over_generations(100,0.4,30,300,1,50)
-deflation_over_generations(100,2,30,300,1,50)
+#deflation_over_generations(100,2,30,300,1,50)
 
 
 def vagueness_single_gen(s,sigma,k,sample_amount,learning_parameter,gens):
@@ -74,60 +74,32 @@ def vagueness_single_gen(s,sigma,k,sample_amount,learning_parameter,gens):
 
 ##vagueness_single_gen(100,0.4,20,100,1,50)
 
+def heatmap_e_to_delta():
+    print 'Loading data'
+    df = pd.read_csv('./results/quantifiers_mean_results.csv')
+    
+    k = 5
+    l = 1
+    
+    final_group = df.loc[:,('k','learning_parameter','epsilon','delta','t11_final')]
+    
+    group = final_group.loc[final_group['k'] == k]
+    group = group.loc[group['learning_parameter'] == l]
+    
+    t11_rel = group.loc[:,('epsilon', 'delta','t11_final')] #ignore other columns, given that they are fixed
+    t11_rec = t11_rel.pivot('epsilon','delta','t11_final') #reshape to have a prior_cost_c by learning_parameter table
+    
+    sns.set(font_scale=1.2)
+    
+    vacio = ["" for _ in xrange(9)]
+    yticks = [0] + vacio + [0.1] + vacio + [0.2] + vacio + [0.3] + vacio + [0.4] + vacio + [0.5] + vacio + [0.6] + vacio + [0.7] + vacio + [0.8] + vacio + [0.9] + ["" for _ in xrange(8)] + [0.99]
+    sns.set(font_scale=1.4)
+    ax = sns.heatmap(t11_rec,yticklabels=yticks,xticklabels=yticks)#,yticklabels=yticks)#, yticklabels=yticks) 
+    ax.set(ylabel='epsilon',xlabel='delta') #, title=r'Pragmatic L-lack ($\alpha = %d, \lambda = %d$, samples = %d, k = %d)' %(a,lam,sample,k))
+    plt.yticks(rotation=0)
+   # ax.tick_params(labelsize=15)
+    ax.invert_yaxis()
 
+    plt.show()
 
-#def heatmap_quantifiers():
-#    print 'Loading data'
-#    df = pd.read_csv('./mean-1000games-c-to-l.csv')
-#    
-#    a = 1
-#    k = 5
-#    lam = 30
-#    sample = 10
-#    
-#    final_group = df.loc[:,('alpha','prior_cost_c','lambda','k','sample_amount','learning_parameter','t11_final')]
-#    
-#    group = final_group.loc[final_group['alpha'] == a]
-#    group = group.loc[group['k'] == k]
-#    group = group.loc[group['lambda'] == lam]
-#    group = group.loc[group['sample_amount'] == sample]
-#    
-#    t11_rel = group.loc[:,('prior_cost_c', 'learning_parameter','t11_final')] #ignore other columns, given that they are fixed
-#    t11_rec = t11_rel.pivot('prior_cost_c','learning_parameter','t11_final') #reshape to have a prior_cost_c by learning_parameter table
-#    
-#    sns.set(font_scale=1.2)
-#    
-#    vacio = ["" for _ in xrange(9)]
-#    yticks = [0] + vacio + [0.1] + vacio + [0.2] + vacio + [0.3] + vacio + [0.4] + vacio + [0.5] + vacio + [0.6] + vacio + [0.7] + vacio + [0.8] + vacio + [0.9] + ["" for _ in xrange(8)] + [0.99]
-#    ax = sns.heatmap(t11_rec,yticklabels=yticks)#, yticklabels=yticks) 
-#    ax.set(ylabel='Learning bias c',xlabel='Sampling to MAP parameter l', title=r'Pragmatic L-lack ($\alpha = %d, \lambda = %d$, samples = %d, k = %d)' %(a,lam,sample,k))
-#    plt.yticks(rotation=0)
-#    
-#    ax.invert_yaxis()
-#    plt.show()
-#
-#def dev_over_gens_quantifiers():
-#    df = pd.read_csv('./mean-1000games-c-to-l.csv')
-#    a = 1
-#    k = 5
-#    lam = 30
-#    sample = 10
-#    learn = 3
-#    
-#    final_group = df.loc[:,('alpha','prior_cost_c','lambda','k','sample_amount','learning_parameter','t9_final','t10_final','t11_final')]
-#    group = final_group.loc[final_group['alpha'] == a]
-#    group = group.loc[group['k'] == k]
-#    group = group.loc[group['lambda'] == lam]
-#    group = group.loc[group['sample_amount'] == sample]
-#    group = group.loc[group['learning_parameter'] == learn]
-#    
-#    t_final = group.groupby(['prior_cost_c'])
-#    t_final = t_final[['t9_final','t10_final','t11_final']].agg(np.average) 
-#    
-#    ax = t_final.plot(title=r'($\alpha = %d, \lambda = %d, k = %d$, samples = %d, l =%d)' %(a,lam,k,sample,learn))
-#    ax.set(ylabel="Proportion in population",xlabel='Learning bias c')
-#    plt.legend(["prag. L-taut","prag. L-bound","prag. L-lack"], loc='best')
-#    
-#    plt.show() 
-#
-#
+heatmap_e_to_delta()
