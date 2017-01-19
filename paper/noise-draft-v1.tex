@@ -71,15 +71,15 @@
 \maketitle
 
 \begin{abstract}
-Language change favors features that are passed on with high fidelity from one language user to the next. The outcomes of this process are often argued to stem from cognitive biases that influence a learner's inductive task. We complement this view by showing how such effects on language change can also arise without assuming any cognitive biases but simply as an epiphenomenon of systematic disturbances stemming from environmental factors. To this end, we discuss three case studies in which iterated learning under noisy perception can give rise to (i) vagueness, (ii) meaning deflation, and (iii) a lack of upper-bounds in weak scalar alternatives. We argue these results to underpin the importance of (either cognitive or extraneous) transmission perturbations in the cultural evolution of language and bring attention to the often overlooked possibility that channel noise can mimic effects of inductive biases.
+Over time, language favors features that can be passed on with high fidelity from one language user to the next. The outcomes of this process are often argued to by influenced by cognitive biases that influence a learner's inductive task. Under this view, cognitive biases are therefore important determinants of linguistic structure. We complement this view by showing how such effects can also arise without assuming any biases but simply as an epiphenomenon of systematic disturbances stemming from environmental factors. To this end, we discuss three case studies in which iterated learning under noisy perception can give rise to (i) vagueness, (ii) meaning deflation, and (iii) a lack of upper-bounds in weak scalar alternatives. We argue these results to underpin the importance of (either cognitive or extraneous) transmission perturbations in the cultural evolution of language and bring attention to the often overlooked possibility that channel noise can mimic effects of inductive biases.
 
 \textbf{Keywords:} 
 noise; biases; iterated learning;   
 \end{abstract}
 \section{Introduction}
-Language is shaped by its use and transmission across generations. Linguistic properties therefore need not necessarily arise and stabilize in a language solely due to functional pressure but may also be influenced and selected for by a pressure for learnability. The effects that such iterated learning has on language can be viewed as arising from a combination of general learning mechanisms and inductive cognitive biases (e.g. \citealt{griffiths+kalish:2007,kirby+etal:2014,tamariz+kirby:2016}). Proposals of biases that shape language acquisition abound. Some prominent examples are mutual exclusivity \citep{merriman+bowman:1989,clark:2009}, simplicity \citep{kirby+etal:2015}, regularization \citep{hudson+etal:2005}, and generalization \citep{smith:2011,oconnor:2015}.\footnote{Depending on their formulation and the domain(s) they are proposed to apply to, biases may also interact. For instance, a domain-independent bias for simplicity may entail regularization but stand in conflict with mutual exclusivity.} 
+Language is shaped by its use and transmission across generations. Linguistic properties therefore need not necessarily arise and stabilize solely due to functional pressure but may also be influenced and selected for by a pressure for learnability. The effects that such iterated learning has on language can be viewed as arising from a combination of general learning mechanisms and inductive cognitive biases (e.g. \citealt{griffiths+kalish:2007,kirby+etal:2014,tamariz+kirby:2016}). Proposals of biases that shape language acquisition abound. Some prominent examples are mutual exclusivity \citep{merriman+bowman:1989,clark:2009}, simplicity \citep{kirby+etal:2015}, regularization \citep{hudson+etal:2005}, and generalization \citep{smith:2011,oconnor:2015}.\footnote{Depending on their formulation and the domain(s) they are proposed to apply to, biases may also interact. For instance, a domain-independent bias for simplicity may entail regularization but stand in conflict with mutual exclusivity.} 
 
-In the following we show how environmental factors can produce evolutionary outcomes that look as if such cognitive learning biases are present even if they are not. In doing so, we underline the pivotal role of systematic transmission perturbations of linguistic knowledge in language change while showing that such perturbations may stem from other sources, e.g., from learners' noisy perception. This result highlights the frequently overlooked possibility that channel noise in evolutionary replication can mimic effects of inductive biases.
+In the following we show how environmental factors can produce evolutionary outcomes that look as if such cognitive learning biases are present even if they are not. In doing so, we underline the pivotal role of systematic transmission perturbations of linguistic knowledge in language change while showing that such perturbations may stem from other sources, e.g., from learners' noisy perception. \tb{Now mention case studies}
 
 
 
@@ -170,7 +170,16 @@ In words, it may be the case that learner and/or teacher do not perceive the act
 \end{itemize}
 
 \subsection{Quantifiers}
-\paragraph{Main result.} Noisy perception of states can mimic cognitive biases. In this case, a bias towards simplicity (no upper-bounds) as analyzed in \citet{brochhagen+etal:2016:CogSci}. Pragmatic inferences stabilize in population as byproduct of noise. \tb{Subfig(i) would show mean development of population over generations for all 4 types, Subfig(ii) would show heatmap of proportion of Gricean $L_5$ with x-axis $\epsilon$ and y-axis $\delta$}
+\paragraph{Main result.} Noisy perception of states can mimic cognitive biases. In this case, a bias towards simplicity (no upper-bounds) as analyzed in \citet{brochhagen+etal:2016:CogSci}. Pragmatic inferences stabilize in population as byproduct of noise, as shown in Figure \ref{fig:quant}. Little changes for small increases of $k$ (10 or 15) or $l$ (e.g. 10 instead of posterior sampling).
+
+
+\begin{figure}[ht]
+\centering
+    \includegraphics[scale=0.5]{../code/plots/quantifiers-posterior-sampling-k5.png}
+  \caption{Influence of noise-parameters on the mean proportion of Gricean players with a lexicon lacking an upper-bound after $20$ generations with $k = 5, \lambda = 20, \alpha = 1$ and $10$ sampled production sequences per parent (posterior sampling).}
+  \label{fig:quant}
+\end{figure}
+%
 
 \begin{itemize}
   \item $S = \{\ssome, \sall\}$
