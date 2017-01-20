@@ -35,6 +35,34 @@ Brochhagen, T.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Chater%
+\ \BBA {} Vit{\'{a}}nyi%
+}{%
+Chater%
+\ \BBA {} Vit{\'{a}}nyi%
+}{%
+{\protect \APACyear {2003}}%
+}]{%
+chater+vitanyi:2003}
+\APACinsertmetastar {%
+chater+vitanyi:2003}%
+\begin{APACrefauthors}%
+Chater, N.%
+\BCBT {}\ \BBA {} Vit{\'{a}}nyi, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Simplicity: a unifying principle in cognitive science?}
+  {Simplicity: a unifying principle in cognitive science?}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Trends in Cognitive Sciences}{7}{1}{19--22}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/s1364-6613(02)00005-0} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Clark%
 }{%
 Clark%
@@ -59,6 +87,30 @@ Clark, E\BPBI V.%
 \APACaddressPublisher{}{Cambridge University Press}.
 \newblock
 \begin{APACrefDOI} \doi{10.1017/cbo9780511576164.016} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Feldman%
+}{%
+Feldman%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+feldman:2000}
+\APACinsertmetastar {%
+feldman:2000}%
+\begin{APACrefauthors}%
+Feldman, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Minimization of Boolean complexity in human concept
+  learning} {Minimization of boolean complexity in human concept
+  learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature}{407}{6804}{630--633}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -142,6 +194,36 @@ hudson+etal:2005}%
 \APACjournalVolNumPages{Language Learning and Development}{1}{2}{151--195}.
 \newblock
 \begin{APACrefDOI} \doi{10.1207/s15473341lld0102\_3} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kirby%
+, Dowman%
+\BCBL {}\ \BBA {} Griffiths%
+}{%
+Kirby%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+}]{%
+kirby+etal:2007}
+\APACinsertmetastar {%
+kirby+etal:2007}%
+\begin{APACrefauthors}%
+Kirby, S.%
+, Dowman, M.%
+\BCBL {}\ \BBA {} Griffiths, T\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Innateness and culture in the evolution of language}
+  {Innateness and culture in the evolution of language}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Proceedings of the National Academy of
+  Sciences}{104}{12}{5241--5245}.
+\newblock
+\begin{APACrefDOI} \doi{10.1073/pnas.0608222104} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

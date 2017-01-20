@@ -57,7 +57,7 @@
 
 %\citeA{bibkeyword} cites only year
 
-\title{Transmission perturbations in the cultural evolution of language}
+\title{Systematic transmission perturbations in the cultural evolution of language}
  
 \author{{\large \bf Name Surname (mail@mail.com)} \\
   Department, street \& number \\
@@ -71,26 +71,54 @@
 \maketitle
 
 \begin{abstract}
-Over time, language favors features that can be passed on with high fidelity from one language user to the next. The outcomes of this process are often argued to by influenced by cognitive biases that influence a learner's inductive task. Under this view, cognitive biases are therefore important determinants of linguistic structure. We complement this view by showing how such effects can also arise without assuming any biases but simply as an epiphenomenon of systematic disturbances stemming from environmental factors. To this end, we discuss three case studies in which iterated learning under noisy perception can give rise to (i) vagueness, (ii) meaning deflation, and (iii) a lack of upper-bounds in weak scalar alternatives. We argue these results to underpin the importance of (either cognitive or extraneous) transmission perturbations in the cultural evolution of language and bring attention to the often overlooked possibility that channel noise can mimic effects of inductive biases.
+Over time, languages favors linguistic features that can be passed on with high fidelity from one language user to the next. The outcomes of this process are often argued to involve cognitive biases that influence a learner's inductive task. Such learning biases thereby serve as central devices to understand and predict linguistic structure. We complement this view by showing how such effects can also arise without assuming any biases but simply as an epiphenomenon of systematic disturbances stemming from environmental factors. To this end, we investigate the effects of iterated learning under noisy perception in three case studies on (i) vagueness, (ii) meaning deflation, and (iii) a lack of upper-bounds in weak scalar alternatives. We argue these technical results to underpin the importance of, either cognitive or extraneous, transmission perturbations in the cultural evolution of language and bring attention to the often overlooked possibility that channel noise can mimic effects of inductive biases.
 
 \textbf{Keywords:} 
-noise; biases; iterated learning;   
+noise; cognitive biases; iterated learning; cultural evolution;  
 \end{abstract}
 \section{Introduction}
-Language is shaped by its use and transmission across generations. Linguistic properties therefore need not necessarily arise and stabilize solely due to functional pressure but may also be influenced and selected for by a pressure for learnability. The effects that such iterated learning has on language can be viewed as arising from a combination of general learning mechanisms and inductive cognitive biases (e.g. \citealt{griffiths+kalish:2007,kirby+etal:2014,tamariz+kirby:2016}). Proposals of biases that shape language acquisition abound. Some prominent examples are mutual exclusivity \citep{merriman+bowman:1989,clark:2009}, simplicity \citep{kirby+etal:2015}, regularization \citep{hudson+etal:2005}, and generalization \citep{smith:2011,oconnor:2015}.\footnote{Depending on their formulation and the domain(s) they are proposed to apply to, biases may also interact. For instance, a domain-independent bias for simplicity may entail regularization but stand in conflict with mutual exclusivity.} 
+Language is shaped by its use and transmission across generations. Linguistic properties therefore need not necessarily arise and stabilize solely due to functional pressure but may also be influenced and selected for by a pressure for learnability. The effects that such iterated learning has on language can be viewed as arising from a combination of general learning mechanisms and inductive cognitive biases (e.g. \citealt{griffiths+kalish:2007,kirby+etal:2014,tamariz+kirby:2016}). Proposals of biases that shape language acquisition abound. Some prominent examples are mutual exclusivity \citep{merriman+bowman:1989,clark:2009}, simplicity \citep{kirby+etal:2015}, regularization \citep{hudson+etal:2005}, and generalization \citep{smith:2011,oconnor:2015}.\footnote{Depending on their formulation and the domain(s) they are proposed to apply to, biases may also interact. For instance, a domain-independent bias for simplicity may entail regularization but stand in conflict with mutual exclusivity.} In the following we show how environmental factors can produce evolutionary outcomes that look as if such cognitive learning biases are present even if they are not.
 
-In the following we show how environmental factors can produce evolutionary outcomes that look as if such cognitive learning biases are present even if they are not. In doing so, we underline the pivotal role of systematic transmission perturbations of linguistic knowledge in language change while showing that such perturbations may stem from other sources, e.g., from learners' noisy perception. \tb{Now mention case studies}
-
+We present three case studies that show how transmission perturbations can lead to well-known linguistic phenomena: vagueness, meaning deflation, and a lack of upper-bounds in weak scalar expressions. These results are not meant to suggest noisy perception to be the sole or main determinant of these phenomena. Instead, this investigation's main contribution is conceptual and seeks to underline the pivotal role of systematic transmission perturbations of linguistic knowledge in language change while showing that such perturbations may stem from other sources, e.g., from learners' noisy perception.
 
 
 \section{Iterated learning under noisy perception}
+We model the transmission of linguistic knowledge as process of iterated learning (for recent overviews see \citealt{kirby+etal:2014, tamariz+kirby:2016}). That is, as a repeated transfer of knowledge and behavior, such a language and its use, from one agent to another. 
 
-\begin{itemize}
-  \item Introduction to iterated Bayesian learning. Highlighting predictions of the prior's influence (i) from a technical perspective with respect to sampling to MAP and (ii) conceptual perspective with respect to the claim that laboratory experiments can give us insights into learning priors \tb{For this we can draw directly from what we already had in the other draft}
-  \item Noisy iterated learning. Following what we had before.
-  \item Possibly: functional pressure.
-\end{itemize}
+In the simplest case one may think of this process as involving a chain of parents and children. At the chain's top a parent produces linguistic data. This data is witnessed by the next agent in the chain, a child, who in turn acquires a language and behavior based on it. The child, now turned a proficient adult language user, then goes on to produce data for another child to learn from and so on. The learner's task is therefore to infer covert linguistic information, such as a language's grammar or when {\em red} holds true of an object, from observable language use. Importantly, there are multiple ways in which this process can induce change in a language. For instance, learning data may be sparse, speaker may make mistakes in production, or it could be that data incorrectly perceived by the learner. The fidelity by which a language or feature is transmitted against such perturbations therefore plays an important role in its emergence and stability across generations.
 
+If linguistic behavior is kept constant across agents then the learner's task reduces to inferring a language $L \in \mathcal{L}$. A more general approach, used in our third case study, is to allow for variation in an agents production algorithm as well \citep{brochhagen+etal:2016:CogSci}. In these cases the learner's task is to perform a joint inference over types of linguistic behavior and lexical meaning. We call such a combination a type, $t \in T$. 
+
+More precisely, we follow \citet{griffiths+kalish:2007} in modeling language acquisition as a form of (iterated) Bayesian learning \citep{griffiths+kalish:2007}. Learning is hereby captured as a combination of the likelihood of a type generating the data witnessed by the learner with prior inductive biases, $P \in \Delta(T)$. This prior can be understood as a condensed codification of learning preferences. For example, learners may have a preference for simpler languages over ones with a more complex grammar, larger or more marked inventories, or cognitively taxing components (c.f. \citealt{feldman:2000,chater+vitanyi:2003, kirby+etal:2015}). Crucially, even weak biases can magnify and have striking effects on an evolving linguistic system. Experimental and mathematical investigations in iterated learning have therefore been taken to suggest that the linguistic structure evinced by the outcome of this process reflect learners inductive biases \citep{kirby+etal:2007,kirby+etal:2014}. 
+
+The set of possible data a learner may be exposed to is represented by a set $D$. This set is made up of $k$-length sequences of the form $\tuple{\tuple{s_i,m_j}, ..., \tuple{s_k,m_l}}$, where $s \in S$ is the observation of meaning $s$ accompanied with an utterance $m \in M$. The parameter $k$ therefore controls how much information learners have at their disposition to discern languages from one another. Generally, low $k$ means that more languages will be compatible with the data, lowering the likelihood of a language being passed on faithfully. Conversely, inferring the language that generated the data, i.e., adopting the language used by a teacher, has a higher likelihood for larger sequences. 
+
+
+The likelihood $P(d|t_j)$ of datum $d$ being produced by type $t_j$ is given by a parent $j$'s linguistic behavior in combination with the language it uses. Letting $P_{PA_j}(\cdot)$ and $L_j$ stand type $j$'s production algorithm and language:
+
+\begin{align*}
+  P(d = \tuple{\tuple{s_1,m_1},\dots , \tuple{s_k,m_k}} \mid t_j) = \prod_{i = 1}^k P_{PA_j}(m_i
+  \mid s_i; L_{j})\,.
+\end{align*}
+
+
+
+These components can be put together in a transmission matrix $Q$, where $Q_{ij}$ is the probability that a learner acquires language $i$ when learning from a user of language $j$
+
+\begin{flalign*}
+  Q_{ji} \propto \sum_{d \in D} P(d \mid t_j) F(t_i \mid d)\,.
+\end{flalign*}
+
+where $F(t_i \mid d)$ is the parametrized acquisition probability of $t_i$ given datum $d$, obtained from the likelihood and prior:
+
+\begin{flalign*}
+  & F(t_i \mid d) \propto [P(t_i) P(d \mid t_i)]^l\,.
+\end{flalign*}
+
+where $l$ is a posterior parameter \tb{explain and then go over to noise}.
+
+
+\paragraph{Noisy transmission}
 We denote the probability that the teacher (learner) observes state $s_t$ ($s_l$) when the actual state is $s_a$ as $P_N(s_t \mid s_a)$ ($P_N(s_l \mid s_a)$). The probability that $s_a$ is the actual state when the learner observes $s_l$ is therefore:
 
 \begin{align*}

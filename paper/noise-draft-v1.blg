@@ -12,44 +12,44 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: noise-bib.bib
 apacite.bst [2012/02/25 v6.01 APA bibliography style]
-You've used 11 entries,
+You've used 14 entries,
             6735 wiz_defined-function locations,
-            1319 strings with 12519 characters,
-and the built_in function-call counts, 21333 in all, are:
-= -- 2683
-> -- 174
-< -- 994
-+ -- 1023
-- -- 22
-* -- 1387
-:= -- 3918
-add.period$ -- 48
-call.type$ -- 11
-change.case$ -- 189
+            1343 strings with 13020 characters,
+and the built_in function-call counts, 26481 in all, are:
+= -- 3316
+> -- 217
+< -- 1229
++ -- 1251
+- -- 28
+* -- 1729
+:= -- 4842
+add.period$ -- 60
+call.type$ -- 14
+change.case$ -- 240
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 520
-empty$ -- 837
-format.name$ -- 270
-if$ -- 4055
+cite$ -- 28
+duplicate$ -- 654
+empty$ -- 1055
+format.name$ -- 340
+if$ -- 5047
 int.to.chr$ -- 0
-int.to.str$ -- 22
+int.to.str$ -- 28
 missing$ -- 0
-newline$ -- 290
-num.names$ -- 90
-pop$ -- 300
+newline$ -- 367
+num.names$ -- 114
+pop$ -- 370
 preamble$ -- 1
-purify$ -- 44
+purify$ -- 56
 quote$ -- 0
-skip$ -- 1469
+skip$ -- 1826
 stack$ -- 0
-substring$ -- 1143
-swap$ -- 331
-text.length$ -- 35
+substring$ -- 1394
+swap$ -- 421
+text.length$ -- 41
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1008
+type$ -- 1248
 warning$ -- 0
-while$ -- 92
+while$ -- 116
 width$ -- 0
-write$ -- 354
+write$ -- 448
