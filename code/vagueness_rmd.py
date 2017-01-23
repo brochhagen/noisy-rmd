@@ -8,8 +8,8 @@ import csv
 
 ##### variables ##########
 s = 100 #amount of states
-sigma = 5
-k = 30  # length of observation sequences
+sigma = 0.4
+k = 10  # length of observation sequences
 sample_amount = 100 #amount of k-length samples for each production type 
 
 learning_parameter = 1 #prob-matching = 1, increments approach MAP

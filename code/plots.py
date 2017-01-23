@@ -72,8 +72,13 @@ def vagueness_single_gen(s,sigma,k,sample_amount,learning_parameter,gens):
             plt.legend([r'$m_1$',r'$m_2$'], loc='best',fontsize=19)
             plt.show()
 
-##vagueness_single_gen(100,0.4,20,100,1,50)
+#vagueness_single_gen(100,0.4,20,100,1,50)
+#vagueness_single_gen(100,0.00,30,100,1,50)
+#vagueness_single_gen(100,0.4,5,10,1,50)
+vagueness_single_gen(100,0.4,10,100,1,50)
 
+
+sys.exit()
 def heatmap_e_to_delta():
     print 'Loading data'
     df = pd.read_csv('./results/quantifiers_mean_results.csv')
