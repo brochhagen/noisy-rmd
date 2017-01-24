@@ -57,7 +57,7 @@
 
 %\citeA{bibkeyword} cites only year
 
-\title{Systematic transmission perturbations in the cultural evolution of language}
+\title{Effects of transmission perturbation in the cultural evolution of language}
  
 \author{{\large \bf Name Surname (mail@mail.com)} \\
   Department, street \& number \\
@@ -71,19 +71,85 @@
 \maketitle
 
 \begin{abstract}
-Over time, languages favors linguistic features that can be passed on with high fidelity from one language user to the next. The outcomes of this process are often argued to involve cognitive biases that influence a learner's inductive task. Such learning biases thereby serve as central devices to understand and predict linguistic structure. We complement this view by showing how such outcomes can also arise without assuming any biases but simply as an epiphenomenon of systematic disturbances stemming from environmental factors. To this end, we investigate the effects of iterated learning under noisy perception in three case studies on (i) vagueness, (ii) meaning deflation, and (iii) a lack of upper-bounds in weak scalar expressions. These results underpin and elucidate the importance of, either cognitive or extraneous, transmission perturbations in the cultural evolution of language and bring attention to the often overlooked possibility that channel noise can mimic effects of inductive biases.
+  Two main factors seem to play a major role in the cultural evolution of language. On the on
+  hand, there is functional pressure towards efficient transfer of relevant information. On the
+  other hand, languages have to be learned repeatedly and will therefor show traces of
+  systematic biases operating during the transmission of linguistic knowledge. While a lot of
+  attention has been paid to the effects of cognitive learning biases on the transmission of
+  language, there is reason to expect that the class of possibly relevant transmission biases
+  is much larger. This paper therefore explores some potential effects of transmission noise
+  due to errors in the observation of states of the world. We look at three case studies on (i)
+  vagueness, (ii) meaning deflation, and (iii) underspecified lexical meaning, demonstrating
+  that transmission perturbations other than learning biases might explain attested patterns in
+  the cultural evolution of language and that non-cognitive transmission biases may even
+  reproduce effects of learning biases.
 
 \textbf{Keywords:} 
 noise; cognitive biases; iterated learning; cultural evolution;  
 \end{abstract}
 \section{Introduction}
-Language is shaped by its use and transmission across generations. Linguistic properties therefore need not necessarily arise and stabilize solely due to functional pressure but may also be influenced and selected for by a pressure for learnability. The effects that (iterated) learning has on language are often seen as stemming from a combination of general learning mechanisms and inductive cognitive biases (e.g. \citealt{griffiths+kalish:2007,kirby+etal:2014,tamariz+kirby:2016}). Proposals of biases that shape language acquisition abound. Some prominent examples are mutual exclusivity \citep{merriman+bowman:1989,clark:2009}, simplicity \citep{kirby+etal:2015}, regularization \citep{hudson+etal:2005}, and generalization \citep{smith:2011,oconnor:2015}.\footnote{Depending on their formulation and the domain(s) they are proposed to apply to, biases may also interact. For instance, a domain-independent bias for simplicity may entail regularization but stand in conflict with mutual exclusivity.} In the following we show how environmental factors can produce evolutionary outcomes that look as if such learning biases are present even if they are not.
+Language is shaped by its use and transmission across generations. Linguistic properties
+therefore need not necessarily arise and stabilize solely due to functional pressure, such as
+the selection of more communicatively efficient ways of behavior, but may also be influenced
+and selected for by a pressure for learnability. To put it extremely, an unlearnable language
+will not make it to the next generation. The effects that (iterated) learning has on language
+are often seen as stemming from a combination of general learning mechanisms and inductive
+cognitive biases
+(e.g. \citealt{griffiths+kalish:2007,kirby+etal:2014,tamariz+kirby:2016}). Proposals of biases
+that shape language acquisition abound. Some prominent examples are mutual exclusivity
+\citep{merriman+bowman:1989,clark:2009}, simplicity \citep{kirby+etal:2015}, regularization
+\citep{hudson+etal:2005}, and generalization
+\citep{smith:2011,oconnor:2015}.\footnote{Depending on their formulation and the domain(s) they
+  are proposed to apply to, biases may also interact. For instance, a domain-independent bias
+  for simplicity may entail regularization but stand in conflict with mutual exclusivity.} But
+there is good reason to expect that other forces that may systematically perturb the
+transmission of linguistic knowledge may additionally shape the cultural evolution of
+language. The goal of this paper is to give a formalism in which to study the effects of some
+such perturbations and apply it to three case studies on (i) vagueness, (ii) meaning deflation,
+and (iii) underspecified lexical meaning. 
 
-We present three case studies that show how transmission perturbations can lead to the emergence of vagueness, meaning deflation, and a lack of upper-bounds in weak scalar expressions in populations of language users. These results are not meant to suggest noisy perception to be the sole or main determinant of these phenomena. Instead, this investigation's main contribution is conceptual and technical in nature in that it aims to clarify the role of systematic transmission perturbations of linguistic knowledge in language change while showing that such perturbations may stem from other sources, e.g., from learners' noisy perception.
+
+
 
 
 \section{Iterated learning under noisy perception}
-We model the transmission of linguistic knowledge as a process of iterated learning (for recent overviews see \citealt{kirby+etal:2014, tamariz+kirby:2016}). That is, as a repeated transfer of knowledge and behavior, such a language and its use, from one agent to another. 
+
+We model the transmission of linguistic knowledge as a process of iterated learning (for recent
+overviews see \citealt{kirby+etal:2014, tamariz+kirby:2016}). More specifically, we focus on
+iterated Bayesian learning in which the language learner must infer unobservables, such as the
+lexical meaning of a word, from the observable behavior of a proficient language user
+\citep[e.g.][]{griffiths+kalish:2007}. The learner observes instances $\tuple{s,m}$ of overt
+language use by a proficient speaker (teacher), where $s$ is a world state and $m$ is the
+message that the teacher used in $s$ at that occasion. The learner's task is to infer which
+latent type $t$, e.g., which set of lexical meanings, may have produced a sequence of such
+observations. To do so, the learner looks at the posterior of a type $t$ given a sequence $d$
+of observations of $\tuple{s, m}$ pairs:
+\begin{align*}
+  P(t \mid d) \propto P(t) \ P(d \mid t)\,,
+\end{align*}
+where $P(t)$ is the learner's prior for type $t$ and
+$P(d \mid t) = \prod_{\tuple{s,m} \in d} P(m \mid s, t)$ is the likelihood of type $t$
+producing the sequence of data, with $P(m \mid s, t)$ the probability that a type $t$ produces
+message $m$ when in world state $s$. Iterated Bayesian learning \dots learner picks type from
+the posterior \dots
+
+
+The prior $P(t)$ can be understood as a condensed codification of a learner's a priori
+preferences. For example, learners may have a preference for simpler languages over ones with a
+more complex grammar, larger or more marked inventories, or cognitively taxing components
+(c.f. \citealt{feldman:2000,chater+vitanyi:2003, kirby+etal:2015}). Crucially, even weak biases
+can magnify and have striking effects on an evolving linguistic system. Experimental and
+mathematical investigations in iterated learning have therefore argued that the linguistic
+structure evinced by the outcome of this process reflect learners' inductive biases
+\citep{kirby+etal:2007,kirby+etal:2014}. The role of such biases can be viewed as that of
+introducing systematic perturbations in the transmission of linguistic knowledge, guiding
+learners to the convergence on particular evolutionary outcomes. In the following, we show how
+environmental factors can play a similar role. To this end, we introduce a variant of iterated
+Bayesian learning that gives room for environmental perturbations in the learning process.
+
+\bigskip
+
+
 
 In the simplest case one may think of this process as involving a chain of parents and children. At the chain's top a parent produces linguistic data. This data is witnessed by the next agent in the chain, a child, who acquires a language and behavior based on it. This agent, now turned a proficient language user, then goes on to produce data for the next child in the chain to learn from, and so on. The learner's task is therefore to infer covert linguistic information from observable language use. Importantly, there are multiple ways in which this process can induce change in a language. Among others, learning data may be sparse, speakers may make mistakes in production, or it could be that the data incorrectly perceived by the learner. The fidelity by which linguistic features are transmitted against such perturbations therefore plays an important role in their emergence and stability across generations.
 
@@ -224,6 +290,17 @@ Lastly, and differently from Brochhagen et al.'s noise-free model, noise is intr
 
 \section{Discussion}
 \tb{TO DO} 
+
+\begin{itemize}
+\item We present three case studies that show how transmission perturbations can lead to the
+  emergence of vagueness, meaning deflation, and a lack of upper-bounds in weak scalar
+  expressions in populations of language users. These results are not meant to suggest noisy
+  perception to be the sole or main determinant of these phenomena. Instead, this
+  investigation's main contribution is conceptual and technical in nature in that it aims to
+  clarify the role of systematic transmission perturbations of linguistic knowledge in language
+  change while showing that such perturbations may stem from other sources, e.g., from
+  learners' noisy perception.
+\end{itemize}
 
 \section{Conclusion}
 \tb{TO DO}
