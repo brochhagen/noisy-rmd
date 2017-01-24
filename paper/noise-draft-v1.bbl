@@ -1,0 +1,722 @@
+\newcommand{\SortNoop}[1]{}
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Blume%
+\ \BBA {} Board%
+}{%
+Blume%
+\ \BBA {} Board%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+BlumeBoard2013:Intentional-Vag}
+\APACinsertmetastar {%
+BlumeBoard2013:Intentional-Vag}%
+\begin{APACrefauthors}%
+Blume, A.%
+\BCBT {}\ \BBA {} Board, O.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Intentional Vagueness} {Intentional vagueness}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Erkenntnis}{79}{4}{855-899}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Brochhagen%
+, Franke%
+\BCBL {}\ \BBA {} van Rooij%
+}{%
+Brochhagen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+brochhagen+etal:2016:CogSci}
+\APACinsertmetastar {%
+brochhagen+etal:2016:CogSci}%
+\begin{APACrefauthors}%
+Brochhagen, T.%
+, Franke, M.%
+\BCBL {}\ \BBA {} van Rooij, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning biases may prevent lexicalization of pragmatic
+  inferences: a case study combining iterated (Bayesian) learning and
+  functional selection} {Learning biases may prevent lexicalization of
+  pragmatic inferences: a case study combining iterated (bayesian) learning and
+  functional selection}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 38th Annual Conference of the
+  Cognitive Science Society} {Proceedings of the 38th annual conference of the
+  cognitive science society}\ (\BPGS\ 2081--2086).
+\newblock
+\APACaddressPublisher{Austin, TX}{Cognitive Science Society}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Chater%
+\ \BBA {} Vit{\'{a}}nyi%
+}{%
+Chater%
+\ \BBA {} Vit{\'{a}}nyi%
+}{%
+{\protect \APACyear {2003}}%
+}]{%
+chater+vitanyi:2003}
+\APACinsertmetastar {%
+chater+vitanyi:2003}%
+\begin{APACrefauthors}%
+Chater, N.%
+\BCBT {}\ \BBA {} Vit{\'{a}}nyi, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Simplicity: a unifying principle in cognitive science?}
+  {Simplicity: a unifying principle in cognitive science?}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Trends in Cognitive Sciences}{7}{1}{19--22}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/s1364-6613(02)00005-0} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Clark%
+}{%
+Clark%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+clark:2009}
+\APACinsertmetastar {%
+clark:2009}%
+\begin{APACrefauthors}%
+Clark, E\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Lexical meaning} {Lexical meaning}.{\BBCQ}
+\newblock
+\BIn{} E\BPBI L.~Bavin\ (\BED), \APACrefbtitle {The Cambridge Handbook of Child
+  Language} {The cambridge handbook of child language}\ (\BPGS\ 283--300).
+\newblock
+\APACaddressPublisher{}{Cambridge University Press}.
+\newblock
+\begin{APACrefDOI} \doi{10.1017/cbo9780511576164.016} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Feldman%
+}{%
+Feldman%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+feldman:2000}
+\APACinsertmetastar {%
+feldman:2000}%
+\begin{APACrefauthors}%
+Feldman, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Minimization of Boolean complexity in human concept
+  learning} {Minimization of boolean complexity in human concept
+  learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature}{407}{6804}{630--633}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Frank%
+\ \BBA {} Goodman%
+}{%
+Frank%
+\ \BBA {} Goodman%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+frank+goodman:2012}
+\APACinsertmetastar {%
+frank+goodman:2012}%
+\begin{APACrefauthors}%
+Frank, M\BPBI C.%
+\BCBT {}\ \BBA {} Goodman, N\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Predicting Pragmatic Reasoning in Language Games}
+  {Predicting pragmatic reasoning in language games}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Science}{336}{6084}{998--998}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Franke%
+\ \BBA {} Correia%
+}{%
+Franke%
+\ \BBA {} Correia%
+}{%
+{\protect \APACyear {to appear}}%
+}]{%
+franke+correia:toappear}
+\APACinsertmetastar {%
+franke+correia:toappear}%
+\begin{APACrefauthors}%
+Franke, M.%
+\BCBT {}\ \BBA {} Correia, J\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{to appear}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Vagueness and imprecise imitation in signalling games}
+  {Vagueness and imprecise imitation in signalling games}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{British Journal for the Philosophy of Science}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Franke%
+\ \BBA {} J{\"a}ger%
+}{%
+Franke%
+\ \BBA {} J{\"a}ger%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+franke+jaeger:2014}
+\APACinsertmetastar {%
+franke+jaeger:2014}%
+\begin{APACrefauthors}%
+Franke, M.%
+\BCBT {}\ \BBA {} J{\"a}ger, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Pragmatic back-and-forth reasoning} {Pragmatic
+  back-and-forth reasoning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Semantics, Pragmatics and the Case of Scalar
+  Implicatures.}{}{}{170--200}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Franke%
+, J{\"{a}}ger%
+\BCBL {}\ \BBA {} {\SortNoop{Rooij}}van~Rooij%
+}{%
+Franke%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+FrankeJager2010:Vagueness-Signa}
+\APACinsertmetastar {%
+FrankeJager2010:Vagueness-Signa}%
+\begin{APACrefauthors}%
+Franke, M.%
+, J{\"{a}}ger, G.%
+\BCBL {}\ \BBA {} {\SortNoop{Rooij}}van~Rooij, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Vagueness, Signaling \& Bounded Rationality} {Vagueness,
+  signaling \& bounded rationality}.{\BBCQ}
+\newblock
+\BIn{} T.~Onoda, D.~Bekki\BCBL {}\ \BBA {} E.~McCready\ (\BEDS), \APACrefbtitle
+  {JSAI-isAI 2010} {Jsai-isai 2010}\ (\BPGS\ 45--59).
+\newblock
+\APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Gazdar%
+}{%
+Gazdar%
+}{%
+{\protect \APACyear {1979}}%
+}]{%
+gazdar:1979}
+\APACinsertmetastar {%
+gazdar:1979}%
+\begin{APACrefauthors}%
+Gazdar, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1979}.
+\newblock
+\APACrefbtitle {Pragmatics, Implicature, Presuposition and Logical Form}
+  {Pragmatics, implicature, presuposition and logical form}.
+\newblock
+\APACaddressPublisher{New York}{Academic Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Grice%
+}{%
+Grice%
+}{%
+{\protect \APACyear {1975}}%
+}]{%
+grice:1975}
+\APACinsertmetastar {%
+grice:1975}%
+\begin{APACrefauthors}%
+Grice, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1975}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Logic and Conversation} {Logic and conversation}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Studies in the Ways of Words} {Studies in the ways of
+  words}\ (\BPGS\ 22--40).
+\newblock
+\APACaddressPublisher{Cambridge, MA}{Harvard University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Griffiths%
+\ \BBA {} Kalish%
+}{%
+Griffiths%
+\ \BBA {} Kalish%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+griffiths+kalish:2007}
+\APACinsertmetastar {%
+griffiths+kalish:2007}%
+\begin{APACrefauthors}%
+Griffiths, T\BPBI L.%
+\BCBT {}\ \BBA {} Kalish, M\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Language Evolution by Iterated Learning With Bayesian
+  Agents} {Language evolution by iterated learning with bayesian
+  agents}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognitive Science}{31}{3}{441--480}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Horn%
+}{%
+Horn%
+}{%
+{\protect \APACyear {1972}}%
+}]{%
+horn:1972}
+\APACinsertmetastar {%
+horn:1972}%
+\begin{APACrefauthors}%
+Horn, L\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1972}.
+\newblock
+\APACrefbtitle {On the Semantic Properties of Logical Operators in English} {On
+  the semantic properties of logical operators in english}.
+\newblock
+\APACaddressPublisher{Bloomington, IN}{Indiana University Linguistics Club}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Hudson Kam}%
+\ \BBA {} Newport%
+}{%
+{Hudson Kam}%
+\ \BBA {} Newport%
+}{%
+{\protect \APACyear {2005}}%
+}]{%
+hudson+etal:2005}
+\APACinsertmetastar {%
+hudson+etal:2005}%
+\begin{APACrefauthors}%
+{Hudson Kam}, C\BPBI L.%
+\BCBT {}\ \BBA {} Newport, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Regularizing Unpredictable Variation: The Roles of Adult
+  and Child Learners in Language Formation and Change} {Regularizing
+  unpredictable variation: The roles of adult and child learners in language
+  formation and change}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Language Learning and Development}{1}{2}{151--195}.
+\newblock
+\begin{APACrefDOI} \doi{10.1207/s15473341lld0102\_3} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{\SortNoop{Jaegher}}de~Jaegher%
+\ \BBA {} {\SortNoop{Rooij}}van~Rooij%
+}{%
+{\SortNoop{Jaegher}}de~Jaegher%
+\ \BBA {} {\SortNoop{Rooij}}van~Rooij%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+Jaegherde-JaegherRooijvan-Rooij2010:Strategic-Vague}
+\APACinsertmetastar {%
+Jaegherde-JaegherRooijvan-Rooij2010:Strategic-Vague}%
+\begin{APACrefauthors}%
+{\SortNoop{Jaegher}}de~Jaegher, K.%
+\BCBT {}\ \BBA {} {\SortNoop{Rooij}}van~Rooij, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Strategic Vagueness, and Appropriate Contexts}
+  {Strategic vagueness, and appropriate contexts}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Language, Games, and Evolution} {Language, games, and
+  evolution}\ (\BPGS\ 40--59).
+\newblock
+\APACaddressPublisher{Berlin, Heidelberg}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kirby%
+, Dowman%
+\BCBL {}\ \BBA {} Griffiths%
+}{%
+Kirby%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+}]{%
+kirby+etal:2007}
+\APACinsertmetastar {%
+kirby+etal:2007}%
+\begin{APACrefauthors}%
+Kirby, S.%
+, Dowman, M.%
+\BCBL {}\ \BBA {} Griffiths, T\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Innateness and culture in the evolution of language}
+  {Innateness and culture in the evolution of language}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Proceedings of the National Academy of
+  Sciences}{104}{12}{5241--5245}.
+\newblock
+\begin{APACrefDOI} \doi{10.1073/pnas.0608222104} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kirby%
+, Griffiths%
+\BCBL {}\ \BBA {} Smith%
+}{%
+Kirby%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+kirby+etal:2014}
+\APACinsertmetastar {%
+kirby+etal:2014}%
+\begin{APACrefauthors}%
+Kirby, S.%
+, Griffiths, T.%
+\BCBL {}\ \BBA {} Smith, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Iterated learning and the evolution of language}
+  {Iterated learning and the evolution of language}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Current Opinion in Neurobiology}{28}{}{108--114}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.conb.2014.07.014} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kirby%
+, Tamariz%
+, Cornish%
+\BCBL {}\ \BBA {} Smith%
+}{%
+Kirby%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+kirby+etal:2015}
+\APACinsertmetastar {%
+kirby+etal:2015}%
+\begin{APACrefauthors}%
+Kirby, S.%
+, Tamariz, M.%
+, Cornish, H.%
+\BCBL {}\ \BBA {} Smith, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Compression and communication in the cultural evolution
+  of linguistic structure} {Compression and communication in the cultural
+  evolution of linguistic structure}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognition}{141}{}{87--102}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lassiter%
+\ \BBA {} Goodman%
+}{%
+Lassiter%
+\ \BBA {} Goodman%
+}{%
+{\protect \APACyear {online first}}%
+}]{%
+LassiterGoodman2015:Adjectival-vagu}
+\APACinsertmetastar {%
+LassiterGoodman2015:Adjectival-vagu}%
+\begin{APACrefauthors}%
+Lassiter, D.%
+\BCBT {}\ \BBA {} Goodman, N\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{online first}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Adjectival vagueness in a Bayesian model of
+  interpretation} {Adjectival vagueness in a bayesian model of
+  interpretation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Synthese}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lipman%
+}{%
+Lipman%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+Lipman2009:Why-is-Language}
+\APACinsertmetastar {%
+Lipman2009:Why-is-Language}%
+\begin{APACrefauthors}%
+Lipman, B\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+\APACrefbtitle {Why is Language Vague?} {Why is language vague?}
+\newblock
+\APACrefnote{Manuscript, Boston University}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Merriman%
+\ \BBA {} Bowman%
+}{%
+Merriman%
+\ \BBA {} Bowman%
+}{%
+{\protect \APACyear {1989}}%
+}]{%
+merriman+bowman:1989}
+\APACinsertmetastar {%
+merriman+bowman:1989}%
+\begin{APACrefauthors}%
+Merriman, W\BPBI E.%
+\BCBT {}\ \BBA {} Bowman, L\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1989}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Mutual Exclusivity Bias in Children's Word Learning}
+  {The mutual exclusivity bias in children's word learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Monographs of the Society for Research in Child
+  Development}{54}{3/4}{i-129}.
+\newblock
+\begin{APACrefDOI} \doi{10.2307/1166130} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+O'Connor%
+}{%
+O'Connor%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+OConnor2013:The-Evolution-o}
+\APACinsertmetastar {%
+OConnor2013:The-Evolution-o}%
+\begin{APACrefauthors}%
+O'Connor, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Evolution of Vagueness} {The evolution of
+  vagueness}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Erkenntnis}{79}{4}{707--727}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+O'Connor%
+}{%
+O'Connor%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+oconnor:2015}
+\APACinsertmetastar {%
+oconnor:2015}%
+\begin{APACrefauthors}%
+O'Connor, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Evolving to Generalize: Trading Precision for Speed}
+  {Evolving to generalize: Trading precision for speed}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The British Journal for the Philosophy of
+  Science}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1093/bjps/axv038} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Smith%
+}{%
+Smith%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+smith:2011}
+\APACinsertmetastar {%
+smith:2011}%
+\begin{APACrefauthors}%
+Smith, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning Bias, Cultural Evolution of Language, and the
+  Biological Evolution of the Language Faculty} {Learning bias, cultural
+  evolution of language, and the biological evolution of the language
+  faculty}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Human Biology}{83}{2}{261--278}.
+\newblock
+\begin{APACrefDOI} \doi{10.3378/027.083.0207} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tamariz%
+\ \BBA {} Kirby%
+}{%
+Tamariz%
+\ \BBA {} Kirby%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+tamariz+kirby:2016}
+\APACinsertmetastar {%
+tamariz+kirby:2016}%
+\begin{APACrefauthors}%
+Tamariz, M.%
+\BCBT {}\ \BBA {} Kirby, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The cultural evolution of language} {The cultural
+  evolution of language}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Current Opinion in Psychology}{8}{}{37--43}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+van Deemter%
+}{%
+van Deemter%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+Deemter2009:Utility-and-Lan}
+\APACinsertmetastar {%
+Deemter2009:Utility-and-Lan}%
+\begin{APACrefauthors}%
+van Deemter, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Utility and Language Generation: {T}he Case of
+  Vagueness} {Utility and language generation: {T}he case of vagueness}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Philosophical Logic}{38}{6}{607--632}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Williamson%
+}{%
+Williamson%
+}{%
+{\protect \APACyear {1994}}%
+}]{%
+Williamson1994:Vagueness}
+\APACinsertmetastar {%
+Williamson1994:Vagueness}%
+\begin{APACrefauthors}%
+Williamson, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1994}.
+\newblock
+\APACrefbtitle {Vagueness} {Vagueness}.
+\newblock
+\APACaddressPublisher{London and New York}{Routledge}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

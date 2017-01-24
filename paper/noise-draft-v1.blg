@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: noise-draft-v1.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Database file #1: noise-bib.bib
+apacite.bst [2012/02/25 v6.01 APA bibliography style]
+You've used 27 entries,
+            6735 wiz_defined-function locations,
+            1429 strings with 15069 characters,
+and the built_in function-call counts, 47334 in all, are:
+= -- 6032
+> -- 390
+< -- 2003
++ -- 1997
+- -- 54
+* -- 2912
+:= -- 8201
+add.period$ -- 117
+call.type$ -- 27
+change.case$ -- 464
+chr.to.int$ -- 0
+cite$ -- 54
+duplicate$ -- 1221
+empty$ -- 2023
+format.name$ -- 599
+if$ -- 9335
+int.to.chr$ -- 0
+int.to.str$ -- 54
+missing$ -- 0
+newline$ -- 679
+num.names$ -- 220
+pop$ -- 768
+preamble$ -- 2
+purify$ -- 108
+quote$ -- 0
+skip$ -- 3459
+stack$ -- 0
+substring$ -- 2268
+swap$ -- 763
+text.length$ -- 82
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 2480
+warning$ -- 0
+while$ -- 208
+width$ -- 0
+write$ -- 813
