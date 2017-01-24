@@ -87,7 +87,10 @@
 \textbf{Keywords:} 
 noise; cognitive biases; iterated learning; cultural evolution;  
 \end{abstract}
+
+
 \section{Introduction}
+
 Language is shaped by its use and transmission across generations. Linguistic properties
 therefore need not necessarily arise and stabilize solely due to functional pressure, such as
 the selection of more communicatively efficient ways of behavior, but may also be influenced
@@ -102,36 +105,35 @@ that shape language acquisition abound. Some prominent examples are mutual exclu
 \citep{smith:2011,oconnor:2015}.\footnote{Depending on their formulation and the domain(s) they
   are proposed to apply to, biases may also interact. For instance, a domain-independent bias
   for simplicity may entail regularization but stand in conflict with mutual exclusivity.} But
-there is good reason to expect that other forces that may systematically perturb the
-transmission of linguistic knowledge may additionally shape the cultural evolution of
-language. The goal of this paper is to give a formalism in which to study the effects of some
-such perturbations and apply it to three case studies on (i) vagueness, (ii) meaning deflation,
-and (iii) underspecified lexical meaning. 
-
-
-
-
+there is good reason to expect that forces other than learning biases may systematically
+perturb the transmission of linguistic knowledge and so additionally contribute to the shaping
+of language by cultural evolution. \mf{could expand here on the type of noise we focus on?} The
+goal of this paper is to give a formalism in which to study the effects of some such
+perturbations and apply it to three case studies on (i) vagueness, (ii) meaning deflation, and
+(iii) underspecified lexical meaning.
 
 \section{Iterated learning under noisy perception}
 
 We model the transmission of linguistic knowledge as a process of iterated learning (for recent
 overviews see \citealt{kirby+etal:2014, tamariz+kirby:2016}). More specifically, we focus on
-iterated Bayesian learning in which the language learner must infer unobservables, such as the
-lexical meaning of a word, from the observable behavior of a proficient language user
-\citep[e.g.][]{griffiths+kalish:2007}. The learner observes instances $\tuple{s,m}$ of overt
-language use by a proficient speaker (teacher), where $s$ is a world state and $m$ is the
+iterated Bayesian learning in which a language learner must infer unobservables, such as the
+lexical meaning of a word, from the observable behavior of a single teacher, who is a
+proficient language user \citep[e.g.][]{griffiths+kalish:2007}. The learner observes instances
+$\tuple{s,m}$ of overt language use in context, where $s$ is a world state and $m$ is the
 message that the teacher used in $s$ at that occasion. The learner's task is to infer which
 latent type $t$, e.g., which set of lexical meanings, may have produced a sequence of such
-observations. To do so, the learner looks at the posterior of a type $t$ given a sequence $d$
-of observations of $\tuple{s, m}$ pairs:
+observations. To do so, the learner considers the posterior probability of type $t$ given a
+data sequence $d$ of $\tuple{s, m}$ pairs:
 \begin{align*}
   P(t \mid d) \propto P(t) \ P(d \mid t)\,,
 \end{align*}
 where $P(t)$ is the learner's prior for type $t$ and
 $P(d \mid t) = \prod_{\tuple{s,m} \in d} P(m \mid s, t)$ is the likelihood of type $t$
-producing the sequence of data, with $P(m \mid s, t)$ the probability that a type $t$ produces
-message $m$ when in world state $s$. Iterated Bayesian learning \dots learner picks type from
-the posterior \dots
+producing the observed data $d$, with $P(m \mid s, t)$ the probability that a type $t$ produces
+message $m$ when in world state $s$. Models of iterated Bayesian learning usually assume that
+the learner adopts a type with probability proportional to $P(t \mid d)^l$, where $l \ge 1$ is
+a parameter that regulates whether learners use probability matching ($l = 1$) or show tendency
+towards choosing a maximum of the posterior distribution ($l > 1$).
 
 
 The prior $P(t)$ can be understood as a condensed codification of a learner's a priori
@@ -143,15 +145,19 @@ mathematical investigations in iterated learning have therefore argued that the 
 structure evinced by the outcome of this process reflect learners' inductive biases
 \citep{kirby+etal:2007,kirby+etal:2014}. The role of such biases can be viewed as that of
 introducing systematic perturbations in the transmission of linguistic knowledge, guiding
-learners to the convergence on particular evolutionary outcomes. In the following, we show how
-environmental factors can play a similar role. To this end, we introduce a variant of iterated
-Bayesian learning that gives room for environmental perturbations in the learning process.
+learners to the convergence on particular evolutionary outcomes. 
+
+Other stochastic factors can influence the adoption of a linguistic type $t$ based on
+observation of $\tuple{s,m}$ pairs.
+
+\begin{itemize}
+\item channel noise concerning $m$
+\item 
+\end{itemize}
 
 \bigskip
 
 
-
-In the simplest case one may think of this process as involving a chain of parents and children. At the chain's top a parent produces linguistic data. This data is witnessed by the next agent in the chain, a child, who acquires a language and behavior based on it. This agent, now turned a proficient language user, then goes on to produce data for the next child in the chain to learn from, and so on. The learner's task is therefore to infer covert linguistic information from observable language use. Importantly, there are multiple ways in which this process can induce change in a language. Among others, learning data may be sparse, speakers may make mistakes in production, or it could be that the data incorrectly perceived by the learner. The fidelity by which linguistic features are transmitted against such perturbations therefore plays an important role in their emergence and stability across generations.
 
 If linguistic behavior is constant across agents then the learner's task reduces to that of inferring a language. A more general approach is to allow for variation in the agents' production algorithm as well \citep{brochhagen+etal:2016:CogSci}. In such cases the learner performs a joint inference over types of linguistic behavior and languages. We call such a combination a type, $t \in T$. 
 
