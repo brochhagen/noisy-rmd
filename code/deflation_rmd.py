@@ -8,7 +8,7 @@ import csv
 
 ##### variables ##########
 s = 100 #amount of states
-sigma = 2
+sigma = 0.4
 k = 30  # length of observation sequences
 sample_amount = 300 #amount of k-length samples for each production type 
 learning_parameter = 1 #prob-matching = 1, increments approach MAP
@@ -40,9 +40,14 @@ def get_obs(states,state_freqs,sample_amount,k): #returns (non-noisy) sample_amo
 
 def get_confusability_matrix(states,sigma):
     out = np.zeros([states,states])
+    myclip_a = 0 #first boundary for distribution
+    myclip_b = 99 #second boundary for distribution
+
     for i in xrange(states):
         for j in xrange(states):
-            out[i,j] = stats.norm(i, sigma).pdf(j)
+            current_mean = i #actual state
+            a, b = (myclip_a - current_mean) / sigma, (myclip_b - current_mean) / sigma
+            out[i,j] = stats.truncnorm.pdf(j,a,b,loc=i,scale=sigma)
     return out
 
 def get_lh(states): #send message if state > threshold

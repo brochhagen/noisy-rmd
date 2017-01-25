@@ -27,6 +27,29 @@ Blume, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Bolinger%
+}{%
+Bolinger%
+}{%
+{\protect \APACyear {1981}}%
+}]{%
+bolinger:1981}
+\APACinsertmetastar {%
+bolinger:1981}%
+\begin{APACrefauthors}%
+Bolinger, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1981}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Deflation of Several} {The deflation of
+  several}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of English Linguistics}{15}{1}{1--3}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Brochhagen%
 , Franke%
 \BCBL {}\ \BBA {} van Rooij%
@@ -84,8 +107,6 @@ Chater, N.%
   {Simplicity: a unifying principle in cognitive science?}{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Trends in Cognitive Sciences}{7}{1}{19--22}.
-\newblock
-\begin{APACrefDOI} \doi{10.1016/s1364-6613(02)00005-0} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -111,8 +132,29 @@ Clark, E\BPBI V.%
   Language} {The cambridge handbook of child language}\ (\BPGS\ 283--300).
 \newblock
 \APACaddressPublisher{}{Cambridge University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Dahl%
+}{%
+Dahl%
+}{%
+{\protect \APACyear {1979}}%
+}]{%
+dahl:1979}
+\APACinsertmetastar {%
+dahl:1979}%
+\begin{APACrefauthors}%
+Dahl, {\"O}.%
+\end{APACrefauthors}%
+\unskip\
 \newblock
-\begin{APACrefDOI} \doi{10.1017/cbo9780511576164.016} \end{APACrefDOI}
+\APACrefYearMonthDay{1979}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Typology of sentence negation} {Typology of sentence
+  negation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Linguistics}{17}{1-2}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -372,8 +414,6 @@ hudson+etal:2005}%
   formation and change}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Language Learning and Development}{1}{2}{151--195}.
-\newblock
-\begin{APACrefDOI} \doi{10.1207/s15473341lld0102\_3} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -431,8 +471,6 @@ Kirby, S.%
 \newblock
 \APACjournalVolNumPages{Proceedings of the National Academy of
   Sciences}{104}{12}{5241--5245}.
-\newblock
-\begin{APACrefDOI} \doi{10.1073/pnas.0608222104} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -460,8 +498,6 @@ Kirby, S.%
   {Iterated learning and the evolution of language}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Current Opinion in Neurobiology}{28}{}{108--114}.
-\newblock
-\begin{APACrefDOI} \doi{10.1016/j.conb.2014.07.014} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -501,7 +537,7 @@ Lassiter%
 Lassiter%
 \ \BBA {} Goodman%
 }{%
-{\protect \APACyear {online first}}%
+{\protect \APACyear {2015}}%
 }]{%
 LassiterGoodman2015:Adjectival-vagu}
 \APACinsertmetastar {%
@@ -512,7 +548,7 @@ Lassiter, D.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{online first}{}{}.
+\APACrefYearMonthDay{2015}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {Adjectival vagueness in a Bayesian model of
   interpretation} {Adjectival vagueness in a bayesian model of
@@ -568,8 +604,6 @@ Merriman, W\BPBI E.%
 \newblock
 \APACjournalVolNumPages{Monographs of the Society for Research in Child
   Development}{54}{3/4}{i-129}.
-\newblock
-\begin{APACrefDOI} \doi{10.2307/1166130} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -617,8 +651,6 @@ O'Connor, C.%
 \newblock
 \APACjournalVolNumPages{The British Journal for the Philosophy of
   Science}{}{}{}.
-\newblock
-\begin{APACrefDOI} \doi{10.1093/bjps/axv038} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -644,8 +676,6 @@ Smith, K.%
   faculty}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Human Biology}{83}{2}{261--278}.
-\newblock
-\begin{APACrefDOI} \doi{10.3378/027.083.0207} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

@@ -34,15 +34,16 @@ def deflation_over_generations(s,sigma,k,sample_amount,learning_parameter,gens):
             plt.plot(X,m1, linestyle='dashed')
 
     plt.ylim(0-0.01,1+0.01) 
+    plt.xlim(0,99) 
+
     plt.legend(["Initial population", "Generation 5", "Generation 10", "Generation 30"],loc='best',fontsize=12)
 #    plt.title('%.2f sigma, %d k, %d samples, %d l' % (sigma,k,sample_amount,learning_parameter))
-    plt.ylabel('Proportion of use',fontsize=19)
+    plt.ylabel('Proportion of message use',fontsize=19)
     plt.xlabel("State",fontsize=19)
 
     plt.show()
 
 #deflation_over_generations(100,0.4,30,300,1,50)
-#deflation_over_generations(100,2,30,300,1,50)
 
 
 def vagueness_single_gen(s,sigma,k,sample_amount,learning_parameter,gens):
@@ -73,12 +74,8 @@ def vagueness_single_gen(s,sigma,k,sample_amount,learning_parameter,gens):
             plt.show()
 
 #vagueness_single_gen(100,0.4,20,100,1,50)
-#vagueness_single_gen(100,0.00,30,100,1,50)
-#vagueness_single_gen(100,0.4,5,10,1,50)
-vagueness_single_gen(100,0.4,10,100,1,50)
 
 
-sys.exit()
 def heatmap_e_to_delta():
     print 'Loading data'
     df = pd.read_csv('./results/quantifiers_mean_results.csv')
@@ -100,7 +97,10 @@ def heatmap_e_to_delta():
     yticks = [0] + vacio + [0.1] + vacio + [0.2] + vacio + [0.3] + vacio + [0.4] + vacio + [0.5] + vacio + [0.6] + vacio + [0.7] + vacio + [0.8] + vacio + [0.9] + ["" for _ in xrange(8)] + [0.99]
     sns.set(font_scale=1.4)
     ax = sns.heatmap(t11_rec,yticklabels=yticks,xticklabels=yticks)#,yticklabels=yticks)#, yticklabels=yticks) 
-    ax.set(ylabel='epsilon',xlabel='delta') #, title=r'Pragmatic L-lack ($\alpha = %d, \lambda = %d$, samples = %d, k = %d)' %(a,lam,sample,k))
+#    ax.set(ylabel=r'$\epsilon$',xlabel=r'$\delta$') 
+    ax.set_ylabel(r'$\epsilon$', fontsize=35)
+    ax.set_xlabel(r'$\delta$', fontsize=35)
+
     plt.yticks(rotation=0)
    # ax.tick_params(labelsize=15)
     ax.invert_yaxis()
