@@ -679,6 +679,30 @@ Smith, K.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Szymanik%
+}{%
+Szymanik%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+szymanik:2016}
+\APACinsertmetastar {%
+szymanik:2016}%
+\begin{APACrefauthors}%
+Szymanik, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2016}.
+\newblock
+\APACrefbtitle {Quantifiers and Cognition: Logical and Computational
+  Perspectives} {Quantifiers and cognition: Logical and computational
+  perspectives}.
+\newblock
+\APACaddressPublisher{}{Springer International Publishing}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Tamariz%
 \ \BBA {} Kirby%
 }{%
