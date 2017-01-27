@@ -22,8 +22,10 @@ def deflation_over_generations(s,sigma,k,sample_amount,learning_parameter,gens):
     df = pd.read_csv(r"./results/deflation-states%d-sigma%.2f-k%d-samples%d-l%d-g%d.csv" %(s,sigma,k,sample_amount,learning_parameter,gens))
     
     X = np.arange(0,s)
-    
+    markers = ['x','v','o','*']
+    size = [7,7,7,12]
     for idx,row in df.iterrows():
+        
         if idx in [0,4,9,29]: #%2 == 0 and idx <= 10:
             theta_prop = [row['t'+str(x)] for x in xrange(s)]
             m1 = np.zeros(s)
@@ -31,7 +33,11 @@ def deflation_over_generations(s,sigma,k,sample_amount,learning_parameter,gens):
                 for j in xrange(len(theta_prop)):
                     if i >= j:
                         m1[i] += theta_prop[j]
-            plt.plot(X,m1, linestyle='dashed')
+            plt.plot(X,m1, linestyle='dashed', marker=markers[0], markevery=8,markersize=size[0])
+            markers.remove(markers[0])
+            size.remove(size[0])
+
+
 
     plt.ylim(0-0.01,1+0.01) 
     plt.xlim(0,99) 
@@ -43,7 +49,7 @@ def deflation_over_generations(s,sigma,k,sample_amount,learning_parameter,gens):
 
     plt.show()
 
-#deflation_over_generations(100,0.4,30,300,1,50)
+deflation_over_generations(100,0.4,30,300,1,50)
 
 
 def vagueness_single_gen(s,sigma,k,sample_amount,learning_parameter,gens):
@@ -100,6 +106,8 @@ def heatmap_e_to_delta():
 #    ax.set(ylabel=r'$\epsilon$',xlabel=r'$\delta$') 
     ax.set_ylabel(r'$\epsilon$', fontsize=35)
     ax.set_xlabel(r'$\delta$', fontsize=35)
+#    ax.set_ylabel(r'$\epsilon (P(s_{\forall} \mid s_{\exists\neg\forall}))$', fontsize=15)
+#    ax.set_xlabel(r'$\delta (P(s_{\exists\neg\forall} \mid s_{\forall}))$', fontsize=15)
 
     plt.yticks(rotation=0)
    # ax.tick_params(labelsize=15)
@@ -107,4 +115,4 @@ def heatmap_e_to_delta():
 
     plt.show()
 
-heatmap_e_to_delta()
+#heatmap_e_to_delta()
