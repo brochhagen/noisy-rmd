@@ -2,6 +2,39 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Ahern%
+\ \BBA {} Clark%
+}{%
+Ahern%
+\ \BBA {} Clark%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+AhernClark2014:Diachronic-Proc}
+\APACinsertmetastar {%
+AhernClark2014:Diachronic-Proc}%
+\begin{APACrefauthors}%
+Ahern, C.%
+\BCBT {}\ \BBA {} Clark, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Diachronic Processes in Language as Signaling Under
+  Conflicting Interests} {Diachronic processes in language as signaling under
+  conflicting interests}.{\BBCQ}
+\newblock
+\BIn{} E\BPBI A.~Cartmill, S.~Roberts, H.~Lyn\BCBL {}\ \BBA {} H.~Cornish\
+  (\BEDS), \APACrefbtitle {The Evolution of Language: {P}roceedings of
+  110textsuperscript{th} International Conference (EVOLANG10)} {The evolution
+  of language: {P}roceedings of 110textsuperscript{th} international conference
+  (evolang10)}\ (\BPGS\ 25--32).
+\newblock
+\APACaddressPublisher{Singapore}{World Scientific Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Blume%
 \ \BBA {} Board%
 }{%
@@ -155,6 +188,33 @@ Dahl, {\"O}.%
   negation}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Linguistics}{17}{1-2}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Deo%
+}{%
+Deo%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+Deo2015:The-Semantic-an}
+\APACinsertmetastar {%
+Deo2015:The-Semantic-an}%
+\begin{APACrefauthors}%
+Deo, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Semantic and Pragmatic Underpinnings of
+  Grammaticalization Paths: {T}he Progressive to Imperfective Shift} {The
+  semantic and pragmatic underpinnings of grammaticalization paths: {T}he
+  progressive to imperfective shift}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Semantics \& Pragmatics}{8}{1}{1--52}.
+\newblock
+\begin{APACrefDOI} \doi{10.3765/sp.8.14} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -630,27 +690,30 @@ O'Connor, C.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-O'Connor%
+Schaden%
 }{%
-O'Connor%
+Schaden%
 }{%
-{\protect \APACyear {2015}}%
+{\protect \APACyear {2012}}%
 }]{%
-oconnor:2015}
+Schaden2012:Modelling-the-A}
 \APACinsertmetastar {%
-oconnor:2015}%
+Schaden2012:Modelling-the-A}%
 \begin{APACrefauthors}%
-O'Connor, C.%
+Schaden, G.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2015}{}{}.
+\APACrefYearMonthDay{2012}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Evolving to Generalize: Trading Precision for Speed}
-  {Evolving to generalize: Trading precision for speed}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Modelling the "Aoristic Drift of the Present Perfect" as
+  Inflation: {A}n Essay in Historical Pragmatics} {Modelling the "aoristic
+  drift of the present perfect" as inflation: {A}n essay in historical
+  pragmatics}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{The British Journal for the Philosophy of
-  Science}{}{}{}.
+\APACjournalVolNumPages{International Review of Pragmatics}{4}{}{261--292}.
+\newblock
+\begin{APACrefDOI} \doi{10.1163/18773109-00040207} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
