@@ -213,8 +213,6 @@ Deo, A.%
   progressive to imperfective shift}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Semantics \& Pragmatics}{8}{1}{1--52}.
-\newblock
-\begin{APACrefDOI} \doi{10.3765/sp.8.14} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -239,32 +237,6 @@ Feldman, J.%
   learning}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Nature}{407}{6804}{630--633}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Frank%
-\ \BBA {} Goodman%
-}{%
-Frank%
-\ \BBA {} Goodman%
-}{%
-{\protect \APACyear {2012}}%
-}]{%
-frank+goodman:2012}
-\APACinsertmetastar {%
-frank+goodman:2012}%
-\begin{APACrefauthors}%
-Frank, M\BPBI C.%
-\BCBT {}\ \BBA {} Goodman, N\BPBI D.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2012}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Predicting Pragmatic Reasoning in Language Games}
-  {Predicting pragmatic reasoning in language games}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Science}{336}{6084}{998--998}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -295,33 +267,6 @@ Franke, M.%
 
 \bibitem [\protect \citeauthoryear {%
 Franke%
-\ \BBA {} J{\"a}ger%
-}{%
-Franke%
-\ \BBA {} J{\"a}ger%
-}{%
-{\protect \APACyear {2014}}%
-}]{%
-franke+jaeger:2014}
-\APACinsertmetastar {%
-franke+jaeger:2014}%
-\begin{APACrefauthors}%
-Franke, M.%
-\BCBT {}\ \BBA {} J{\"a}ger, G.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2014}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Pragmatic back-and-forth reasoning} {Pragmatic
-  back-and-forth reasoning}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Semantics, Pragmatics and the Case of Scalar
-  Implicatures.}{}{}{170--200}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Franke%
 , J{\"{a}}ger%
 \BCBL {}\ \BBA {} {\SortNoop{Rooij}}van~Rooij%
 }{%
@@ -345,7 +290,7 @@ Franke, M.%
   signaling \& bounded rationality}.{\BBCQ}
 \newblock
 \BIn{} T.~Onoda, D.~Bekki\BCBL {}\ \BBA {} E.~McCready\ (\BEDS), \APACrefbtitle
-  {JSAI-isAI 2010} {Jsai-isai 2010}\ (\BPGS\ 45--59).
+  {{JSAI-isAI} 2010} {{JSAI-isAI} 2010}\ (\BPGS\ 45--59).
 \newblock
 \APACaddressPublisher{}{Springer}.
 \PrintBackRefs{\CurrentBib}
@@ -663,7 +608,7 @@ Merriman, W\BPBI E.%
   {The mutual exclusivity bias in children's word learning}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Monographs of the Society for Research in Child
-  Development}{54}{3/4}{i-129}.
+  Development}{54}{3/4}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -706,14 +651,12 @@ Schaden, G.%
 \newblock
 \APACrefYearMonthDay{2012}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Modelling the "Aoristic Drift of the Present Perfect" as
-  Inflation: {A}n Essay in Historical Pragmatics} {Modelling the "aoristic
-  drift of the present perfect" as inflation: {A}n essay in historical
+{\BBOQ}\APACrefatitle {Modelling the ``Aoristic Drift of the Present Perfect''
+  as Inflation: {A}n Essay in Historical Pragmatics} {Modelling the ``aoristic
+  drift of the present perfect'' as inflation: {A}n essay in historical
   pragmatics}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{International Review of Pragmatics}{4}{}{261--292}.
-\newblock
-\begin{APACrefDOI} \doi{10.1163/18773109-00040207} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
