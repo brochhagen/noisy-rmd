@@ -49,7 +49,7 @@ def deflation_over_generations(s,sigma,k,sample_amount,learning_parameter,gens):
 
     plt.show()
 
-deflation_over_generations(100,0.4,30,300,1,50)
+#deflation_over_generations(100,0.4,30,300,1,50)
 
 
 def vagueness_single_gen(s,sigma,k,sample_amount,learning_parameter,gens):
@@ -80,6 +80,34 @@ def vagueness_single_gen(s,sigma,k,sample_amount,learning_parameter,gens):
             plt.show()
 
 #vagueness_single_gen(100,0.4,20,100,1,50)
+
+
+def vagueness_one_plot(s,sigma,k,sample_amount,learning_parameter,gens):
+    print 'Loading data'
+    df = pd.read_csv(r"./results/vagueness-states%d-sigma%.2f-k%d-samples%d-l%d-g%d.csv" %(s,sigma,k,sample_amount,learning_parameter,gens))
+    
+    X = np.arange(0,s)
+    markers = ['x','o']
+    style = ['dashed','solid']
+
+    for idx,row in df.iterrows():
+        if idx == 0 or idx == 1:
+            theta_prop = [row['t'+str(x)] for x in xrange(s)]
+            m1 = np.zeros(s)
+            for i in xrange(s):
+                for j in xrange(len(theta_prop)):
+                    if i >= j:
+                        m1[i] += theta_prop[j]
+            plt.plot(X,m1,linestyle='dashed', marker=markers[0],markevery=10)
+            markers.remove(markers[0])
+    plt.ylim(0-0.01,1+0.01)
+    plt.ylabel('Proportion of m1 use', fontsize=19)
+    plt.xlabel('State', fontsize=19)
+    plt.legend(['Initial population','First generation'], loc='best',fontsize=19)
+    plt.show()
+
+
+vagueness_one_plot(100,0.4,20,100,1,50)
 
 
 def heatmap_e_to_delta():
