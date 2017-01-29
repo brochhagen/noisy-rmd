@@ -105,11 +105,12 @@ that shape language acquisition abound. Some prominent examples are mutual exclu
 %\footnote{Depending on their formulation and the domain(s) they
 %  are proposed to apply to, biases may also interact. For instance, a domain-independent bias
 %  for simplicity may entail regularization but stand in conflict with mutual exclusivity.}
+
 Forces other than learning biases may also systematically perturb the transmission of
 linguistic knowledge and therefore additionally contribute to the shaping of language by
 cultural evolution.  In the following we focus on one particular source of transmission noise:
 agents' imperfect perception of the world. The overall goal of this paper is to give a
-formalism in which to study the effects of such perturbations and apply it to three case
+formalism in which to study the effects of such perturbations and to apply it to three case
 studies on (i) vagueness, (ii) meaning deflation, and (iii) underspecified lexical meaning.
 
 \section{Iterated Bayesian learning}
@@ -134,7 +135,7 @@ message $m$ when in world state $s$. It is usually assumed that learners adopt a
 probability $F(t \mid d) \propto P(t \mid d)^l$, where $l \ge 1$ regulates whether learners use
 probability matching ($l = 1$) or tend towards choosing a maximum of the posterior distribution
 ($l > 1$). If the set $D_k$ of data a learner may be exposed to is the set of all
-sequences with $k$ pairs $\tuple{s,m}$, the probability that the learn a learner
+sequences with $k$ pairs $\tuple{s,m}$, the probability that a learner
 acquires type $t_i$ when learning from type $t_j$ is:
 \begin{align*}
   P(t_j \rightarrow t_i) &\propto \sum_{d \in D_k} P(d \mid t_j) F(t_i \mid d)\,.
@@ -178,7 +179,7 @@ Jean actually is, even if she is in a shared perceptual environment. The main id
 explored here is that regularities in misperceptions of states may have striking and possibly
 explanatory effects on language evolution.
 
-Let $S$ be a set of world states. We denote the probability that the teacher (learner) observes state $s_t$ ($s_l$) when the actual state is $s_a$ as $P_N(s_t \mid s_a)$ ($P_N(s_l \mid s_a)$). The probability that $s_a$ is the actual state when the learner observes $s_l$ is therefore:
+We denote the probability that the teacher (learner) observes state $s_t$ ($s_l$) when the actual state is $s_a$ as $P_N(s_t \mid s_a)$ ($P_N(s_l \mid s_a)$). The probability that $s_a$ is the actual state when the learner observes $s_l$ is therefore:
 \begin{align*}
   P_N(s_a \mid s_l) \propto P(s_a) \ P_N(s_l \mid s_a)\,.
 \end{align*}
@@ -264,7 +265,7 @@ evolutionary dynamic based on the same idea).
 \paragraph{Setup.}  We analyze the effects of noisy perception on the transmission of a simple
 language with $100$ states, $s \in [0,99]$, and two messages, $m \in \{m_1,m_2\}$. The
 probability of perceiving the actual state $s_a$ as $s_p$ is given by a (discretized) normal
-distribution, truncated to $[0;99]$, with the $s_a$ as its mean, and standard deviation
+distribution, truncated to $[0;99]$, with $s_a$ as its mean, and standard deviation
 $\sigma$. % That is, $P(s_p | s_a) \sim \text{Normal}(s_{a},\sigma,s_{0},s_{99})$ with
 % $\sigma$ controlling the degree to which states are confused, and as boundaries $s_{0}$ and
 % $s_{99}$.
@@ -317,7 +318,7 @@ noisy perception:
 An extension towards types as distributions over thresholds is straightforward but the main
 point would remain: systematic state-noise perturbs a population towards vagueness. 
 
-Of course, the stabilization of a linguistic system or population on a particular vague/clear
+Of course, the stabilization of a linguistic system or population on a particular vague/crisp
 state partition may reasonably be expected to depend not only on the effects of learning, but
 also on the functional (dis)advantages that this partition brings about for its
 users. Functional pressure may therefore well be necessary for borderline regions to be kept in
@@ -348,7 +349,7 @@ we now trace the change of a single message $m$, e.g., emphatic negation, withou
 antonym being sent whenever $m$ does not apply. This leads to a situation in which learners
 observe positive examples of use $\tuple{s,m}$ but do not positively observe situations in
 which $m$ did not apply to a particular state. This causes asymmetry in the learning data
-as speakers with higher thresholds will reserve their message only for a small subset of the
+because speakers with high thresholds will reserve their message only for a small subset of the
 state space and otherwise remain silent. Learners take the absence of observations into account
 but cannot know what it is that they did not observe. We assume that learners
 are aware of $k$ so that:\footnote{Knowing fixed $k$ allows learners to compute the likelihood
@@ -362,8 +363,8 @@ are aware of $k$ so that:\footnote{Knowing fixed $k$ allows learners to compute 
   & 
   \ \ \ \ \ \text{succ.prob} = \sum_{i=0}^{t-1} P(s = i)) \prod_{s \in d_l} P(m|s,t)\,.
 \end{align*}
-As before, the first factor corresponds to the
-likelihood of a type producing the perceived data.  The second is the probability of a type not
+As before, the second factor corresponds to the
+likelihood of a type producing the perceived data.  The first is the probability of a type not
 reporting $k-|d|$ events for a total of $k$ events. $P \in \Delta(S)$ is assumed to be
 uniform. In words, a long sequence of data consisting of mostly silence gives stronger evidence
 for the type producing it having a high threshold of applicability even if the few state-message pairs observed in
@@ -403,7 +404,9 @@ pragmatically convey an upper-bound which is not present in their lexical semant
 semantically compatible with a state in which Bo ate all of them, this utterance may convey
 that Bo ate {\em some but not all}, as otherwise the speaker would have used {\em all}. A
 semantically weak meaning is thus pragmatically strengthened by interlocutors' mutual reasoning
-about rational language use \citep{grice:1975}. Why does such pragmatic strengthening not lead
+about rational language use \citep{grice:1975}. 
+
+Why does such pragmatic strengthening not lead
 to wide-spread lexicalization of upper-bounded meanings? To address this question, \citet{brochhagen+etal:2016:CogSci}
 explore an evolutionary model that combines functional pressure and iterated learning.
 Crucially, this account requires the assumption of a prior that favors a lack of
@@ -429,7 +432,7 @@ following choice probabilities:\footnote{Concretely, our results are based on pr
   exposition.}
 
 \begin{centering}
-\hspace{2.8cm} \underline{$L_{\text{bound}}$} \hspace{2.6cm} \underline{$L_{\text{lack}}$} \hspace{1cm}\\
+\hspace{2cm} \underline{$L_{\text{bound}}$} \hspace{2.8cm} \underline{$L_{\text{lack}}$} \hspace{1.2cm}\\
 Literal  \hspace{0.6cm}  \bordermatrix{~ & \msome & \mall \cr 
                   \sall & 0 & 1 \cr
                   \ssome & 1 & 0 \cr} \hspace{0.5cm} \bordermatrix{~ & \msome & \mall \cr 
@@ -450,19 +453,19 @@ in a repeatedly learning population must come from transmission biases. A learni
 favor of $L_\text{lack}$ in the learners' priors will select for it 
 \citep{brochhagen+etal:2016:CogSci}, but here we assume no such cognitive bias. Rather we
 assume state-noise in the form of parameters $\epsilon$ and $\delta$. The former corresponds to
-the probability of perceiving the actual state $\ssome$ as $\sall$,
-$P(\sall | \ssome) = \epsilon$, and $P(\ssome | \sall) = \delta$. For instance, states may be perceived differently because a large number of objects is involved (e.g., quantifiers and numerals) or they may be hard to accurately derive from sensory information (e.g., adjectives).
+the probability of perceiving actual state $\ssome$ as $\sall$,
+$P(\sall | \ssome) = \epsilon$, and $P(\ssome | \sall) = \delta$. For instance, states may be perceived differently because a large number of objects is involved (e.g., quantifiers and numerals) or they may be hard to accurately retrieve from sensory information (e.g., adjectives).
 
 
 \paragraph{Results.} To quantify the effects of the dynamics we ran a fine-grained parameter
 sweep over $\epsilon$ and $\delta$ with $50$ independent simulations per parameter
 configuration. Each simulation started with a random initial population distribution over types
-and applied iterated Bayesian learning with state-noise for 20 generations. The mean proportion
+and applied iterated learning with state-noise for 20 generations. The mean proportion
 of resulting pragmatic users of $L_{\text{lack}}$ under different noise signatures is shown in
 Figure \ref{fig:quant}. These results show that when $\delta$ is small and $\epsilon$ is high,
 iterated noisy transmission can lead to populations consisting of mostly, if not exclusively, a
-type that does not lexicalize an upper-bound for {\em some}-like expressions but conveys it
-pragmatically.  Similar results are obtained for increments in $k$ or $l$.
+type that lexically lacks an upper-bound for {\em some}-like expressions but conveys it
+pragmatically.  Similar results are obtained for larger $k$ or $l$.
 
 \begin{figure}[ht]
 \centering
@@ -474,10 +477,10 @@ pragmatically.  Similar results are obtained for increments in $k$ or $l$.
 
 \paragraph{Discussion.} The main goal of this case study was to show that noisy perception may
 mimic effects of learning biases. In the case of Brochhagen et al. the assumed bias was one
-for simplicity. Accordingly, learners had an a priori preference for not codifying an
-upper-bound lexically. This increases the learners' propensity to infer pragmatic
+for simplicity. Accordingly, learners had an a priori preference for not codifying 
+upper-bounds lexically. This increases the learners' propensity to infer pragmatic
 $L_{\text{lack}}$ over $L_{\text{bound}}$ even if the data witnessed could not tease them
-apart. Here, we assumed no such bias but nevertheless arrived at an evolutionary outcome that
+apart. We assumed no such bias but nevertheless arrived at an evolutionary outcome that
 is comparable to the one predicted if the bias were present. Note however that this outcome
 strongly depends on the types involved. Whether a type thrives under a particular noise
 signature depends on the proportion of types confused with it during transmission. The addition
