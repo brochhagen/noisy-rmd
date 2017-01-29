@@ -70,7 +70,7 @@
 
 \begin{abstract}
   Two factors seem to play a major role in the cultural evolution of language. On the one
-  hand, there is functional pressure towards efficient transfer of relevant information. On the
+  hand, there is functional pressure towards efficient transfer of information. On the
   other hand, languages have to be learned repeatedly and will therefore show traces of
   systematic stochastic perturbations operating during the transmission of linguistic
   knowledge. While a lot of attention has been paid to the effects of cognitive learning biases
@@ -144,7 +144,7 @@ If a population is a distribution over types, then iterated Bayesian learning pr
 likely path of change in the population due to learning from finite observations.
 
 The prior $P(t)$ can be understood as encoding learning biases. For example, learners may have
-a preference for simpler languages over ones with a more complex grammar, or over ones with larger or more marked
+an a priori preference for simpler languages over ones with a more complex grammar, or over ones with larger or more marked
  lexical or phonemic inventories (c.f. \citealt{feldman:2000,chater+vitanyi:2003,
   kirby+etal:2015}). Crucially, even weak biases can magnify and have striking effects on an
 evolving linguistic system, especially if learning is fueled by only limited input (small
@@ -159,7 +159,7 @@ inductive biases \citep{kirby+etal:2007,kirby+etal:2014}.
 \section{Iterated Bayesian learning with state-noise}
 
 Other stochastic factors beyond learning biases in $P(t)$ can influence the adoption of a
-linguistic type $t$ based on the observation of $\tuple{s,m}$ pairs. One further potential source
+linguistic type $t$ based on the observation of $\tuple{s,m}$ sequences. One further potential source
 of ``transmission noise'' are regular stochastic errors in the perception of world states (see
 Figure~\ref{fig:cartoon}).
 %
@@ -171,7 +171,7 @@ Figure~\ref{fig:cartoon}).
 \end{figure}
 % 
 Imperfect perception of world states may lead teachers to produce utterances that deviate from
-their production behavior -- had they witnessed the state correctly. Similarly, learners may
+their production behavior had they witnessed the state correctly. Similarly, learners may
 mistake utterances as applying to different states than the ones witnessed by the teacher who
 produced them. For instance, when learning the meaning of a vague adjective such as {\em tall}
 from an utterance like ``Jean is tall'', agents may have diverging representations of how tall
@@ -198,7 +198,7 @@ reason about state-noise perturbations. In this case the posterior probability o
 learner's perceived data sequence $d_l$ is as before:
 $P(t \mid d_l) \propto P(t) \ P(d_l \mid t)$.  Still, state-noise affects the probability
 $P_N(t_j \rightarrow t_i)$ that the learner adopts $t_i$ given a teacher of type $t_j$, because
-state-noise influences the probability of observing a sequence $d_l$ (with $F(t_i \mid d)$ as before):
+it influences the probability of observing a sequence $d_l$ (with $F(t_i \mid d)$ as before):
 \begin{flalign*}
   P_N(t_j \rightarrow t_i) \propto \sum_{d \in D_k} P_N(d_l \mid t_j) F(t_i \mid d)\,.
 \end{flalign*}
@@ -209,10 +209,10 @@ state-noise influences the probability of observing a sequence $d_l$ (with $F(t_
 
 In sum, it may be the case that learner and/or teacher do not perceive the actual state as what
 it is. They are not aware of this, and produce/learn as if what they observed was the actual
-state. The learner does not reason about noise when she tries to infer the
+state. In particular, the learner does not reason about noise when she tries to infer the
 speaker's type. She takes what she observes a state to be as the actual state that the teacher
 has seen as well, and infers which type would have most likely generated the message to this
-state. This can lead to biases of inferring the ``wrong'' teacher type if the noise makes some
+state. This can lead to biases of inferring the ``wrong'' teacher type if noise makes some
 types err in a way that resembles the noiseless behavior of other types. That is, such
 environmental factors can, in principle, induce transmission perturbations that look as if there was a
 cognitive bias in favor of a particular type, simply because that type better explains the
@@ -222,7 +222,7 @@ noise.
 \section{Case studies}
 
 In what follows we present three case studies that show how iterated learning under noisy
-perception can lead to the emergence of linguistic phenomena. Case
+perception can lead to the emergence of linguistic phenomena. The 
 studies are ordered from more to less obvious examples in which state-noise may be influential
 and explanatory: (i) vagueness, (ii) meaning deflation, and (iii) underspecification in the
 lexicon.
@@ -392,7 +392,7 @@ utterance. %(coupled with the idealized assumption that learners are aware of th
 
 The overall outcome is similar to that of the previous study. Noisy perception can cause
 transmission perturbations that relax once strict linguistic conventions. In contrast to the
-case of vagueness, if there are no competing forms, e.g., {\em small} vs. {\em tall}, asymmetry
+case of vagueness, if there are no relevant competing forms, e.g., {\em small} vs. {\em tall}, asymmetry
 in production and noise will iteratively increase the state space that a form carves out.
 
 \subsection{Scalar expressions}
@@ -402,7 +402,7 @@ include quantifiers such as {\em some} and {\em most}, adjectives such as {\em c
 pragmatically convey an upper-bound which is not present in their lexical semantics
 \citep{horn:1972,gazdar:1979}. For instance, while ``Bo ate some of the cookies'' is
 semantically compatible with a state in which Bo ate all of them, this utterance may convey
-that Bo ate {\em some but not all}, as otherwise the speaker would have used {\em all}. A
+that Bo ate {\em some but not all}, as otherwise the speaker would have said {\em all}. A
 semantically weak meaning is thus pragmatically strengthened by interlocutors' mutual reasoning
 about rational language use \citep{grice:1975}. 
 
@@ -420,7 +420,9 @@ $\msome$, $\mall$, $\ssome$ and $\sall$, where the former state is one in which 
 language {\em some but not all} holds, and the latter one where {\em all} holds. In lexicon
 $L_{\text{bound}}$, which lexicalizes an upper-bound for {\em some}-like expressions, message $\msome$ is only true of $\ssome$ and $\mall$ only of $\sall$. In
 the English-like lexicon $L_{\text{lack}}$, message $\mall$ is also only true of $\sall$, but the
-meaning of $\msome$ is underspecified and lexically holds in both states. Speakers may use
+meaning of $\msome$ is underspecified and lexically holds in both states. 
+
+Speakers may use
 either lexicon either literally or pragmatically. The former linguistic behavior selects any of several true
 messages with equal probability. The latter prefers to send the most informative messages from
 those that are true in the observed state \citep{grice:1975}. This gives rise to probabilistic
@@ -462,7 +464,9 @@ sweep over $\epsilon$ and $\delta$ with $50$ independent simulations per paramet
 configuration. Each simulation started with a random initial population distribution over types
 and applied iterated learning with state-noise for 20 generations. The mean proportion
 of resulting pragmatic users of $L_{\text{lack}}$ under different noise signatures is shown in
-Figure \ref{fig:quant}. These results show that when $\delta$ is small and $\epsilon$ is high,
+Figure \ref{fig:quant}. 
+
+These results show that when $\delta$ is small and $\epsilon$ is high,
 iterated noisy transmission can lead to populations consisting of mostly, if not exclusively, a
 type that lexically lacks an upper-bound for {\em some}-like expressions but conveys it
 pragmatically.  Similar results are obtained for larger $k$ or $l$.
@@ -478,15 +482,15 @@ pragmatically.  Similar results are obtained for larger $k$ or $l$.
 \paragraph{Discussion.} The main goal of this case study was to show that noisy perception may
 mimic effects of learning biases. In the case of Brochhagen et al. the assumed bias was one
 for simplicity. Accordingly, learners had an a priori preference for not codifying 
-upper-bounds lexically. This increases the learners' propensity to infer pragmatic
-$L_{\text{lack}}$ over $L_{\text{bound}}$ even if the data witnessed could not tease them
+upper-bounds lexically, which increases their propensity to infer pragmatic
+$L_{\text{lack}}$ over $L_{\text{bound}}$ even if the witnessed data can not tease them
 apart. We assumed no such bias but nevertheless arrived at an evolutionary outcome that
 is comparable to the one predicted if the bias were present. Note however that this outcome
 strongly depends on the types involved. Whether a type thrives under a particular noise
 signature depends on the proportion of types confused with it during transmission. The addition
 or extraction of a single type may therefore lead to different results.
 
-At present, it is unclear what role noisy perception should play in the selection of underspecified meaning. These results should therefore be taken as suggestive but not indicative of a relationship between the two. A possible way to explore this relation may lie in their connection to empirical work on the verification of quantified statements (see \citealt{szymanik:2016} for a recent overview). The idea being that some states are easier to verify, e.g., $\sall$, and therefore less confusable with other states than others, e.g., $\ssome$. 
+At present, it is unclear what role noisy perception should play in the selection of underspecified meaning. These results should therefore be taken as suggestive but not indicative of a relationship between the two. In the case of quantifiers, a possible way to explore this relation may lie in their connection to empirical work on the verification of quantified statements (see \citealt{szymanik:2016} for a recent overview). The idea being that some states are easier to verify, e.g., $\sall$, and therefore less confusable with other states than others, e.g., $\ssome$. 
 
 
 \section{General discussion}
