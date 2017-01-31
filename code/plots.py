@@ -107,14 +107,14 @@ def vagueness_one_plot(s,sigma,k,sample_amount,learning_parameter,gens):
     plt.show()
 
 
-vagueness_one_plot(100,0.4,20,100,1,50)
+#vagueness_one_plot(100,0.4,20,100,1,50)
 
 
 def heatmap_e_to_delta():
     print 'Loading data'
     df = pd.read_csv('./results/quantifiers_mean_results.csv')
     
-    k = 5
+    k = 20
     l = 1
     
     final_group = df.loc[:,('k','learning_parameter','epsilon','delta','t11_final')]

@@ -90,7 +90,7 @@ cognitive biases; iterated learning; language evolution
 \section{Introduction}
 
 Language is shaped by its use and transmission across generations. Linguistic properties are
-not necessarily solely due to functional pressure, such as the selection of more
+therefore not necessarily solely due to functional pressure, such as the selection of more
 communicatively efficient behavior. They may also be effected by a pressure for
 learnability. In the extreme, an unlearnable language will not make it to the next
 generation. The effects that (iterated) learning has on language are often seen as stemming
@@ -147,7 +147,7 @@ ones with larger or more marked lexical or phonemic inventories
 (c.f. \citealt{feldman:2000,chater+vitanyi:2003, kirby+etal:2015}). Crucially, even weak biases
 can magnify and have striking effects on an evolving linguistic system, especially if learning
 is fueled by only limited input (small $k$). Experimental and mathematical explorations of
-iterated learning suggest that the linguistic structure evinced by the outcome of this process
+iterated learning have consequently suggested that the linguistic structure evinced by the outcome of this process
 reflects learners' inductive biases \citep{kirby+etal:2007,kirby+etal:2014}.
 
 %The role of such biases can be viewed as that of
@@ -172,7 +172,7 @@ Imperfect perception of world states may lead teachers to produce utterances tha
 their production behavior had they witnessed the state correctly. Similarly, learners may
 mistake utterances as applying to different states than the ones witnessed by the teacher who
 produced them. For instance, when learning the meaning of a vague adjective such as {\em tall}
-from a utterances like ``Jean is tall'', agents may have diverging representations of how tall
+from utterances like ``Jean is tall'', agents may have diverging representations of how tall
 Jean actually is, even if she is in a shared perceptual environment. The main idea to be
 explored here is that regularities in misperceptions of states may have striking and possibly
 explanatory effects on language evolution.
@@ -268,7 +268,7 @@ $\sigma$. % That is, $P(s_p | s_a) \sim \text{Normal}(s_{a},\sigma,s_{0},s_{99})
 % $\sigma$ controlling the degree to which states are confused, and as boundaries $s_{0}$ and
 % $s_{99}$.
 Linguistic behavior is fixed by a type $t \in [0;99]$ which is the threshold of applicability
-of $m_1$: $P(m_1 \mid s,t) = \delta_{s \ge t} = (1 - P(m_2 \mid s,t))$. If a speaker observes a
+of $m_1$: $P(m_1 \mid s,t) = \delta_{s \ge t} = (1 - P(m_2 \mid s,t))$. In words, if a speaker observes a
 state that is as large or larger than its type (threshold for $m_1$), then message $m_1$ is
 used (\emph{tall}), otherwise $m_2$ ({\em small}).
 
@@ -307,7 +307,7 @@ no state being (almost) exclusively associated with $m_1$ or $m_2$.
 Transmission perturbations caused by the noisy perception of states reliably give rise to vague
 language use even if the initial population state had a perfectly crisp and uniform
 convention. Clearly, this is a specific picture of vagueness. As modeled here for simplicity,
-each speaker has a fixed and non-vague cut-off point $t$ is her lexicon. Still, the production
+each speaker has a fixed and non-vague cut-off point $t$ in her lexicon. Still, the production
 behavior of a type-$t$ speaker in actual state $s_a$ is probabilistic and ``vague'', because of
 noisy perception:
 \begin{align*}
@@ -323,7 +323,7 @@ combination thereof plays a more central role for the emergence of vagueness is 
 question we do not address here. Instead, we see these results as adding strength to the
 argument that one way in which vagueness may arise is as a byproduct of interactions between
 agents that may occasionally err in their perception of the environment. If state perception is
-systematically noise and learners are not aware of this, some amount of vagueness may be the
+systematically noisy and learners are not aware of this, some amount of vagueness may be the
 natural result.
 
 \subsection{Deflation}
@@ -344,8 +344,8 @@ language change have rather stressed the role of conflicting interests between i
 
 \paragraph{Setup.} The setup for this case study is the same as for the previous, except that
 we now trace the change of a single message $m$, e.g., emphatic negation, without a fixed
-antonym being sent whenever $m$ does not apply. This is a very crude way of modeling use of
-markers of emphasis or high relevance, for which no corresponding ``irrelevance marker''
+antonym being sent whenever $m$ does not apply. This is a crude way of modeling use of
+markers of emphasis or high relevance for which no corresponding ``irrelevance marker''
 exists. Consequently, learners observe positive examples of use $\tuple{s,m}$ but do not
 positively observe situations in which $m$ did not apply to a particular state. This causes
 asymmetry in the learning data because some speakers will reserve their message only for a
@@ -369,7 +369,7 @@ uniform. In words, a long sequence of data consisting of mostly silence gives st
 for the type producing it having a high threshold of applicability even if the few state-message pairs observed in
 the sequence may be equally likely to be produced by types with lower thresholds.
 
-\paragraph{Results.} Development of an initially monomorphic population consisting only of
+\paragraph{Results.} The development of an initially monomorphic population consisting only of
 $t = 80$ is shown in Figure \ref{fig:defl}. Even little noise causes a message to gradually be
 applied to larger portions of the state space. The speed of meaning deflation is regulated by
 $\sigma$, $k$, and to lesser degree $l$. In general, more state confusion due to higher
@@ -422,7 +422,7 @@ the English-like lexicon $L_{\text{lack}}$, message $\mall$ is also only true of
 meaning of $\msome$ is underspecified and lexically holds in both states. 
 
 Speakers are either literal or pragmatic language users. The former select a random true
-message, the latter prefer to send the most informative messages from those that are true in
+message, whereas the latter prefer to send the most informative messages from those that are true in
 the observed state \citep{grice:1975}. This gives rise to probabilistic speaker behavior
 $P(m \mid s,t= \tuple{\text{lexicon},\text{use}})$ which approximates the following choice
 probabilities:\footnote{Concretely, results are obtained for probabilistic speaker behavior
@@ -461,13 +461,11 @@ information (e.g., adjectives).
 \paragraph{Results.} To quantify the effects of the dynamics we ran a fine-grained parameter
 sweep over $\epsilon$ and $\delta$ with $50$ independent simulations per parameter
 configuration. Each simulation started with a random initial population distribution over types
-and applied iterated learning with state-noise for 20 generations. Mean proportion of resulting
+and applied iterated learning with state-noise for 20 generations. Mean proportions of resulting
 pragmatic users of $L_{\text{lack}}$ under different noise signatures are shown in Figure
-\ref{fig:quant}. When $\delta$ is small and $\epsilon$ high, iterated noisy transmission can
+\ref{fig:quant}. These results suggest that when $\delta$ is small and $\epsilon$ high, iterated noisy transmission can
 lead to populations consisting of almost exclusively English-like lexica with pragmatic
-language use. Similar results are obtained for larger $k$ or $l$. \mf{CHECK ME: we need
-  selection for this result, do we not??? if so, we must mention this, at least in one
-  sentence}
+language use. Similar results are obtained for larger $k$ or $l$.
 
 \begin{figure}[ht]
 \centering
