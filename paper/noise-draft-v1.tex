@@ -69,19 +69,18 @@
 \maketitle
 
 \begin{abstract}
-  Two factors seem to play a major role in the cultural evolution of language. On the one
-  hand, there is functional pressure towards efficient transfer of information. On the
-  other hand, languages have to be learned repeatedly and will therefore show traces of
-  systematic stochastic perturbations operating during the transmission of linguistic
-  knowledge. While a lot of attention has been paid to the effects of cognitive learning biases
-  on the transmission of language, there is reason to expect that the class of possibly
-  relevant transmission biases is much larger. This paper therefore explores some potential
-  effects of transmission noise due to errors in the observation of states of the world. We
-  look at three case studies on (i) vagueness, (ii) meaning deflation, and (iii) underspecified
-  lexical meaning. These case studies suggest that transmission perturbations other than
-  learning biases might help explain attested patterns in the cultural evolution of language
-  and that perturbations due to perceptual noise may even produce effects very
-  similar to learning biases.
+  Two factors seem to play a major role in the cultural evolution of language. On the one hand,
+  there is functional pressure towards efficient transfer of information. On the other hand,
+  languages have to be learned repeatedly and will therefore show traces of systematic
+  stochastic disturbances of the transmission of linguistic knowledge. While a lot of attention
+  has been paid to the effects of cognitive learning biases on the transmission of language,
+  there is reason to expect that the class of possibly relevant transmission perturbations is
+  much larger. This paper therefore explores some potential effects of transmission noise due
+  to errors in the observation of states of the world. We look at three case studies on (i)
+  vagueness, (ii) meaning deflation, and (iii) underspecified lexical meaning. These case
+  studies suggest that transmission perturbations other than learning biases might help explain
+  attested patterns in the cultural evolution of language and that perturbations due to
+  perceptual noise may even produce effects very similar to learning biases.
 
 \textbf{Keywords:} 
 cognitive biases; iterated learning; language evolution  
@@ -90,18 +89,16 @@ cognitive biases; iterated learning; language evolution
 
 \section{Introduction}
 
-Language is shaped by its use and transmission across generations. Linguistic properties
-therefore need not necessarily arise and stabilize solely due to functional pressure, such as
-the selection of more communicatively efficient behavior, but may also be influenced
-and selected for by a pressure for learnability. In the extreme, an unlearnable language
-will not make it to the next generation. The effects that (iterated) learning has on language
-are often seen as stemming from a combination of general learning mechanisms and inductive
-cognitive biases
+Language is shaped by its use and transmission across generations. Linguistic properties are
+not necessarily solely due to functional pressure, such as the selection of more
+communicatively efficient behavior. They may also be effected by a pressure for
+learnability. In the extreme, an unlearnable language will not make it to the next
+generation. The effects that (iterated) learning has on language are often seen as stemming
+from a combination of general learning mechanisms and inductive cognitive biases
 (e.g. \citealt{griffiths+kalish:2007,kirby+etal:2014,tamariz+kirby:2016}). Proposals of biases
-that shape language acquisition abound. Some prominent examples are mutual exclusivity
+that shape language acquisition abound, such as mutual exclusivity
 \citep{merriman+bowman:1989,clark:2009}, simplicity \citep{kirby+etal:2015}, regularization
-\citep{hudson+etal:2005}, and generalization
-\citep{smith:2011}.
+\citep{hudson+etal:2005}, and generalization \citep{smith:2011}.
 %\footnote{Depending on their formulation and the domain(s) they
 %  are proposed to apply to, biases may also interact. For instance, a domain-independent bias
 %  for simplicity may entail regularization but stand in conflict with mutual exclusivity.}
@@ -110,8 +107,9 @@ Forces other than learning biases may also systematically perturb the transmissi
 linguistic knowledge and therefore additionally contribute to the shaping of language by
 cultural evolution.  In the following we focus on one particular source of transmission noise:
 agents' imperfect perception of the world. The overall goal of this paper is to give a
-formalism in which to study the effects of such perturbations and to apply it to three case
-studies on (i) vagueness, (ii) meaning deflation, and (iii) underspecified lexical meaning.
+formalism with which to study the possible effects of such perturbations and to apply it to
+three case studies on (i) vagueness, (ii) meaning deflation, and (iii) underspecified lexical
+meaning.
 
 \section{Iterated Bayesian learning}
 
@@ -131,12 +129,12 @@ given a data sequence $d$ of $\tuple{s, m}$ pairs:
 where $P(t)$ is the learner's prior for type $t$ and
 $P(d \mid t) = \prod_{\tuple{s,m} \in d} P(m \mid s, t)$ is the likelihood of type $t$
 producing the observed data $d$, with $P(m \mid s, t)$ the probability that a type $t$ produces
-message $m$ when in world state $s$. It is usually assumed that learners adopt a type with a
-probability $F(t \mid d) \propto P(t \mid d)^l$, where $l \ge 1$ regulates whether learners use
-probability matching ($l = 1$) or tend towards choosing a maximum of the posterior distribution
-($l > 1$). If the set $D_k$ of data a learner may be exposed to is the set of all
-sequences with $k$ pairs $\tuple{s,m}$, the probability that a learner
-acquires type $t_i$ when learning from type $t_j$ is:
+message $m$ when in world state $s$. It is usually assumed that learners exposed to $d$ adopt
+type $t$ with probability $F(t \mid d) \propto P(t \mid d)^l$, where $l \ge 1$ regulates
+whether learners probability match ($l = 1$) or tend towards choosing a maximum of the
+posterior distribution ($l > 1$). If the set $D_k$ of data a learner may be exposed to is the
+set of all sequences with $k$ pairs $\tuple{s,m}$, the probability that a learner acquires type
+$t_i$ when learning from type $t_j$ is:
 \begin{align*}
   P(t_j \rightarrow t_i) &\propto \sum_{d \in D_k} P(d \mid t_j) F(t_i \mid d)\,.
 \end{align*}
@@ -144,13 +142,13 @@ If a population is a distribution over types, then iterated Bayesian learning pr
 likely path of change in the population due to learning from finite observations.
 
 The prior $P(t)$ can be understood as encoding learning biases. For example, learners may have
-an a priori preference for simpler languages over ones with a more complex grammar, or over ones with larger or more marked
- lexical or phonemic inventories (c.f. \citealt{feldman:2000,chater+vitanyi:2003,
-  kirby+etal:2015}). Crucially, even weak biases can magnify and have striking effects on an
-evolving linguistic system, especially if learning is fueled by only limited input (small
-$k$). Experimental and mathematical investigations in iterated learning have therefore argued
-that the linguistic structure evinced by the outcome of this process reflects learners'
-inductive biases \citep{kirby+etal:2007,kirby+etal:2014}.
+an a priori preference for simpler languages over ones with a more complex grammar, or over
+ones with larger or more marked lexical or phonemic inventories
+(c.f. \citealt{feldman:2000,chater+vitanyi:2003, kirby+etal:2015}). Crucially, even weak biases
+can magnify and have striking effects on an evolving linguistic system, especially if learning
+is fueled by only limited input (small $k$). Experimental and mathematical explorations of
+iterated learning suggest that the linguistic structure evinced by the outcome of this process
+reflects learners' inductive biases \citep{kirby+etal:2007,kirby+etal:2014}.
 
 %The role of such biases can be viewed as that of
 %introducing systematic perturbations in the transmission of linguistic knowledge, guiding
@@ -174,7 +172,7 @@ Imperfect perception of world states may lead teachers to produce utterances tha
 their production behavior had they witnessed the state correctly. Similarly, learners may
 mistake utterances as applying to different states than the ones witnessed by the teacher who
 produced them. For instance, when learning the meaning of a vague adjective such as {\em tall}
-from an utterance like ``Jean is tall'', agents may have diverging representations of how tall
+from a utterances like ``Jean is tall'', agents may have diverging representations of how tall
 Jean actually is, even if she is in a shared perceptual environment. The main idea to be
 explored here is that regularities in misperceptions of states may have striking and possibly
 explanatory effects on language evolution.
@@ -183,7 +181,8 @@ We denote the probability that the teacher (learner) observes state $s_t$ ($s_l$
 \begin{align*}
   P_N(s_a \mid s_l) \propto P(s_a) \ P_N(s_l \mid s_a)\,.
 \end{align*}
-Accordingly, assuming a finite state space, the probability that the teacher observes $s_t$ when the learner observes $s_l$ is:
+Assuming a finite state space for convenience, the probability that the teacher observes $s_t$
+when the learner observes $s_l$ is:
 \begin{align*}
   P_N(s_t \mid s_l) = \sum_{s_a} P(s_a \mid s_l) \ P_N(s_t \mid s_a)\,.
 \end{align*}
@@ -193,7 +192,7 @@ sequence $d_l$ of $\tuple{s_l, m}$ pairs is:
   P_N(d_l \mid t) = \prod_{\tuple{s_l,m} \in d_l} \sum_{s_t} P_N(s_t \mid s_l) \ P(m \mid s_t, t)\,.
 \end{align*}
 It is natural to assume that learners, even if they (in tendency) perform rational Bayesian
-inference on the likely teacher type $t$ based on observation $\tuple{s_l,m}$, do not also
+inference of the likely teacher type $t$ based on observation $\tuple{s_l,m}$, do not also
 reason about state-noise perturbations. In this case the posterior probability of $t$ given the
 learner's perceived data sequence $d_l$ is as before:
 $P(t \mid d_l) \propto P(t) \ P(d_l \mid t)$.  Still, state-noise affects the probability
@@ -208,15 +207,14 @@ it influences the probability of observing a sequence $d_l$ (with $F(t_i \mid d)
 % Finally, we need to specify what the transmission matrix $Q$ operates over. This could be a distribution over types that an agent in the learning chain entertains at a given time, but also as a population of types following standard practice in evolutionary game theory (for discussion on the relationship of single chain learning and population dynamics see e.g. \citealt[\S 7]{griffiths+kalish:2007}). Here, we adopt the latter view, and consequently take this component to be a population vector $x$, where $x_i$ is the proportion of type $t_i$ in $x$. The full dynamics are captured by the discrete mutator dynamics $\hat{x}_j = \sum_i Q_{ij} x_j$ (for an overview see \citealt{hofbauer+sigmund:2003}).
 
 In sum, it may be the case that learner and/or teacher do not perceive the actual state as what
-it is. They are not aware of this, and produce/learn as if what they observed was the actual
-state. In particular, the learner does not reason about noise when she tries to infer the
-speaker's type. She takes what she observes a state to be as the actual state that the teacher
-has seen as well, and infers which type would have most likely generated the message to this
-state. This can lead to biases of inferring the ``wrong'' teacher type if noise makes some
-types err in a way that resembles the noiseless behavior of other types. That is, such
-environmental factors can, in principle, induce transmission perturbations that look as if there was a
-cognitive bias in favor of a particular type, simply because that type better explains the
-noise.
+it is. If they are not aware of this, they produce/learn as if what they observed was the
+actual state. In particular, the learner does not reason about noise when she tries to infer
+the speaker's type. She takes what she observes as the actual state that the teacher has seen
+as well, and infers which type would have most likely generated the message to this state. This
+can lead to biases of inferring the ``wrong'' teacher type if noise makes some types err in a
+way that resembles the noiseless behavior of other types. That is, such environmental factors
+can, in principle, induce transmission perturbations that look as if there was a cognitive bias
+in favor of a particular type, simply because that type better explains the noise.
 
 
 \section{Case studies}
@@ -255,7 +253,7 @@ of language evolution since functional pressure towards maximal information tran
 under fairly general conditions, weed out vagueness \citep{Lipman2009:Why-is-Language}. Many
 have therefore argued that vagueness is intrinsically useful for communication
 \citep[e.g.][]{Deemter2009:Utility-and-Lan,Jaegherde-JaegherRooijvan-Rooij2010:Strategic-Vague,BlumeBoard2013:Intentional-Vag}. Others
-hold that vagueness arises naturally due to limits in perception, memory, or information
+hold that vagueness arises naturally due to limits of perception, memory, or information
 processing
 \citep[e.g.][]{FrankeJager2010:Vagueness-Signa,OConnor2013:The-Evolution-o,LassiterGoodman2015:Adjectival-vagu}. We
 follow the latter line of exploration here, arguing that vagueness arises naturally under
@@ -264,15 +262,15 @@ evolutionary dynamic based on the same idea).
 
 \paragraph{Setup.}  We analyze the effects of noisy perception on the transmission of a simple
 language with $100$ states, $s \in [0,99]$, and two messages, $m \in \{m_1,m_2\}$. The
-probability of perceiving the actual state $s_a$ as $s_p$ is given by a (discretized) normal
-distribution, truncated to $[0;99]$, with $s_a$ as its mean, and standard deviation
+probability of perceiving actual state $s_a$ as $s_p$ is given by a (discretized) normal
+distribution, truncated to $[0;99]$, with $s_a$ as mean and standard deviation
 $\sigma$. % That is, $P(s_p | s_a) \sim \text{Normal}(s_{a},\sigma,s_{0},s_{99})$ with
 % $\sigma$ controlling the degree to which states are confused, and as boundaries $s_{0}$ and
 % $s_{99}$.
-Linguistic behavior is determined by a type $t \in [0;99]$ which encodes the threshold of
-applicability of $m_1$: $P(m_1 \mid s,t) = \delta_{s \ge t} = (1 - P(m_2 \mid s,t))$. In words, if a speaker observes a
-state that is as large or larger than its type (threshold for $m_1$), then message $m_1$, e.g.,
-{\em tall}, is used; otherwise $m_2$, e.g., {\em small}, is used.
+Linguistic behavior is fixed by a type $t \in [0;99]$ which is the threshold of applicability
+of $m_1$: $P(m_1 \mid s,t) = \delta_{s \ge t} = (1 - P(m_2 \mid s,t))$. If a speaker observes a
+state that is as large or larger than its type (threshold for $m_1$), then message $m_1$ is
+used (\emph{tall}), otherwise $m_2$ ({\em small}).
 
 \paragraph{Results.} The effects of a single generational turnover under noisy transmission is
 depicted in Figure \ref{fig:vagb}. As shown in Figure \ref{fig:vaga}, this population initially
@@ -300,7 +298,7 @@ no state being (almost) exclusively associated with $m_1$ or $m_2$.
     \label{fig:vagb}
 
   \end{subfigure}
-  \caption{Noisy iterated learning with posterior sampling, $\sigma = 0.4$, and $k =
+  \caption{Noisy iterated learning with posterior sampling ($l=1$), $\sigma = 0.4$, and $k =
     20$.}
   \label{fig:vag}
 \end{figure}
@@ -308,7 +306,7 @@ no state being (almost) exclusively associated with $m_1$ or $m_2$.
 \paragraph{Discussion.}
 Transmission perturbations caused by the noisy perception of states reliably give rise to vague
 language use even if the initial population state had a perfectly crisp and uniform
-convention. Of course, this is a specific picture of vagueness. As modeled here for simplicity,
+convention. Clearly, this is a specific picture of vagueness. As modeled here for simplicity,
 each speaker has a fixed and non-vague cut-off point $t$ is her lexicon. Still, the production
 behavior of a type-$t$ speaker in actual state $s_a$ is probabilistic and ``vague'', because of
 noisy perception:
@@ -318,15 +316,15 @@ noisy perception:
 An extension towards types as distributions over thresholds is straightforward but the main
 point would remain: systematic state-noise perturbs a population towards vagueness. 
 
-Of course, the stabilization of a linguistic system or population on a particular vague/crisp
-state partition may reasonably be expected to depend not only on the effects of learning, but
-also on the functional (dis)advantages that this partition brings about for its
-users. Functional pressure may therefore well be necessary for borderline regions to be kept in
-check, so to speak. Which factor or combination thereof plays a more central role for the
-emergence of vagueness is an empirical question we do not address here. Instead, we see these
-results as adding strength to the argument that one way in which vagueness may arise is as a
-byproduct of interactions between agents that may occasionally err in their perception of the
-environment.
+Of course, convergence on any particular population state will depend also on the functional
+(dis)advantages of particular patterns of language use. Functional pressure may therefore well
+be necessary for borderline regions to be kept in check, so to speak. Which factor or
+combination thereof plays a more central role for the emergence of vagueness is an empirical
+question we do not address here. Instead, we see these results as adding strength to the
+argument that one way in which vagueness may arise is as a byproduct of interactions between
+agents that may occasionally err in their perception of the environment. If state perception is
+systematically noise and learners are not aware of this, some amount of vagueness may be the
+natural result.
 
 \subsection{Deflation}
 Meaning deflation is a diachronic process by which a form's once restricted range of
@@ -346,17 +344,18 @@ language change have rather stressed the role of conflicting interests between i
 
 \paragraph{Setup.} The setup for this case study is the same as for the previous, except that
 we now trace the change of a single message $m$, e.g., emphatic negation, without a fixed
-antonym being sent whenever $m$ does not apply. This leads to a situation in which learners
-observe positive examples of use $\tuple{s,m}$ but do not positively observe situations in
-which $m$ did not apply to a particular state. This causes asymmetry in the learning data
-because speakers with high thresholds will reserve their message only for a small subset of the
-state space and otherwise remain silent. Learners take the absence of observations into account
-but cannot know what it is that they did not observe. We assume that learners
-are aware of $k$ so that:\footnote{Knowing fixed $k$ allows learners to compute the likelihood
-  of a type not reporting $k -|d_l|$ state observations. A more involved but better justified
-  alternative is to specify a prior over $k$ and for learners to perform a joint inference on
-  $k$ and the teacher's type given a partial observation of only overtly produced data. For
-  simplicity, we opt for the former, albeit admittedly artificial, assumption.}
+antonym being sent whenever $m$ does not apply. This is a very crude way of modeling use of
+markers of emphasis or high relevance, for which no corresponding ``irrelevance marker''
+exists. Consequently, learners observe positive examples of use $\tuple{s,m}$ but do not
+positively observe situations in which $m$ did not apply to a particular state. This causes
+asymmetry in the learning data because some speakers will reserve their message only for a
+small subset of the state space and otherwise remain silent. Learners take the absence of
+observations into account but cannot know what it is that they did not observe. We assume that
+learners are aware of $k$ so that:\footnote{Knowing $k$ allows learners to compute the
+  likelihood of a type not reporting $k -|d_l|$ state observations. A better but more complex
+  alternative is to specify a prior over $k$ with learners performing a joint inference on $k$
+  and the teacher's type. For simplicity, we opt for the former, albeit admittedly artificial,
+  assumption.}
 \begin{align*}
   P(t | d_l) & \propto \text{Binom}(\text{successes} =
   k-|d_l|, \text{trials} = k, \\
@@ -370,17 +369,17 @@ uniform. In words, a long sequence of data consisting of mostly silence gives st
 for the type producing it having a high threshold of applicability even if the few state-message pairs observed in
 the sequence may be equally likely to be produced by types with lower thresholds.
 
-\paragraph{Results.} The development of an initially monomorphic population consisting only of
-$t = 80$ is shown in Figure \ref{fig:defl}. In this setup even little noise will cause a
-message to gradually be applied to larger portions of the state space. As before, the speed by
-which meaning deflates is regulated by $\sigma$, $k$, and to lesser degree $l$. In general,
-more state confusion due to higher $\sigma$, shorter sequences, or less posterior maximization
-will lead to more learners inferring lower types than present in the previous generation.
+\paragraph{Results.} Development of an initially monomorphic population consisting only of
+$t = 80$ is shown in Figure \ref{fig:defl}. Even little noise causes a message to gradually be
+applied to larger portions of the state space. The speed of meaning deflation is regulated by
+$\sigma$, $k$, and to lesser degree $l$. In general, more state confusion due to higher
+$\sigma$, shorter sequences, or less posterior maximization will lead to more learners
+inferring lower types than present in the previous generation.
 
 \begin{figure}[ht]
 \centering
     \includegraphics[scale=0.4]{../code/plots/deflation-sigma04.png}
-  \caption{Noisy iterated learning with posterior sampling, $\sigma = 0.4$, and $k = 30$.}
+  \caption{Noisy iterated learning with posterior sampling ($l=1$), $\sigma = 0.4$, and $k = 30$.}
   \label{fig:defl}
 \end{figure}
 
@@ -390,10 +389,11 @@ always produced. This setup can be likened to acquisition only from positive lin
 evidence in a world in which not every state is equally likely to lead to an observable
 utterance. %(coupled with the idealized assumption that learners are aware of the amount of silence ``produced'' by a teacher).
 
-The overall outcome is similar to that of the previous study. Noisy perception can cause
-transmission perturbations that relax once strict linguistic conventions. In contrast to the
-case of vagueness, if there are no relevant competing forms, e.g., {\em small} vs. {\em tall}, asymmetry
-in production and noise will iteratively increase the state space that a form carves out.
+The outcome is similar to that of the previous study. Noisy perception can cause transmission
+perturbations that gradually relax formerly strict linguistic conventions. In contrast to the
+case of vagueness, if there are no relevant competing forms, e.g., {\em small} vs. {\em tall},
+asymmetry in production and noise will iteratively increase the state space that a form carves
+out.
 
 \subsection{Scalar expressions}
 Scalar expressions have been at the center of many studies on pragmatic inference. Examples
@@ -406,12 +406,11 @@ that Bo ate {\em some but not all}, as otherwise the speaker would have said {\e
 semantically weak meaning is thus pragmatically strengthened by interlocutors' mutual reasoning
 about rational language use \citep{grice:1975}. 
 
-Why does such pragmatic strengthening not lead
-to wide-spread lexicalization of upper-bounded meanings? To address this question, \citet{brochhagen+etal:2016:CogSci}
-explore an evolutionary model that combines functional pressure and iterated learning.
-Crucially, this account requires the assumption of a prior that favors a lack of
-upper-bounds. Here, we demonstrate that state-noise can mimic the effects of such a cognitive
-learning bias.
+Why does such pragmatic strengthening not lead to wide-spread lexicalization of upper-bounded
+meanings? To address this question, \citet{brochhagen+etal:2016:CogSci} explore an evolutionary
+model that combines functional pressure and iterated learning.  This account assumes a prior
+that favors a lack of upper-bounds. Here, we demonstrate that state-noise can mimic the effects
+of such a cognitive learning bias.
 
 \paragraph{Setup.} The simplest possible model distinguishes two kinds of lexica and two
 usage patterns, a pair of which constitutes a type. Both lexica specify the
@@ -422,16 +421,14 @@ $L_{\text{bound}}$, which lexicalizes an upper-bound for {\em some}-like express
 the English-like lexicon $L_{\text{lack}}$, message $\mall$ is also only true of $\sall$, but the
 meaning of $\msome$ is underspecified and lexically holds in both states. 
 
-Speakers may use
-either lexicon either literally or pragmatically. The former linguistic behavior selects any of several true
-messages with equal probability. The latter prefers to send the most informative messages from
-those that are true in the observed state \citep{grice:1975}. This gives rise to probabilistic
-speaker behavior $P(m \mid s,t= \tuple{\text{lexicon},\text{use}})$ which approximates the
-following choice probabilities:\footnote{Concretely, our results are based on probabilistic speaker behavior
-  following the definitions of \citet{brochhagen+etal:2016:CogSci} under parameter values that
-  approximate this behavior very closely. As nothing essential to our main argument and
-  simulation results hinges on these details we background them here for ease of
-  exposition.}
+Speakers are either literal or pragmatic language users. The former select a random true
+message, the latter prefer to send the most informative messages from those that are true in
+the observed state \citep{grice:1975}. This gives rise to probabilistic speaker behavior
+$P(m \mid s,t= \tuple{\text{lexicon},\text{use}})$ which approximates the following choice
+probabilities:\footnote{Concretely, results are obtained for probabilistic speaker behavior
+  following the definitions of \citet{brochhagen+etal:2016:CogSci}. Nothing essential to our
+  main argument and simulation results hinges on these details, so we background them here for
+  ease of exposition.}
 
 \begin{centering}
 \hspace{2cm} \underline{$L_{\text{bound}}$} \hspace{2.8cm} \underline{$L_{\text{lack}}$} \hspace{1.2cm}\\
@@ -450,26 +447,27 @@ Pragmatic \hspace{0.05cm}  \bordermatrix{~ & \msome & \mall \cr
 \noindent where $P(m|s,t) = M_{sm}$ with $M$ being type $t$'s choice matrix.
 
 As pragmatic users of $L_\text{lack}$ are (almost) indistinguishable from types with
-$L_\text{bound}$ in terms of their observable behavior, the emergence of a predominance of $L_\text{lack}$
-in a repeatedly learning population must come from transmission biases. A learning bias in
-favor of $L_\text{lack}$ in the learners' priors will select for it 
-\citep{brochhagen+etal:2016:CogSci}, but here we assume no such cognitive bias. Rather we
-assume state-noise in the form of parameters $\epsilon$ and $\delta$. The former corresponds to
-the probability of perceiving actual state $\ssome$ as $\sall$,
-$P(\sall | \ssome) = \epsilon$, and $P(\ssome | \sall) = \delta$. For instance, states may be perceived differently because a large number of objects is involved (e.g., quantifiers and numerals) or they may be hard to accurately retrieve from sensory information (e.g., adjectives).
+$L_\text{bound}$, the emergence of a predominance of $L_\text{lack}$ in a repeatedly learning
+population must come from transmission biases. A learning bias in favor of $L_\text{lack}$ in
+the learners' priors will select for it \citep{brochhagen+etal:2016:CogSci}, but here we assume
+no such cognitive bias. Rather we assume state-noise in the form of parameters $\epsilon$ and
+$\delta$. The former corresponds to the probability of perceiving actual state $\ssome$ as
+$\sall$, $P(\sall | \ssome) = \epsilon$, and $P(\ssome | \sall) = \delta$. For instance, states
+may be perceived differently because different numbers of objects must be perceived (e.g.,
+quantifiers and numerals) or they may be more or less hard to accurately retrieve from sensory
+information (e.g., adjectives).
 
 
 \paragraph{Results.} To quantify the effects of the dynamics we ran a fine-grained parameter
 sweep over $\epsilon$ and $\delta$ with $50$ independent simulations per parameter
 configuration. Each simulation started with a random initial population distribution over types
-and applied iterated learning with state-noise for 20 generations. The mean proportion
-of resulting pragmatic users of $L_{\text{lack}}$ under different noise signatures is shown in
-Figure \ref{fig:quant}. 
-
-These results show that when $\delta$ is small and $\epsilon$ is high,
-iterated noisy transmission can lead to populations consisting of mostly, if not exclusively, a
-type that lexically lacks an upper-bound for {\em some}-like expressions but conveys it
-pragmatically.  Similar results are obtained for larger $k$ or $l$.
+and applied iterated learning with state-noise for 20 generations. Mean proportion of resulting
+pragmatic users of $L_{\text{lack}}$ under different noise signatures are shown in Figure
+\ref{fig:quant}. When $\delta$ is small and $\epsilon$ high, iterated noisy transmission can
+lead to populations consisting of almost exclusively English-like lexica with pragmatic
+language use. Similar results are obtained for larger $k$ or $l$. \mf{CHECK ME: we need
+  selection for this result, do we not??? if so, we must mention this, at least in one
+  sentence}
 
 \begin{figure}[ht]
 \centering
