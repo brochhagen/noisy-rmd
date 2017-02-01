@@ -209,7 +209,7 @@ it influences the probability of observing a sequence $d_l$ (with $F(t_i \mid d)
 In sum, it may be the case that learner and/or teacher do not perceive the actual state as what
 it is. If they are not aware of this, they produce/learn as if what they observed was the
 actual state. In particular, the learner does not reason about noise when she tries to infer
-the speaker's type. She takes what she observes as the actual state that the teacher has seen
+the teacher's type. She takes what she observes as the actual state that the teacher has seen
 as well, and infers which type would have most likely generated the message to this state. This
 can lead to biases of inferring the ``wrong'' teacher type if noise makes some types err in a
 way that resembles the noiseless behavior of other types. That is, such environmental factors
@@ -470,7 +470,7 @@ language use. Similar results are obtained for larger $k$ or $l$.
 \begin{figure}[ht]
 \centering
     \includegraphics[scale=0.33]{../code/plots/quantifiers-posterior-sampling-k5.png}
-  \caption{Mean proportion of pragmatic $L_{\text{lack}}$ users after $20$ generations with posterior sampling and $k = 5$.}
+  \caption{Mean proportion of pragmatic $L_{\text{lack}}$ users after $20$ generations with posterior sampling ($l = 1$) and $k = 5$.}
   \label{fig:quant}
 \end{figure}
 
