@@ -144,3 +144,62 @@ def heatmap_e_to_delta():
     plt.show()
 
 #heatmap_e_to_delta()
+
+
+def vagueness_single_gens_side_by_side(s,sigma,k,sample_amount,learning_parameter,gens):
+    print 'Loading data'
+    ax1 = plt.subplot(1,2,1)
+    ax2 = plt.subplot(1,2,2)
+    df = pd.read_csv(r"./results/vagueness-states%d-sigma%.2f-k%d-samples%d-l%d-g%d.csv" %(s,sigma,k,sample_amount,learning_parameter,gens))
+    X = np.arange(0,s)
+
+    for idx,row in df.iterrows():
+        if idx == 0:
+            theta_prop = [row['t'+str(x)] for x in xrange(s)]
+            m1 = np.zeros(s)
+            m2 = np.zeros(s)
+            for i in xrange(s):
+                for j in xrange(len(theta_prop)):
+                    if i >= j:
+                        m1[i] += theta_prop[j]
+                    else:
+                        m2[i] += theta_prop[j]
+            ax1.plot(X,m1)
+            ax1.plot(X,m2, linestyle='dashed')
+            ax1.set_ylim(0-0.01,1+0.01)
+            ax1.set_ylabel('Proportion of use', fontsize=19)
+            ax1.set_title('Initial population',fontsize=17)
+            ax1.set_xlabel('State', fontsize=19)
+
+            ax1.tick_params(labelsize=15)
+            ax1.legend([r'$m_1$',r'$m_2$'], loc='best',fontsize=20)
+
+            ax1.set_xlim(0,100)
+
+    for idx,row in df.iterrows():
+        if idx == 1:
+            theta_prop = [row['t'+str(x)] for x in xrange(s)]
+            m1 = np.zeros(s)
+            m2 = np.zeros(s)
+            for i in xrange(s):
+                for j in xrange(len(theta_prop)):
+                    if i >= j:
+                        m1[i] += theta_prop[j]
+                    else:
+                        m2[i] += theta_prop[j]
+            ax2.plot(X,m1)
+            ax2.plot(X,m2, linestyle='dashed')
+            ax2.axes.yaxis.set_ticklabels([])
+            ax2.set_ylim(0-0.01,1+0.01)
+            ax2.set_xlim(0,100)
+            ax2.set_title('Population after one generation',fontsize=17)
+            ax2.tick_params(labelsize=15)
+            ax2.set_xlabel('State', fontsize=19)
+
+
+    plt.tight_layout()
+    plt.show()
+
+vagueness_single_gens_side_by_side(100,0.4,20,100,1,50)
+
+
