@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.3)  18 APR 2017 18:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.3)  19 APR 2017 17:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -418,30 +418,31 @@ Package pdftex.def Info: pics/cartoon_picture.png used on input line 165.
 
 
 
-] [2 <./pics/cartoon_picture.png>]
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 197.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 197.
+ [2 <./pics/cartoon_picture.png>]
 <../code/plots/vag-side-by-side.png, id=19, 578.16pt x 397.485pt>
 File: ../code/plots/vag-side-by-side.png Graphic file (type png)
 
 <use ../code/plots/vag-side-by-side.png>
 Package pdftex.def Info: ../code/plots/vag-side-by-side.png used on input line 
-287.
+289.
 (pdftex.def)             Requested size: 254.53233pt x 174.99098pt.
 
-Overfull \hbox (10.62108pt too wide) in paragraph at lines 287--288
+Overfull \hbox (10.62108pt too wide) in paragraph at lines 289--290
  [][] 
  []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 344.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 344.
 [3 <../code/plots/vag-side-by-side.png>]
 <../code/plots/deflation-sigma04.png, id=24, 578.16pt x 397.485pt>
 File: ../code/plots/deflation-sigma04.png Graphic file (type png)
 
 <use ../code/plots/deflation-sigma04.png>
 Package pdftex.def Info: ../code/plots/deflation-sigma04.png used on input line
- 366.
+ 368.
 (pdftex.def)             Requested size: 231.2599pt x 158.99118pt.
  [4 <../code/plots/deflation-sigma04.png>]
 <../code/plots/quantifiers-posterior-sampling-k5.png, id=30, 730.6497pt x 586.8
@@ -450,24 +451,26 @@ File: ../code/plots/quantifiers-posterior-sampling-k5.png Graphic file (type pn
 g)
  <use ../code/plots/quantifiers-posterior-sampling-k5.png>
 Package pdftex.def Info: ../code/plots/quantifiers-posterior-sampling-k5.png us
-ed on input line 457.
+ed on input line 456.
 (pdftex.def)             Requested size: 241.11514pt x 193.65529pt.
+ [5 <../code/plots/quantifiers-posterior-sampling-k5.png>] (./noise-camera-read
+y.bbl [6])
+[7] [8
 
-(./noise-camera-ready.bbl [5 <../code/plots/quantifiers-posterior-sampling-k5.p
-ng>]) [6] [7] (./noise-camera-ready.aux)
+] (./noise-camera-ready.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.3pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 5205 strings out of 493089
- 76158 string characters out of 6134843
- 146921 words of memory out of 5000000
- 8552 multiletter control sequences out of 15000+600000
- 57346 words of font info for 125 fonts, out of 8000000 for 9000
+ 5210 strings out of 493089
+ 76272 string characters out of 6134843
+ 147982 words of memory out of 5000000
+ 8556 multiletter control sequences out of 15000+600000
+ 57646 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,12n,38p,925b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,38p,1030b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -477,10 +480,10 @@ e/2015/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on noise-camera-ready.pdf (7 pages, 391986 bytes).
+Output written on noise-camera-ready.pdf (8 pages, 394130 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 73 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

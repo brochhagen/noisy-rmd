@@ -33,6 +33,32 @@ Ahern, C.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Bergen%
+\ \BBA {} Goodman%
+}{%
+Bergen%
+\ \BBA {} Goodman%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+bergen+goodman:2015}
+\APACinsertmetastar {%
+bergen+goodman:2015}%
+\begin{APACrefauthors}%
+Bergen, L.%
+\BCBT {}\ \BBA {} Goodman, N\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Strategic Use of Noise in Pragmatic Reasoning} {The
+  strategic use of noise in pragmatic reasoning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Topics in Cognitive Science}{7}{2}{336--350}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Blume%
 \ \BBA {} Board%
 }{%
