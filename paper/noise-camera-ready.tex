@@ -143,7 +143,7 @@ likely path of change in the population due to learning from finite observations
 The prior $P(\type{})$ can be understood as encoding learning biases. For example, learners may have
 an a priori preference for simpler languages over ones with a more complex grammar, or over
 ones with larger or more marked lexical or phonemic inventories
-(cf. \citealt{chater+vitanyi:2003, kirby+etal:2015}). Crucially, even weak biases
+\citep[cf.][]{kirby+etal:2015}. Crucially, even weak biases
 can magnify and have striking effects on an evolving linguistic system, especially if learning
 is fueled by only limited input (small $k$). Experimental and mathematical explorations of
 iterated learning have consequently suggested that the linguistic structure evinced by the outcome of this process
@@ -194,7 +194,7 @@ It is natural to assume that learners, even if they (in tendency) perform ration
 inference of the likely teacher type $\type{}$ based on observation $\tuple{s_l,m}$, do not also
 reason about state-noise perturbations. In contrast to, e.g., noisy-channel models that have agents reason over potential
 message corruption caused by noise \citep[e.g.][]{bergen+goodman:2015}, our learners are not proficient language users that could leverage knowledge about the world and its linguistic codification  to infer likely state misperception.\footnote{To do so, agents would have to infer or come equipped with knowledge about $P_N(\cdot|s_a)$, which could itself be
-subject to updates. We stick to the simpler case of ignorance about noise here, but as long as the actual state is not always recoverable our general results also hold for agents that reason about noise.} In this case the posterior probability of $\type{}$ given the
+subject to updates. We stick to the simpler case of noise-free inference here, but as long as the actual state is not always recoverable our general results also hold for agents that reason about noise.} In this case the posterior probability of $\type{}$ given the
 learner's perceived data sequence $d_l$ is as before:
 $P(\type{} \mid d_l) \propto P(\type{}) \ P(d_l \mid \type{})$.  Still, state-noise affects the probability
 $P_N(\type{j} \rightarrow \type{i})$ that the learner adopts $\type{i}$ given a teacher of type $\type{j}$, because
@@ -264,7 +264,7 @@ evolutionary dynamic based on the same idea).
 
 \paragraph{Setup.}  We analyze the effects of noisy perception on the transmission of a simple
 language with $100$ states, $s \in [0,99]$, and two messages, $m \in \{m_1,m_2\}$. The
-probability that agents perceive actual state $s_a$ as perceived $s_t$/$s_l$ is given by a (discretized) normal
+probability that agents perceive actual state $s_a$ as $s_t$/$s_l$ is given by a (discretized) normal
 distribution, truncated to $[0;99]$, with $s_a$ as mean and standard deviation
 $\sigma$. % That is, $P(s_p | s_a) \sim \text{Normal}(s_{a},\sigma,s_{0},s_{99})$ with
 % $\sigma$ controlling the degree to which states are confused, and as boundaries $s_{0}$ and
@@ -287,7 +287,7 @@ no state being (almost) exclusively associated with $m_1$ or $m_2$.
 \begin{figure}[ht]
 \centering
     \includegraphics[width=\textwidth,height=6.15cm, keepaspectratio]{../code/plots/vag-side-by-side.png}
-\caption{Noisy iterated learning with posterior sampling ($\postparameter=1$), $\sigma = 0.4$, and $k = 20$.}
+\caption{Noisy iterated learning ($\postparameter=1$, $\sigma = 0.4$, $k = 20$).}
   \label{fig:vag}
 \end{figure}
  
@@ -299,7 +299,7 @@ each speaker has a fixed and non-vague cut-off point $\type{}$ in her lexicon. S
 behavior of a type-$\type{}$ speaker in actual state $s_a$ is probabilistic and ``vague'', because of
 noisy perception:
 \begin{align*}
-  P_N(m \mid s_a, \type{}) = \sum_{s_p} P(s_p \mid s_a) P(m \mid s_p, \type{})\,.
+  P_N(m \mid s_a, \type{}) = \sum_{s_t} P(s_t \mid s_a) P(m \mid s_t, \type{})\,.
 \end{align*}
 An extension towards types as distributions over thresholds is straightforward but the main
 point would remain: systematic state-noise perturbs a population towards vagueness. 
@@ -366,7 +366,7 @@ inferring lower types than present in the previous generation.
 \begin{figure}[ht]
 \centering
     \includegraphics[scale=0.4]{../code/plots/deflation-sigma04.png}
-  \caption{Noisy iterated learning with posterior sampling ($\postparameter=1$), $\sigma = 0.4$, and $k = 30$.}
+  \caption{Noisy iterated learning ($\postparameter=1$, $\sigma = 0.4$, $k = 30$).}
   \label{fig:defl}
 \end{figure}
 
@@ -454,7 +454,7 @@ language use. Similar results are obtained for larger $k$ or \postparameter.
 \begin{figure}[ht]
 \centering
     \includegraphics[scale=0.33]{../code/plots/quantifiers-posterior-sampling-k5.png}
-  \caption{Mean proportion of pragmatic $L_{\text{lack}}$ users after $20$ generations with posterior sampling ($\postparameter = 1$) and $k = 5$.}
+  \caption{Mean proportion of pragmatic $L_{\text{lack}}$ users after $20$ generations ($\postparameter = 1$, $k = 5$).}
   \label{fig:quant}
 \end{figure}
 
@@ -464,8 +464,8 @@ mimic effects of learning biases. In the case of Brochhagen et al. the assumed b
 for simplicity; learners had an a priori preference for not codifying 
 upper-bounds lexically, which increased their propensity to infer pragmatic
 $L_{\text{lack}}$ over $L_{\text{bound}}$ even if the witnessed data could not tease them
-apart. We assumed no such bias but nevertheless arrived at an evolutionary outcome that
-is comparable to the one predicted if the bias were present. However, this outcome
+apart. We assumed no such bias but nevertheless arrived at evolutionary outcomes that
+comparable to those predicted if the bias were present. However, this result
 strongly depends on the types involved. Whether a type thrives under a particular noise
 signature depends on the proportion of types confused with it during transmission. The addition
 or extraction of a single type may therefore lead to different results.
@@ -486,8 +486,8 @@ Beyond technical aspects, we foregrounded two intertwined issues in the cultural
 language. First, the fact that noise signatures may mimic the effects of cognitive biases has
 consequences for the interpretation of outcomes of acquisition processes. Care must
 therefore be exercised in reading off the influence of possible learning biases from
-data obtained ``in the wild'' or the laboratory. Noisy perception can instead be regarded as a neutral
-model of cultural evolution as it does not appeal to functional
+data obtained ``in the wild'' or the laboratory. Noisy perception instead offers a neutral
+model of cultural evolution that appeals to neither functional
 competition nor differential learnability among types \citep{reali+griffiths:2009}. Second, and more importantly, these results
 may be seen as complementing and stressing the pivotal role of systematic transmission
 perturbations as explanatory and predictive devices of language change -- independent of the
@@ -526,18 +526,18 @@ of T\"{u}bingen (Deutsche Forschungsgemeinschaft, ZUK 63).
 \newpage
 \section*{Reviewer comments}
   \begin{itemize}
-    \item [MR+RV1-3] Why don't teachers/learners reason about noise? (cf. noisy channel models, e.g., Gibson et al 2013, Bergen \& Goodman 2015). What happens if they do?\\ \tb{The main difference to (many?) noisy-channel models is that here states rather than messages are perceived noisily. Additionally, noisy-channel models (usually?) consider rational language use between agents that know a language, whereas our learners need to acquire one. Teachers/Learners could be modelled as having access (and correcting for) state noise signatures, but as long as this correction is not perfect we would still see the main effects we are after. I find reasoning about noise tricky conceptually as well; would teachers produce utterances correcting for what they may have misperceived (e.g. say {\em small} even if you think you saw {\em big})? Do learners come equipped with full knowledge about noise signatures? Why? I now briefly mention some of this in the section introducing noisy IL.} 
+    \item [MR+RV1-3] Why don't teachers/learners reason about noise? (cf. noisy channel models, e.g., Gibson et al 2013, Bergen \& Goodman 2015). What happens if they do?\\ \tb{The main difference to (many?) noisy-channel models is that here states rather than messages are perceived noisily. Additionally, noisy-channel models (usually?) consider rational language use between agents that know a language, whereas our learners need to acquire one. Teachers/Learners could be modelled as having access (and correcting for) state noise signatures, but as long as this correction is not perfect we would still see the main effects we are after. Overall, I find reasoning about state-noise tricky conceptually; would teachers produce utterances correcting for what they may have misperceived (e.g. say {\em small} even if you think you saw {\em big})? Do learners come equipped with full knowledge about noise signatures? Why? I now briefly mention some of this in the section introducing noisy IL.} 
     \item [MR] Do results presented correspond to stable states? Case study 1 only shows 1 step, case study 2 shows 30 and case study 3 shows 20. Do these correspond to stable outcomes?\\ \tb{Clear in the discussion of each case study (but admittedly not very prominent)}
-    \item [RV1] Explicit comparison to other neutral models (e.g. Reali \& Griffiths 2010)\\ \tb{Similarities: No direct competition between types in the dynamics (no selection nor selective mutation). Differences: R+G still have a learning prior that modulates selection of hypotheses.} 
+    \item [RV1] Explicit comparison to other neutral models (e.g. Reali \& Griffiths 2010)\\ \tb{Similarities: No direct competition among types in the dynamics (no functional selection nor selective mutation). Differences: R+G still have a learning prior that modulates selection of hypotheses.} 
     \item [RV1] Clarify what a type is early on\\ \tb{Done inasmuch as I could given variation across studies and space limitations}
     \item [RV2] Clarify differences (or similarity) between case study 1 and 2\\\tb{I think this is clear enough from the discussion on deflation}
     \item [RV2] Notational clarifications:
       \begin{itemize}
 	\item $k$ is used to designate numbers instead of $n$\\ \tb{Minor. I'd leave it as is.}
-	\item $t$ is both {\em teacher} and {\em type}\\ \tb{True \type{} for {\em type}}
-	\item $l$ is both {\em learner} and {\em posterior parameter}\\ \tb{True \postparameter~ for {\em posterior parameter}}
+	\item $t$ is both {\em teacher} and {\em type}\\ \tb{True. Now \type{} for {\em type}}
+	\item $l$ is both {\em learner} and {\em posterior parameter}\\ \tb{True. Now \postparameter~ for {\em posterior parameter}}
 	\item $a$ to index actual state is counterintuitive\\ \tb{Disagree. I'd leave it as is.}
-	\item Switch from $s_l$ to $s_p$ in case studies\\ \tb{This is intended as it encompasses teacher and learner perception. I clarified this}
+	\item Switch from $s_l$ to $s_p$ in case studies\\ \tb{Done. $s_p$ was purged.}
 	\item Consistent distinction between $P_N$ and $P$ (e.g. first two equations on p.2)\\
 	\tb{Done}
 	\item $P(t|d_l)$: $s$ is not defined within the binomial; is the sum in $succ\_prob$ really over $t$ (not $d$)?\\ \tb{Everything seems correct to me. With more space it would help to clarify how summing up to $\type{}-1$ in {\em succ.prob} relates to the speaker behavior of teacher of type \type{}, which is the confusing bit in this term. Then again, we at least have an intuitive explanation of the formula so I hope we're fine with only 1/3 of the reviewers being confused by this.}
@@ -545,6 +545,6 @@ of T\"{u}bingen (Deutsche Forschungsgemeinschaft, ZUK 63).
 	\item scalar d vs sequence/vector d\\ \tb{Haven't caught where $d$ is allegedly used as a scalar}
       \end{itemize}
     \item [RV3] Perhaps the graph in figure 2 could be changed so that the before and after populations were side by side?\\ \tb{Done}
-    \item [RV3] Perfors \& Navarro (2014) paper should be mentioned - at least to say how this approach relates to theirs \\ \tb{P\&N consider the effects $P(s)$ has on evolving languages. In a nutshell: If $k$ is small we see more effects of learning biases, if $k$ is large, $P(s)$ plays a role. They contend that this relativizes K\&G's convergence to the prior and, in this sense, the paper is similar to ours. Otherwise, there's no connection. I added some brief mentions of this paper but not explicit comparison.}
+    \item [RV3] Perfors \& Navarro (2014) paper should be mentioned - at least to say how this approach relates to theirs \\ \tb{P\&N consider the effects $P(s)$ has on evolving languages. In a nutshell: If $k$ is small we see more effects of learning biases, if $k$ is large, $P(s)$ plays a role. They contend that this relativizes K\&G's convergence to the prior and, in this sense, the paper is similar to this one (i.e., in stressing other factors may influence transmission). Otherwise, there's no connection nor easy comparison. I added some brief mentions of this paper but not explicit comparison.}
   \end{itemize}
 \end{document}

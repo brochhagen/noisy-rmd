@@ -141,32 +141,6 @@ Brochhagen, T.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Chater%
-\ \BBA {} Vit{\'{a}}nyi%
-}{%
-Chater%
-\ \BBA {} Vit{\'{a}}nyi%
-}{%
-{\protect \APACyear {2003}}%
-}]{%
-chater+vitanyi:2003}
-\APACinsertmetastar {%
-chater+vitanyi:2003}%
-\begin{APACrefauthors}%
-Chater, N.%
-\BCBT {}\ \BBA {} Vit{\'{a}}nyi, P.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2003}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Simplicity: a unifying principle in cognitive science?}
-  {Simplicity: a unifying principle in cognitive science?}{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Trends in Cognitive Sciences}{7}{1}{19--22}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Clark%
 }{%
 Clark%
