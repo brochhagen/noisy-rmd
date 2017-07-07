@@ -1,0 +1,65 @@
+%% Change "letterpaper" in the following line to "a4paper" if you must.
+
+\documentclass[10pt,a4paper]{article}
+%\usepackage{cogsci}
+\usepackage{pslatex}
+\usepackage{apacite}
+
+
+%\usepackage{geometry}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{nicefrac}
+%\usepackage{stmaryrd}
+%\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{color}
+\usepackage{booktabs}
+
+\usepackage{blkarray}
+\usepackage{xspace}
+
+
+\definecolor{Red}{RGB}{178,34,34}
+\newcommand{\mf}[1]{\textcolor{Red}{[MF: #1]}} 
+\newcommand{\tb}[1]{\textcolor[rgb]{.8,.33,.0}{[TB: #1]}}% prints in orange
+\newcommand{\citeposs}[2][]{\citeauthor{#2}'s (\citeyear[#1]{#2})}
+\newcommand{\tuple}[1]{\ensuremath{\left\langle #1 \right\rangle}} 
+
+
+%%% MF's commands
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\card}[1]{\left \lvert \, #1 \, \right\rvert}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\States}{\ensuremath{S}\xspace}		% Set of States
+\newcommand{\state}{\ensuremath{s}\xspace}		% single states
+\newcommand{\mystate}[1]{\ensuremath{\state_{\text{#1}}}\xspace} %meaningful states
+\newcommand{\Messgs}{\ensuremath{M}\xspace}		% Set of Messages
+\newcommand{\messg}{\ensuremath{m}\xspace}		% single messages
+\newcommand{\mymessg}[1]{\ensuremath{\messg_{\text{#1}}}\xspace} %meaningful messages
+\newcommand{\ssome}{\mystate{\ensuremath{\exists\neg\forall}}}
+\newcommand{\sall}{\mystate{\ensuremath{\forall}}}
+\newcommand{\msome}{\mymessg{some}}
+\newcommand{\mall}{\mymessg{all}}
+\newcommand{\asome}{\myact{\ensuremath{\exists\neg\forall}}}
+\newcommand{\aall}{\myact{\ensuremath{\forall}}}
+\newcommand{\type}[1]{\ensuremath{\tau_{#1}}}
+\newcommand{\postparameter}{\ensuremath{\gamma}}
+\definecolor{mygray}{cmyk}{0.35,0.35,0.35,0.35}
+\newcommand{\mygray}[1]{{\textcolor{mygray}{#1}}}
+
+
+\begin{document}
+
+\begin{flalign*}
+  P_N(\type{j} \rightarrow \type{i}) \; \propto \; \sum_{d \in D_k} \; \; \;
+  \underbrace{P_N(d_l \mid \type{j})}_{\substack{\prod_{\tuple{s_l,m} \in d_l} \sum_{s_t} P_N(s_t \mid s_l) \\ \qquad \qquad \;\;\; P(m \mid s_t, \type{})}} \; \; \;
+  \underbrace{F(\type{i} \mid d)}_{\propto \; P(\type{i} \mid d)^\gamma}
+\end{flalign*}
+\end{document}
