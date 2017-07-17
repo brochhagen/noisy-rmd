@@ -62,4 +62,34 @@
   \underbrace{P_N(d_l \mid \type{j})}_{\substack{\prod_{\tuple{s_l,m} \in d_l} \sum_{s_t} P_N(s_t \mid s_l) \\ \qquad \qquad \;\;\; P(m \mid s_t, \type{})}} \; \; \;
   \underbrace{F(\type{i} \mid d)}_{\propto \; P(\type{i} \mid d)^\gamma}
 \end{flalign*}
+
+\begin{flalign*}
+  P(\tau \mid d) \; \propto \; \underbrace{P(\tau)}_{\text{prior}} \quad \underbrace{P(d \mid \tau)}_{\Pi_{\tuple{s,m} \in d} P(m \mid s,\tau)}
+\end{flalign*}
+
+\begin{flalign*}
+  F(\tau \mid d) \; \propto \; P(\tau \mid d)^l,  \quad l \geq 1
+\end{flalign*}
+
+\begin{align*}
+  P(\type{j} \rightarrow \type{i}) &\propto \sum_{d \in D_k} P(d \mid \type{j}) F(\type{i} \mid d)\,.
+\end{align*}
+
+\begin{flalign*}
+P_N(s_a \mid s_l) \propto P(s_a) \; P_N(s_l \mid s_a)
+\end{flalign*}
+
+\begin{flalign*}
+P_N(s_t \mid s_l) = \sum\nolimits_{s_a} P(s_a \mid s_l) P_N(s_t \mid s_a)
+\end{flalign*}
+
+\begin{align*}
+  P_N(d_l \mid \type{}) = \prod_{\tuple{s_l,m} \in d_l} \sum_{s_t} P_N(s_t \mid s_l) \ P(m \mid s_t, \type{})\,.
+\end{align*}
+
+\begin{flalign*}
+  P_N(\type{j} \rightarrow \type{i}) \propto \sum_{d \in D_k} P_N(d_l \mid \type{j}) F(\type{i} \mid d)\,.
+\end{flalign*}
+
+
 \end{document}
